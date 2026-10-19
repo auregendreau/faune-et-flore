@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+
+# Le dossier .claude porte du contenu versionné — les skills du dépôt — mais
+# aussi deux choses que les outils y déposent au passage et qui n'ont rien à
+# y faire : les copies de travail isolées des agents, et les fichiers-sondes
+# écrits un par requête quand on mesure le déclenchement d'un skill.
+.claude/worktrees/
+.claude/commands/

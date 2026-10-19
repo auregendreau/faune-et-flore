@@ -1,0 +1,436 @@
+/* La Promenade — l'habillage du mini-site (les gabarits du thème).
+ *
+ * Tout est dans @media screen : le papier ne voit rien de ce fichier (il
+ * reste le Carnet de terrain, theme.css, bloc @media print). Les classes
+ * pr-… sont celles des gabarits (gabarits.js) ; les couleurs passent par les
+ * jetons, les polices par --police-titre (Bagel Fat One), --police-etiquette
+ * (Barlow Condensed, les plaques) et --police-texte (Figtree) ; les mots de
+ * l'enfant (.mot-enfant) restent en Andika. Tout mouvement est sous
+ * prefers-reduced-motion: no-preference.
+ */
+@media screen {
+  /* ——— La page : le ciel, puis la crème du chemin ——— */
+  body[data-support="ecran"] {
+    background: linear-gradient(180deg, var(--t-ciel) 0, var(--t-ciel-2) 520px, var(--t-creme) 1100px) no-repeat, var(--t-creme);
+  }
+  #entete, #pied { display: block; }
+  .pr-page { max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px) 40px; font-size: 1.0625rem; line-height: 1.6; }
+  .pr-page section { margin-top: clamp(56px, 8vw, 104px); }
+  .pr-page .ic { width: 1.15em; height: 1.15em; vertical-align: -.2em; }
+  .pr-fl { width: 1.1em; height: 1.1em; flex: none; }
+  .pr-visuel-cache { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .pr-colonne > section:first-child { margin-top: clamp(40px, 6vw, 80px); }
+
+  /* La balise du sentier : deux bandes, blanche et de la couleur du milieu */
+  .pr-balise {
+    display: inline-block; width: 22px; height: 14px; flex: none; border-radius: 2px; vertical-align: middle;
+    background: linear-gradient(#fff 0 42%, transparent 42% 58%, var(--periode, var(--t-jaune-fonce)) 58%);
+    box-shadow: 0 0 0 1.5px rgba(27, 42, 49, .25);
+  }
+  .pr-surtitre {
+    display: flex; align-items: center; gap: 10px; margin: 0 0 14px;
+    font: 800 .95rem/1.15 var(--police-etiquette); letter-spacing: .12em; text-transform: uppercase; color: var(--encre-douce);
+  }
+  .pr-note { color: var(--encre-douce); font-size: .95rem; max-width: 75ch; }
+  .pr-chapo { font-size: clamp(1.08rem, 1.6vw, 1.25rem); line-height: 1.6; color: var(--encre-douce); max-width: 56ch; margin: 0 auto; }
+  .pr-titre-bloc { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 18px; margin-bottom: 22px; }
+  .pr-titre-bloc h2, .pr-panorama-tete h2 { font: 400 clamp(1.9rem, 4vw, 3rem)/1.05 var(--police-titre); margin: 0; color: var(--encre); }
+  .pr-zone { font: 800 .9rem/1 var(--police-etiquette); letter-spacing: .1em; text-transform: uppercase; padding: 8px 12px; border-radius: var(--rayon-pilule); background: var(--encre); color: var(--t-jaune); }
+  .pr-sous { font: 800 1rem/1.2 var(--police-etiquette); letter-spacing: .12em; text-transform: uppercase; color: var(--encre-douce); margin: 26px 0 12px; }
+
+  /* ——— Le poteau indicateur (ordinateur) ——— */
+  .pr-haut { position: relative; z-index: 20; padding: 22px clamp(16px, 4vw, 48px) 0; }
+  .pr-poteau { position: relative; max-width: 1280px; margin: 0 auto; display: flex; align-items: center; }
+  .pr-mat { position: absolute; left: 50%; top: -22px; bottom: -14px; width: 12px; transform: translateX(-50%); border-radius: 3px; background: var(--t-mat); z-index: -1; }
+  .pr-plaques { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; width: 100%; }
+  .pr-plaque-groupe { position: relative; }
+  .pr-plaque {
+    appearance: none; border: 0; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+    height: 52px; padding: 0 30px 0 18px; color: var(--encre); background: var(--t-jaune);
+    font: 800 1.12rem/1 var(--police-etiquette); letter-spacing: .06em; text-transform: uppercase;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, .12); transition: transform .3s cubic-bezier(.3, 1.6, .5, 1), background .2s;
+  }
+  .pr-plaque em { font-style: normal; font-weight: 600; font-size: .9rem; padding: 2px 7px; border-radius: var(--rayon-pilule); background: rgba(27, 42, 49, .12); }
+  .pr-plaque:hover, .pr-plaque[aria-expanded="true"] { transform: translateX(6px) rotate(-1.5deg); background: var(--t-jaune-vif); }
+  .pr-plaque[aria-current], .pr-plaque[data-actif] { background: var(--encre); color: var(--t-jaune); }
+  .pr-plaque[aria-current] em, .pr-plaque[data-actif] em { background: rgba(246, 207, 60, .2); }
+  .pr-plaque:focus-visible { outline-offset: 4px; clip-path: none; }
+  .pr-topo {
+    position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%); width: min(560px, 90vw); padding: 20px;
+    border-radius: 18px; background: var(--feuille); box-shadow: var(--ombre-flotte); z-index: 30;
+  }
+  .pr-topo-gauche { left: 0; transform: translateX(-20%); }
+  .pr-topo-droite { left: auto; right: 0; transform: none; }
+  .pr-topo::before { content: ""; position: absolute; left: 22px; top: 56px; bottom: 22px; border-left: 3px dotted var(--t-sentier); opacity: .45; }
+  .pr-topo-titre { margin: 0 0 12px; font: 800 .95rem/1 var(--police-etiquette); letter-spacing: .12em; text-transform: uppercase; color: var(--encre-douce); }
+  .pr-topo ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 10px; position: relative; }
+  .pr-topo-lien { display: flex; gap: 12px; align-items: flex-start; padding: 10px; border-radius: 12px; text-decoration: none; color: var(--encre); transition: background .15s; }
+  .pr-topo-lien > .ic { color: var(--p2); margin-top: 2px; background: var(--feuille); width: 20px; height: 20px; }
+  .pr-topo-lien > .pr-balise { margin-top: 4px; }
+  .pr-topo-lien strong { display: block; font-weight: 700; line-height: 1.2; }
+  .pr-topo-lien small { display: block; color: var(--encre-douce); font-size: .84rem; line-height: 1.35; margin-top: 2px; }
+  .pr-topo-lien:hover { background: var(--t-ciel-2); }
+  .pr-topo-lien[aria-current] { background: var(--t-jaune-pale); }
+  .pr-m-bouton { display: none; }
+  @media (prefers-reduced-motion: no-preference) {
+    .pr-topo:not([hidden]) { animation: pr-deplie .22s ease-out; }
+    .pr-topo-droite:not([hidden]), .pr-topo-gauche:not([hidden]) { animation: pr-deplie-droit .22s ease-out; }
+  }
+  @keyframes pr-deplie { from { opacity: 0; transform: translate(-50%, -8px); } to { opacity: 1; transform: translate(-50%, 0); } }
+  @keyframes pr-deplie-droit { from { opacity: 0; translate: 0 -8px; } to { opacity: 1; translate: 0 0; } }
+
+  /* ——— L'ouverture ——— */
+  .pr-ouverture { margin-top: clamp(48px, 7vw, 92px); text-align: center; }
+  .pr-ouverture .pr-surtitre { justify-content: center; }
+  .pr-ouverture h1, .pr-doc-tete h1 { font: 400 clamp(2.6rem, 7.4vw, 6.2rem)/.95 var(--police-titre); margin: 0 auto 22px; max-width: 14ch; letter-spacing: -.01em; color: var(--encre); text-wrap: balance; }
+  .pr-mot { max-width: 56ch; margin: 16px auto 0; color: var(--encre-douce); font-style: italic; }
+  /* « La classe d'Aurélie » : le panneau du départ, jaune sur son poteau */
+  .pr-depart { position: relative; display: inline-flex; flex-direction: column; align-items: center; margin: 34px auto 0; }
+  .pr-depart-mat { position: absolute; left: 50%; top: 100%; width: 10px; height: 34px; transform: translateX(-50%); border-radius: 0 0 3px 3px; background: var(--t-mat); }
+  .pr-depart-panneau {
+    position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 14px 30px 16px;
+    background: var(--t-jaune); color: var(--encre); border-radius: 6px; box-shadow: inset 0 -5px 0 rgba(0, 0, 0, .12), 0 14px 26px rgba(27, 42, 49, .14);
+    transform: rotate(-1.5deg);
+  }
+  .pr-depart-panneau::before, .pr-depart-panneau::after { content: ""; position: absolute; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: rgba(27, 42, 49, .35); }
+  .pr-depart-panneau::before { left: 10px; } .pr-depart-panneau::after { right: 10px; }
+  .pr-depart-petit { font: 800 .85rem/1 var(--police-etiquette); letter-spacing: .14em; text-transform: uppercase; }
+  .pr-depart-nom { font: 400 clamp(1.6rem, 3.4vw, 2.3rem)/1.05 var(--police-titre); }
+
+  /* ——— Le panorama des cinq tableaux ——— */
+  .pr-panorama-zone { position: relative; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); }
+  .pr-panorama-tete { max-width: 1280px; margin: 0 auto 18px; padding: 0 clamp(16px, 4vw, 48px); display: flex; align-items: end; justify-content: space-between; gap: 16px; }
+  .pr-fleches { display: flex; gap: 8px; flex: none; }
+  .pr-fleches button { appearance: none; border: 0; width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: var(--t-jaune); color: var(--encre); cursor: pointer; box-shadow: inset 0 -3px 0 rgba(0, 0, 0, .12); transition: transform .2s; }
+  .pr-fleches button .ic { width: 24px; height: 24px; stroke-width: 2.6; }
+  .pr-fleches button:hover { transform: scale(1.08); }
+  .pr-panorama {
+    list-style: none; margin: 0; display: flex; gap: 0; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+    padding: 0 max(clamp(16px, 4vw, 48px), calc(50vw - 640px)); overscroll-behavior-x: contain;
+  }
+  .pr-panorama::-webkit-scrollbar { display: none; }
+  .pr-panorama:focus-visible { outline-offset: -4px; }
+  .pr-vue { flex: 0 0 min(560px, 80vw); scroll-snap-align: start; position: relative; }
+  .pr-vue > a { display: block; position: relative; height: clamp(360px, 52vh, 500px); overflow: hidden; text-decoration: none; color: #fff; background: var(--encre); }
+  .pr-vue:first-child > a { border-radius: 18px 0 0 18px; }
+  .pr-vue:last-child > a { border-radius: 0 18px 18px 0; }
+  .pr-vue img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(.2, .7, .2, 1); }
+  .pr-vue > a:hover img, .pr-vue > a:focus-visible img { transform: scale(1.06); }
+  .pr-vue > a::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, var(--t-voile)); }
+  .pr-vue > a::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 8px; background: var(--periode); z-index: 2; }
+  .pr-vue > a:focus-visible { outline: 4px solid var(--t-jaune); outline-offset: -4px; }
+  .pr-vue-info { position: absolute; left: 24px; right: 24px; bottom: 28px; z-index: 2; display: flex; flex-direction: column; gap: 4px; text-shadow: 0 1px 8px rgba(0, 0, 0, .5); }
+  .pr-vue-etape { display: inline-flex; align-items: center; gap: 10px; font: 800 .95rem/1 var(--police-etiquette); letter-spacing: .12em; text-transform: uppercase; }
+  .pr-vue-info strong { font: 400 clamp(2.2rem, 4vw, 3.4rem)/1 var(--police-titre); text-shadow: 0 2px 16px rgba(0, 0, 0, .45); }
+  .pr-vue-dates { font-weight: 600; font-size: 1rem; }
+  .pr-vue.pr-ici > a { box-shadow: inset 0 0 0 6px var(--t-jaune); }
+  .pr-vue.pr-ici .pr-vue-etape { color: var(--t-jaune); }
+  .pr-vous-etes-ici { flex: 0 0 0; position: relative; z-index: 4; scroll-snap-align: none; }
+  .pr-pin-zone { position: absolute; left: 50%; top: 0; height: 100%; z-index: 4; pointer-events: none; }
+  .pr-pin { position: absolute; left: 0; top: 22%; transform: translate(-50%, -50%); width: 64px; height: 64px; border-radius: 50% 50% 50% 0; rotate: -45deg; display: grid; place-items: center; background: var(--t-jaune); color: var(--encre); box-shadow: 0 10px 24px rgba(0, 0, 0, .3); }
+  .pr-pin .ic { rotate: 45deg; width: 28px; height: 28px; }
+  .pr-pin-texte { position: absolute; left: 0; top: calc(22% + 44px); transform: translateX(-50%); width: 170px; padding: 10px 12px; border-radius: 12px; text-align: center; background: var(--feuille); color: var(--encre); font-size: .82rem; line-height: 1.35; box-shadow: 0 12px 28px rgba(0, 0, 0, .25); }
+  .pr-pin-texte strong { display: block; font: 800 1rem/1.1 var(--police-etiquette); letter-spacing: .06em; text-transform: uppercase; }
+  @media (prefers-reduced-motion: no-preference) {
+    .pr-pin { animation: pr-sautille 2.4s ease-in-out infinite; }
+  }
+  @keyframes pr-sautille { 0%, 100% { translate: 0 0; } 50% { translate: 0 -8px; } }
+  .pr-trace { display: block; width: 100%; height: 50px; margin-top: -4px; color: var(--t-sentier); }
+
+  /* ——— Le sentier de l'année ——— */
+  .pr-sentier { list-style: none; margin: 0 0 14px; padding: 34px 22px 24px; display: flex; gap: 10px; align-items: stretch; border-radius: 18px; background: var(--feuille); box-shadow: 0 18px 40px rgba(27, 42, 49, .08); }
+  .pr-troncon { display: flex; flex-direction: column; gap: 6px; min-width: 0; position: relative; }
+  .pr-pas-ligne { display: flex; gap: 3px; height: 22px; align-items: center; }
+  .pr-pas { flex: 1; height: 10px; border-radius: 99px; background: var(--periode); }
+  .pr-pas:nth-child(odd) { height: 16px; }
+  .pr-troncon-nom { font: 800 1.02rem/1.1 var(--police-etiquette); letter-spacing: .03em; text-transform: uppercase; color: var(--periode); text-decoration: none; }
+  .pr-troncon-nom:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .pr-troncon-sem { font-size: .86rem; color: var(--encre-douce); }
+  .pr-halte { flex: 0 0 120px; display: flex; flex-direction: column; gap: 2px; padding: 10px; border-radius: 12px; background: var(--t-ciel-2); font-size: .8rem; line-height: 1.3; color: var(--encre-douce); position: relative; }
+  .pr-halte strong { font: 800 .98rem/1.1 var(--police-etiquette); text-transform: uppercase; letter-spacing: .04em; color: var(--encre); }
+  .pr-halte em { font-style: normal; font-weight: 700; color: var(--encre); }
+  .pr-halte.pr-ici { background: var(--t-jaune); color: var(--encre); }
+  .pr-ici-mot { position: absolute; top: -26px; left: 0; display: inline-flex; align-items: center; gap: 4px; font: 800 .8rem/1 var(--police-etiquette); letter-spacing: .1em; text-transform: uppercase; color: var(--encre); white-space: nowrap; }
+  .pr-ici-mot .ic { width: 15px; height: 15px; }
+
+  /* ——— À imprimer : les sacs et les étiquettes de bagage ——— */
+  .pr-sacs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .pr-sac { padding: 18px; border-radius: 18px; background: var(--feuille); box-shadow: 0 10px 30px rgba(27, 42, 49, .07); border-top: 6px solid var(--periode); min-width: 0; }
+  .pr-sac-ici { grid-column: 1 / -1; padding: 24px; background: linear-gradient(135deg, var(--periode-pale), var(--feuille) 60%); }
+  .pr-sac-tete { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; margin-bottom: 14px; }
+  .pr-sac-tete h3 { margin: 0; font: 800 1.3rem/1.1 var(--police-etiquette); letter-spacing: .03em; text-transform: uppercase; }
+  .pr-sac-tete h3 a { text-decoration: none; color: var(--encre); }
+  .pr-sac-tete h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .pr-sac-ici .pr-sac-tete h3 { font: 400 2rem/1.05 var(--police-titre); text-transform: none; letter-spacing: 0; }
+  .pr-sac-dates { color: var(--encre-douce); font-size: .9rem; flex-basis: 100%; }
+  .pr-sac-ici .pr-sac-dates { flex-basis: auto; margin-left: auto; }
+  .pr-pastille-ici { font: 800 .82rem/1 var(--police-etiquette); letter-spacing: .1em; text-transform: uppercase; padding: 6px 10px; border-radius: var(--rayon-pilule); background: var(--t-jaune); color: var(--encre); }
+  .pr-sac-liens { display: grid; gap: 6px; }
+  .pr-sac-liens a { display: flex; gap: 8px; align-items: center; padding: 8px 10px; border-radius: 10px; text-decoration: none; color: var(--encre); font-weight: 600; font-size: .95rem; background: var(--t-ciel-2); transition: background .15s, transform .15s; }
+  .pr-sac-liens a .ic { color: var(--periode); }
+  .pr-sac-liens a:hover { background: var(--t-jaune-pale); transform: translateX(3px); }
+  .pr-tags { list-style: none; margin: 0; padding: 10px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .pr-tag {
+    position: relative; display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 22px 18px 16px 36px; text-decoration: none; color: var(--sur-periode);
+    background: var(--periode); border-radius: 6px 14px 14px 6px; clip-path: polygon(22px 0, 100% 0, 100% 100%, 22px 100%, 0 calc(100% - 22px), 0 22px);
+    transition: transform .35s cubic-bezier(.3, 1.6, .5, 1); transform-origin: 0 50%;
+  }
+  .pr-tag:hover { transform: rotate(-3deg); }
+  .pr-tag:focus-visible { clip-path: none; outline-color: var(--encre); }
+  .pr-trou { position: absolute; left: 12px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: var(--t-creme); box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .2); }
+  .pr-tag > .ic { width: 1.6em; height: 1.6em; }
+  .pr-tag strong { font: 400 1.5rem/1.05 var(--police-titre); }
+  .pr-tag small { font-size: .9rem; line-height: 1.4; flex: 1; }
+  .pr-tag-pdf { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: var(--rayon-pilule); background: var(--t-jaune); color: var(--encre); font: 800 .9rem/1 var(--police-etiquette); letter-spacing: .08em; }
+
+  /* ——— Mes documents ——— */
+  .pr-docs { display: grid; grid-template-columns: 1fr 2fr 1.2fr; gap: 28px; align-items: start; }
+  .pr-docs-groupe { min-width: 0; }
+  .pr-docs-groupe h3 { margin: 0 0 12px; font: 800 1rem/1.1 var(--police-etiquette); letter-spacing: .12em; text-transform: uppercase; color: var(--encre-douce); }
+  .pr-cartes-docs { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .pr-docs-2 .pr-cartes-docs { grid-template-columns: 1fr 1fr; }
+  .pr-carte-doc { position: relative; display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; padding: 16px 44px 16px 16px; border-radius: 14px; background: var(--feuille); color: var(--encre); text-decoration: none; box-shadow: 0 6px 18px rgba(27, 42, 49, .06); transition: transform .2s, box-shadow .2s; height: 100%; }
+  .pr-carte-doc > .ic { grid-row: span 2; width: 34px; height: 34px; padding: 7px; border-radius: 50%; background: var(--t-jaune-pale); color: var(--encre); }
+  .pr-carte-doc strong { font-weight: 800; font-size: 1.05rem; line-height: 1.2; }
+  .pr-carte-doc small { color: var(--encre-douce); font-size: .88rem; line-height: 1.4; }
+  .pr-carte-fl { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--t-sentier); transition: transform .2s; }
+  .pr-carte-doc:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(27, 42, 49, .12); }
+  .pr-carte-doc:hover .pr-carte-fl { transform: translate(4px, -50%); }
+  .pr-carte-eval { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; align-items: center; padding: 12px 14px; border-radius: 12px; text-decoration: none; color: var(--encre); background: var(--feuille); border-left: 6px solid var(--periode); transition: transform .2s; }
+  .pr-carte-eval strong { font-weight: 800; }
+  .pr-carte-eval small { grid-column: 2; color: var(--encre-douce); font-size: .85rem; }
+  .pr-carte-eval:hover { transform: translateX(4px); }
+
+  /* ——— Le pied ——— */
+  .pr-pied { position: relative; margin-top: 60px; padding: 56px clamp(16px, 4vw, 48px) 36px; text-align: center; background: var(--t-pied); color: var(--encre); }
+  .pr-pied-sentier { position: absolute; left: 0; top: -20px; width: 100%; height: 40px; color: var(--t-sentier); }
+  .pr-pied-classe { margin: 0 0 18px; font: 800 1rem/1.3 var(--police-etiquette); letter-spacing: .1em; text-transform: uppercase; color: var(--encre); }
+  .pr-signature { display: inline-flex; align-items: center; gap: 12px; padding: 0 30px 0 22px; height: 62px; text-decoration: none; color: var(--t-jaune); background: var(--encre); clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 0 100%); transition: transform .3s; }
+  .pr-signature:hover { transform: translateX(6px); }
+  .pr-signature:focus-visible { clip-path: none; }
+  .pr-sig-petit { font: 600 .9rem/1 var(--police-etiquette); letter-spacing: .14em; text-transform: uppercase; color: #fff; }
+  .pr-sig-nom { font: 400 1.7rem/1 var(--police-titre); }
+  .pr-pied-texte { max-width: 72ch; margin: 22px auto 8px; color: var(--encre-douce); font-size: .9rem; }
+  .pr-pied-credits { max-width: 100ch; margin: 0 auto; color: var(--encre-douce); font-size: .8rem; }
+  .pr-pied-credits a { color: var(--encre); font-weight: 700; }
+  #pied .pied-origine { max-width: 100ch; margin: 8px auto 0; text-align: center; font-size: .8rem; color: var(--encre-douce); }
+
+  /* ——— Un document ——— */
+  .pr-doc-tete { margin-top: clamp(40px, 6vw, 76px); }
+  .pr-doc-tete h1 { margin: 0 0 16px; max-width: 16ch; font-size: clamp(2.4rem, 6vw, 4.6rem); }
+  .pr-doc-tete .pr-chapo { margin: 0 0 26px; }
+  .pr-doc-actions { display: flex; flex-wrap: wrap; gap: 18px 30px; align-items: center; }
+  .pr-btn-plaque { display: inline-flex; align-items: center; gap: 10px; height: 56px; padding: 0 34px 0 20px; text-decoration: none; background: var(--t-jaune); color: var(--encre); font: 800 1.15rem/1 var(--police-etiquette); letter-spacing: .06em; text-transform: uppercase; clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 0 100%); transition: transform .3s; }
+  .pr-btn-plaque:hover { transform: translateX(6px); }
+  .pr-btn-plaque:focus-visible { clip-path: none; }
+  .pr-extraits p, .pr-doc-cahiers p { margin: 0 0 8px; display: flex; gap: 8px; align-items: center; font-size: .9rem; color: var(--encre-douce); }
+  .pr-extraits-liste { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pr-extrait { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px 8px 10px; border-radius: var(--rayon-pilule); background: var(--feuille); color: var(--encre); text-decoration: none; font-weight: 700; font-size: .92rem; box-shadow: 0 3px 10px rgba(27, 42, 49, .07); transition: transform .15s; }
+  .pr-extrait .ic { color: var(--periode, var(--encre)); }
+  .pr-extrait:hover { transform: translateY(-2px); }
+  .pr-lecture { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 44px; margin-top: 48px; align-items: start; }
+  .pr-lecture.pr-sans-jalons { grid-template-columns: minmax(0, 1fr); }
+  .pr-lecture > * { min-width: 0; }
+  .pr-jalons { position: sticky; top: 24px; max-height: calc(100vh - 48px); overflow-y: auto; }
+  .pr-jalons-titre { margin: 0 0 12px; font: 800 .9rem/1 var(--police-etiquette); letter-spacing: .12em; text-transform: uppercase; color: var(--encre-douce); }
+  .pr-jalons ol { list-style: none; margin: 0; padding: 0 0 0 4px; position: relative; }
+  .pr-jalons ol::before { content: ""; position: absolute; left: 11px; top: 14px; bottom: 14px; border-left: 3px dotted var(--t-sentier); opacity: .6; }
+  .pr-jalons a { position: relative; display: flex; gap: 12px; align-items: center; padding: 8px 6px; text-decoration: none; color: var(--encre); font-size: .93rem; line-height: 1.25; border-radius: 10px; }
+  .pr-jalons a:hover, .pr-jalons a.pr-actif { background: var(--feuille); }
+  .pr-jalons a.pr-actif { font-weight: 700; }
+  .pr-j-point { flex: none; width: 18px; height: 18px; border-radius: 50%; background: var(--t-creme); border: 3px solid var(--encre-douce); position: relative; }
+  .pr-j-p .pr-j-point { background: var(--periode); border-color: #fff; box-shadow: 0 0 0 2px var(--periode); }
+
+  /* Le texte du document (le Markdown rendu) */
+  .pr-texte { background: var(--feuille); border-radius: 24px; padding: clamp(22px, 5vw, 64px) clamp(18px, 5vw, 68px); font-size: 1.125rem; line-height: 1.75; box-shadow: 0 20px 50px rgba(27, 42, 49, .07); color: var(--encre); }
+  .pr-texte > :first-child { margin-top: 0; }
+  .pr-texte p, .pr-texte li { max-width: 70ch; }
+  .pr-texte a { color: var(--encre); text-underline-offset: 3px; }
+  .pr-texte h2 { font: 400 clamp(1.6rem, 3vw, 2.3rem)/1.1 var(--police-titre); margin: 48px 0 18px; padding-top: 34px; border-top: 3px dotted var(--trait); text-wrap: balance; }
+  .pr-texte > h2:first-child { border-top: 0; padding-top: 0; }
+  .pr-texte hr { border: 0; margin: 0; }
+  .pr-texte h3 { font: 800 1.25rem/1.25 var(--police-etiquette); letter-spacing: .03em; text-transform: uppercase; margin: 32px 0 10px; color: var(--encre); }
+  .pr-texte h4 { font-size: 1.05rem; margin: 24px 0 8px; }
+  .pr-texte ul, .pr-texte ol { padding-left: 1.3em; }
+  .pr-texte li { margin: 4px 0; }
+  .pr-texte li::marker { color: var(--t-sentier); }
+  .pr-texte blockquote { margin: 18px 0; padding: 14px 20px; border-radius: 14px; background: var(--t-ciel-2); border-left: 6px solid var(--t-jaune); }
+  .pr-texte blockquote p { margin: 6px 0; }
+  .pr-texte code { background: var(--feuille-creuse); padding: .1em .35em; border-radius: 4px; font-size: .9em; overflow-wrap: anywhere; }
+  .pr-texte .zone-badge { display: block; flex-basis: 100%; margin-top: 6px; font: 600 1rem/1.3 var(--police-etiquette); letter-spacing: .04em; color: var(--encre-douce); }
+  .pr-h-periode { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; color: var(--periode); }
+  .pr-h-etape { display: inline-flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: var(--rayon-pilule); background: var(--periode); color: var(--sur-periode); font: 800 .95rem/1 var(--police-etiquette); letter-spacing: .1em; text-transform: uppercase; }
+  .pr-h-etape .pr-balise { box-shadow: none; background: linear-gradient(#fff 0 42%, transparent 42% 58%, rgba(255, 255, 255, .6) 58%); }
+  .pr-tableau { overflow-x: auto; margin: 6px 0 14px; }
+  .pr-texte table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: .98rem; line-height: 1.55; }
+  .pr-texte th { text-align: left; font: 800 .9rem/1.2 var(--police-etiquette); letter-spacing: .08em; text-transform: uppercase; color: var(--encre-douce); padding: 10px 14px; background: var(--t-ciel-2); vertical-align: bottom; }
+  .pr-texte th:first-child { border-radius: 10px 0 0 10px; }
+  .pr-texte th:last-child { border-radius: 0 10px 10px 0; }
+  .pr-texte td { padding: 14px; vertical-align: top; border-bottom: 1px solid var(--trait); }
+  .pr-texte td:first-child { font-weight: 800; }
+  .pr-tableau-p td:first-child { color: var(--periode); }
+
+  /* ——— La page d'un milieu ——— */
+  .pr-hero { position: relative; margin: 28px calc(50% - 50vw) 0; min-height: min(78vh, 720px); display: flex; align-items: flex-end; overflow: hidden; background: var(--encre); }
+  .pr-page-milieu > .pr-hero { margin-top: 28px; }
+  .pr-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  @media (prefers-reduced-motion: no-preference) {
+    .pr-hero-img { animation: pr-lent 30s ease-in-out infinite alternate; }
+  }
+  @keyframes pr-lent { from { transform: scale(1.02); } to { transform: scale(1.1) translateX(-1.5%); } }
+  .pr-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10, 25, 18, 0) 25%, rgba(10, 25, 18, .86)); }
+  .pr-hero-texte { position: relative; z-index: 2; width: 100%; max-width: 1280px; margin: 0 auto; padding: 120px clamp(16px, 4vw, 48px) clamp(64px, 8vw, 100px); color: #fff; }
+  .pr-hero .pr-surtitre { color: #fff; }
+  .pr-hero h1 { color: #fff; margin: 0 0 12px; font: 400 clamp(3.4rem, 12vw, 9rem)/.95 var(--police-titre); text-shadow: 0 6px 30px rgba(0, 0, 0, .35); }
+  .pr-hero .pr-chapo { color: #f6f8f4; margin: 0 0 20px; text-shadow: 0 1px 8px rgba(0, 0, 0, .5); }
+  .pr-pastilles { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .pr-pastilles li { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--rayon-pilule); background: rgba(10, 20, 24, .55); backdrop-filter: blur(6px); font-weight: 700; font-size: .95rem; }
+  .pr-pastilles .pr-p-ici { background: var(--t-jaune); color: var(--encre); }
+  .pr-hero-credit { position: absolute; z-index: 2; right: 16px; top: 12px; margin: 0; max-width: calc(100% - 32px); font-size: .75rem; color: #fff; background: rgba(0, 0, 0, .6); padding: 4px 8px; border-radius: 6px; }
+  .pr-carnet { display: grid; grid-template-columns: auto 1.3fr 1fr; gap: clamp(20px, 4vw, 48px); align-items: center; padding: clamp(22px, 4vw, 44px); border-radius: 28px; background: var(--feuille); box-shadow: 0 20px 50px rgba(27, 42, 49, .07); position: relative; z-index: 3; }
+  .pr-colonne > .pr-carnet:first-child { margin-top: -48px; }
+  .pr-carnet.pr-sans-photo { grid-template-columns: 1.3fr 1fr; }
+  .pr-polaroid { margin: 0; width: clamp(170px, 20vw, 230px); padding: 10px 10px 4px; background: #fff; box-shadow: 0 14px 34px rgba(0, 0, 0, .18); transform: rotate(-4deg); transition: transform .4s cubic-bezier(.3, 1.6, .5, 1); }
+  .pr-polaroid:hover { transform: rotate(2deg) scale(1.03); }
+  .pr-polaroid img { aspect-ratio: 1; object-fit: cover; width: 100%; height: auto; }
+  .pr-polaroid figcaption { text-align: center; font-size: 1.15rem; padding: 8px 0 6px; color: var(--encre); }
+  .pr-s-periode { color: var(--periode); }
+  .pr-carnet h2 { font: 400 clamp(2rem, 4vw, 3rem)/1 var(--police-titre); margin: 0 0 12px; color: var(--periode); }
+  .pr-carnet p { margin: 0 0 12px; }
+  .pr-carnet-sortie { align-self: stretch; padding: 22px; border-radius: 20px; background: var(--t-jaune); color: var(--encre); }
+  .pr-carnet-sortie .pr-surtitre { color: var(--encre); margin-bottom: 8px; }
+  .pr-carnet-sortie .pr-puces + .pr-surtitre { margin-top: 18px; }
+  .pr-carnet-sortie .pr-puces, .pr-elevage { font-weight: 600; font-size: 1.02rem; margin: 0; }
+  .pr-puces { margin: 0; padding-left: 1.2em; }
+  .pr-puces li { margin: 4px 0; }
+  .pr-arrets { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 28px; }
+  .pr-arret { display: grid; grid-template-columns: auto 1fr; gap: 16px; padding: 22px; border-radius: 20px; background: var(--feuille); box-shadow: 0 8px 26px rgba(27, 42, 49, .06); min-width: 0; }
+  .pr-arret > div { min-width: 0; }
+  .pr-arret-num { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: var(--periode); color: var(--sur-periode); font: 400 1.3rem/1 var(--police-titre); }
+  .pr-arret h3 { margin: 8px 0 12px; font: 800 1.35rem/1.1 var(--police-etiquette); letter-spacing: .03em; text-transform: uppercase; }
+  .pr-arret h3 a { display: inline-flex; align-items: center; gap: 10px; color: var(--encre); text-decoration: none; }
+  .pr-arret h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .pr-arret h3 .ic { color: var(--periode); }
+  .pr-arret ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-size: .96rem; line-height: 1.5; }
+  .pr-arret li { padding-left: 14px; border-left: 3px dotted var(--t-sentier); overflow-wrap: anywhere; }
+  .pr-composante { display: block; font: 800 .85rem/1.3 var(--police-etiquette); letter-spacing: .08em; text-transform: uppercase; color: var(--periode); }
+  .pr-rencontres { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+  .pr-rencontres li { display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center; font-size: 1.02rem; line-height: 1.2; color: var(--encre); }
+  .pr-rencontres img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 50%; border: 5px solid #fff; box-shadow: 0 8px 20px rgba(27, 42, 49, .14); transition: transform .35s cubic-bezier(.3, 1.6, .5, 1); }
+  .pr-rencontres li:hover img { transform: scale(1.07) rotate(-3deg); }
+  .pr-deux { display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(28px, 4vw, 56px); }
+  .pr-deux > * { min-width: 0; }
+  .pr-corpus { margin-bottom: 18px; }
+  .pr-corpus h3 { margin: 0 0 10px; font: 800 1rem/1.2 var(--police-etiquette); letter-spacing: .1em; text-transform: uppercase; color: var(--encre-douce); }
+  .pr-galets { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .pr-galets li { padding: 7px 14px; border-radius: 999px 999px 999px 999px / 70% 70% 90% 90%; background: var(--feuille); box-shadow: 0 3px 0 #e1e6df; font-size: 1.05rem; color: var(--encre); }
+  .pr-galets li:nth-child(3n) { background: var(--t-vert-pale); }
+  .pr-galets li:nth-child(4n) { background: var(--t-jaune-pale); }
+  .pr-albums { list-style: none; margin: 0 0 14px; padding: 0; display: grid; gap: 10px; }
+  .pr-album { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; padding: 16px 18px; border-radius: 16px; background: var(--feuille); border-left: 8px solid var(--periode); }
+  .pr-album strong { font: 400 1.4rem/1.15 var(--police-titre); }
+  .pr-album span { color: var(--encre-douce); }
+  .pr-album em { font: 800 .82rem/1 var(--police-etiquette); letter-spacing: .08em; text-transform: uppercase; padding: 5px 9px; border-radius: var(--rayon-pilule); background: var(--t-jaune); color: var(--encre); font-style: normal; }
+  .pr-album.pr-etoile { background: var(--periode-pale); }
+  .pr-arts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .pr-art { padding: 22px; border-radius: 20px; background: var(--feuille); box-shadow: 0 8px 26px rgba(27, 42, 49, .06); border-top: 6px solid var(--periode); min-width: 0; }
+  .pr-art h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 10px; font: 800 1.2rem/1.1 var(--police-etiquette); letter-spacing: .04em; text-transform: uppercase; }
+  .pr-art h3 .ic { color: var(--periode); }
+  .pr-suite { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 56px; }
+  .pr-suite a { display: flex; flex-direction: column; gap: 4px; padding: 18px 22px; border-radius: 18px; background: var(--feuille); color: var(--encre); text-decoration: none; font: 400 1.6rem/1.1 var(--police-titre); border-bottom: 6px solid var(--periode, var(--t-jaune)); transition: transform .2s; }
+  .pr-suite a small { font: 800 .9rem/1 var(--police-etiquette); letter-spacing: .1em; text-transform: uppercase; color: var(--encre-douce); }
+  .pr-suite .pr-suivante { text-align: right; }
+  .pr-suite a:hover { transform: translateY(-3px); }
+
+  /* ——— Écran moyen ——— */
+  @media (min-width: 861px) and (max-width: 1100px) {
+    .pr-plaque { font-size: .98rem; padding: 0 26px 0 14px; }
+    .pr-sacs, .pr-tags { grid-template-columns: 1fr 1fr; }
+    .pr-rencontres { grid-template-columns: repeat(4, 1fr); }
+    .pr-carnet { grid-template-columns: auto 1fr; }
+    .pr-carnet-sortie { grid-column: 1 / -1; }
+    .pr-docs { grid-template-columns: 1fr 1fr; }
+    .pr-docs-2 { grid-column: 1 / -1; grid-row: 1; }
+  }
+
+  /* ——— Téléphone : « Où va-t-on ? » ——— */
+  @media (max-width: 860px) {
+    .pr-poteau { display: none; }
+    .pr-haut { padding: 0; min-height: 76px; }
+    .pr-m-bouton { display: block; position: absolute; top: 14px; right: 12px; z-index: 40; padding: 0; border: 0; background: none; cursor: pointer; filter: drop-shadow(0 6px 12px rgba(0, 0, 0, .18)); }
+    .pr-m-bouton-plaque { display: inline-flex; align-items: center; gap: 10px; height: 48px; padding: 0 30px 0 16px; background: var(--t-jaune); color: var(--encre); font: 800 1.05rem/1 var(--police-etiquette); letter-spacing: .06em; text-transform: uppercase; clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 0 100%); }
+    .pr-m-bouton:focus-visible { outline-offset: 2px; }
+    .pr-m-poteau { position: fixed; inset: 0; z-index: 50; overflow-y: auto; overscroll-behavior: contain; padding: 18px 16px 40px; background: linear-gradient(180deg, var(--t-ciel), var(--t-ciel-2) 60%, var(--t-pied)); }
+    .pr-m-tete { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+    .pr-m-titre { margin: 0; font: 400 2.2rem/1 var(--police-titre); color: var(--encre); }
+    .pr-m-ferme { appearance: none; border: 0; display: inline-flex; align-items: center; gap: 6px; padding: 10px 14px; border-radius: var(--rayon-pilule); background: var(--encre); color: #fff; font: 800 .95rem/1 var(--police-etiquette); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; flex: none; }
+    .pr-m-ici { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; margin: 0 0 18px; padding: 10px 14px; border-radius: 14px; background: var(--feuille); color: var(--encre-douce); font-size: .9rem; }
+    .pr-m-ici span { font: 800 .85rem/1 var(--police-etiquette); letter-spacing: .1em; text-transform: uppercase; }
+    .pr-m-ici a { flex-basis: 100%; color: var(--encre); font-weight: 800; font-size: 1.05rem; }
+    .pr-m-chemin { position: relative; }
+    .pr-m-mat { position: absolute; left: 50%; top: -12px; bottom: -40px; width: 12px; transform: translateX(-50%); border-radius: 3px; background: var(--t-mat); }
+    .pr-m-plaques { position: relative; list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+    .pr-m-plaque > a, .pr-m-sommet {
+      appearance: none; border: 0; display: flex; align-items: center; gap: 10px; height: 58px; padding: 0 36px 0 18px; cursor: pointer; text-decoration: none;
+      background: var(--t-jaune); color: var(--encre); font: 800 1.3rem/1 var(--police-etiquette); letter-spacing: .05em; text-transform: uppercase; width: 86%;
+      clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 50%, calc(100% - 24px) 100%, 0 100%); box-shadow: inset 0 -4px 0 rgba(0, 0, 0, .12);
+    }
+    .pr-m-sommet em { font-style: normal; font-weight: 600; font-size: 1rem; padding: 2px 8px; border-radius: var(--rayon-pilule); background: rgba(27, 42, 49, .12); margin-left: auto; }
+    .pr-m-plaque > a:focus-visible, .pr-m-sommet:focus-visible { clip-path: none; }
+    .pr-g > a, .pr-g > .pr-m-sommet { margin-right: auto; transform: rotate(-1.5deg); }
+    .pr-d > a, .pr-d > .pr-m-sommet { margin-left: auto; transform: rotate(1.5deg); }
+    .pr-m-sommet[aria-expanded="true"], .pr-m-plaque > a[aria-current], .pr-m-sommet[data-actif] { background: var(--encre); color: var(--t-jaune); }
+    .pr-m-liste { list-style: none; margin: 10px 0 0; padding: 10px; border-radius: 18px; background: var(--feuille); box-shadow: 0 14px 30px rgba(27, 42, 49, .15); display: grid; gap: 2px; position: relative; }
+    .pr-page { padding-bottom: 60px; }
+    .pr-ouverture { margin-top: 24px; }
+    .pr-ouverture .pr-surtitre .pr-balise { display: none; }
+    .pr-surtitre { letter-spacing: .08em; font-size: .88rem; }
+    .pr-panorama { padding: 0 16px; }
+    .pr-vue { flex-basis: 84vw; scroll-snap-align: center; }
+    .pr-vue > a, .pr-vue:first-child > a, .pr-vue:last-child > a { height: 380px; border-radius: 0; }
+    .pr-pin { width: 52px; height: 52px; top: 20%; }
+    .pr-pin-texte { top: calc(20% + 40px); width: 150px; font-size: .78rem; transform: translateX(-12px); }
+    .pr-vous-etes-ici .pr-pin { transform: translate(-12px, -50%); }
+    .pr-fleches button { width: 44px; height: 44px; }
+    .pr-sentier { flex-direction: column; padding: 20px 16px; gap: 14px; }
+    .pr-troncon.pr-ici, .pr-halte.pr-ici { margin-top: 24px; }
+    .pr-halte { flex-basis: auto; flex-direction: row; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; margin-left: 18px; }
+    .pr-sacs { grid-template-columns: 1fr; }
+    .pr-tags { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .pr-tag { padding: 18px 12px 14px 30px; }
+    .pr-tag strong { font-size: 1.2rem; }
+    .pr-tag small { font-size: .82rem; }
+    .pr-docs, .pr-deux, .pr-arts, .pr-docs-2 .pr-cartes-docs { grid-template-columns: 1fr; }
+    .pr-doc-tete { margin-top: 24px; }
+    .pr-lecture { grid-template-columns: 1fr; gap: 16px; margin-top: 30px; }
+    .pr-jalons { position: sticky; top: 0; z-index: 5; margin: 0 -16px; padding: 10px 16px; max-height: none; overflow: visible; background: rgba(238, 246, 248, .96); backdrop-filter: blur(6px); }
+    .pr-jalons-titre { display: none; }
+    .pr-jalons ol { display: flex; overflow-x: auto; gap: 4px; padding: 0; scrollbar-width: none; }
+    .pr-jalons ol::before { display: none; }
+    .pr-jalons a { white-space: nowrap; background: var(--feuille); border-radius: var(--rayon-pilule); padding: 6px 12px 6px 6px; }
+    .pr-texte { margin: 0 -6px; padding: 22px 18px; font-size: 1.06rem; border-radius: 18px; }
+    .pr-texte table, .pr-texte tbody, .pr-texte tr, .pr-texte td { display: block; width: auto; }
+    .pr-texte thead { display: none; }
+    .pr-texte tr { padding: 14px 0; border-bottom: 3px dotted var(--trait); }
+    .pr-texte td { border: 0; padding: 4px 0; }
+    .pr-texte td[data-label]::before { content: attr(data-label); display: block; font: 800 .8rem/1.4 var(--police-etiquette); letter-spacing: .1em; text-transform: uppercase; color: var(--encre-douce); }
+    .pr-texte td:first-child::before { display: none; }
+    .pr-texte td:first-child { font-size: 1.2rem; }
+    .pr-tableau { overflow: visible; }
+    .pr-hero { min-height: 560px; margin-top: 0; }
+    .pr-page-milieu > .pr-hero { margin-top: 0; }
+    .pr-hero-texte { padding-top: 140px; }
+    .pr-carnet, .pr-carnet.pr-sans-photo { grid-template-columns: 1fr; justify-items: center; text-align: left; }
+    .pr-colonne > .pr-carnet:first-child { margin-top: -32px; }
+    .pr-carnet-texte, .pr-carnet-sortie { justify-self: stretch; }
+    .pr-arrets { grid-template-columns: 1fr; }
+    .pr-arret { padding: 18px 16px; gap: 12px; }
+    .pr-arret-num { width: 38px; height: 38px; }
+    .pr-rencontres { grid-template-columns: repeat(3, 1fr); gap: 12px 10px; }
+    .pr-rencontres li { font-size: .95rem; }
+    .pr-suite { grid-template-columns: 1fr; }
+    .pr-suite a { font-size: 1.35rem; }
+    .pr-suite .pr-suivante { text-align: left; }
+  }
+}

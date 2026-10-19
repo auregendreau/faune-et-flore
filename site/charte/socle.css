@@ -1,0 +1,118 @@
+/* Le socle de la charte — ce que toutes les classes partagent, quel que soit
+ * leur thème.
+ *
+ *  - Andika, la police de tout mot qu'un enfant lit (a et g à un étage, l et I
+ *    distincts) : elle ne dépend pas du thème, parce qu'elle sert la lecture ;
+ *  - les espacements (pas de 4 px) et les rayons ;
+ *  - la mécanique des périodes : data-periode="1".."5" pose --periode,
+ *    --periode-trait et --periode-pale à partir des --pN que fournit le thème.
+ *
+ * Le thème de la classe (site/charte/themes/<thème>/, choisi par classe.yml)
+ * fournit le reste : couleurs, polices de l'adulte, ombre (theme.css), et
+ * l'habillage des composants nommés (composants.css, facultatif), avec ses
+ * motifs et ses polices. scripts/classe.py generer assemble le socle et le
+ * thème dans site/charte/charte.css, le seul fichier que chargent les pages.
+ * Ne pas éditer charte.css à la main.
+ *
+ * Ce que le thème ne peut pas changer — la police de l'enfant, les
+ * espacements, la mécanique des périodes, le format des pages — est contrôlé
+ * par scripts/verifier-theme.py (skill charte-graphique, « Le contrat du
+ * thème »).
+ */
+
+/* ——— Police de l'enfant (auto-hébergée : le PDF se fabrique sans réseau) ——— */
+@font-face { font-family: "Andika"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("polices/andika-latin-400.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Andika"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("polices/andika-latin-ext-400.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Andika"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("polices/andika-latin-700.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Andika"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("polices/andika-latin-ext-700.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/* ——— La mention de la marque, au pied de chaque page du matériel ———
+   Fiches, imagier, cartes-corpus : « Conçu avec Encrine · encrine.ai », en
+   petit, dans la MARGE BASSE de la page (une boîte de marge @page) — elle ne
+   prend rien au contenu, et ne peut donc pas faire déborder une fiche : la
+   règle d'une page par fiche et par planche tient, au même nombre de pages.
+   Figtree, la police du texte d'Encrine (site/marque/), à l'ardoise douce
+   de la marque : gris doux, mais lisible à la photocopie. Placée en haut de
+   la marge (à 8 mm du bord), hors de la bande que les imprimantes rognent.
+   Du socle : aucun thème ne la retire (il n'écrit pas de @page). Les
+   documents de l'enseignant ont leur propre pied (impression.css). */
+@font-face { font-family: "Figtree"; font-style: normal; font-weight: 300 900; font-display: block;
+  src: url("../marque/polices/figtree-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@page {
+  @bottom-center {
+    content: "Conçu avec Encrine · encrine.ai";
+    vertical-align: top; padding-top: 1.8mm;
+    font: 500 6.8pt/1 "Figtree", Arial, sans-serif; letter-spacing: .02em; color: #4a5566;
+  }
+}
+/* Une boîte de marge ne fait pas charger sa police, et sans elle Chromium
+   n'imprime RIEN dans la boîte (pas même la police de secours) : ce double
+   invisible, à la police de la mention, la fait charger dès l'ouverture de
+   la page. Pas sous @media print : chargée au moment d'imprimer, la police
+   arrive trop tard et la mention disparaît (essayé). */
+html::before {
+  content: "Conçu avec Encrine · encrine.ai"; font: 500 6.8pt "Figtree", Arial, sans-serif;
+  position: absolute; top: 0; left: 0; visibility: hidden; pointer-events: none;
+}
+
+/* ——— Jetons communs ——— */
+:root {
+  /* La police des mots de l'enfant : la même pour toutes les classes */
+  --police-enfant: "Andika", "Century Gothic", Verdana, sans-serif;
+
+  /* Espacements (pas de 4 px) */
+  --esp-1: 4px; --esp-2: 8px; --esp-3: 12px; --esp-4: 16px;
+  --esp-5: 24px; --esp-6: 32px; --esp-7: 48px; --esp-8: 64px;
+
+  /* Les rayons ne sont pas du socle : ils donnent son visage à la classe,
+     le thème les porte (--rayon-s, -m, -l, -pilule). */
+
+  /* La mention de rangement des cartes (« période 1 · l'Europe · faune ») :
+     l'enseignant la lit en triant les cartes plastifiées. Imprimée à 5,5 pt
+     en gris pâle, elle ne se lisait plus ; 6,5 pt et l'encre douce (4,5:1)
+     sont le minimum. */
+  --repere-taille: 6.5pt;
+  --repere-encre: var(--encre-douce);
+
+  /* La police des étiquettes de l'adulte (pastilles, numéros de période,
+     tampons) : celle des titres, sauf si le thème en apporte une troisième. */
+  --police-etiquette: var(--police-titre);
+}
+
+/* Les ornements : des éléments vides que le moteur pose aux points
+   d'accroche (data-orne="…") et qu'un thème peut remplir d'un motif. Sans
+   thème, ils n'existent pas. Ils ne prennent jamais de place dans la page :
+   un thème les place en position absolue (verifier-theme.py le vérifie sur
+   le papier). */
+.orne { display: none; }
+
+/* La période d'un bloc : data-periode="1".."5" pose --periode, --periode-trait et --periode-pale. */
+[data-periode="1"] { --periode: var(--p1); --periode-trait: var(--p1-trait); --periode-pale: var(--p1-pale); }
+[data-periode="2"] { --periode: var(--p2); --periode-trait: var(--p2-trait); --periode-pale: var(--p2-pale); }
+[data-periode="3"] { --periode: var(--p3); --periode-trait: var(--p3-trait); --periode-pale: var(--p3-pale); }
+[data-periode="4"] { --periode: var(--p4); --periode-trait: var(--p4-trait); --periode-pale: var(--p4-pale); }
+[data-periode="5"] { --periode: var(--p5); --periode-trait: var(--p5-trait); --periode-pale: var(--p5-pale); }
+
+/* ——— Les mots que l'enfant lit ———
+   Tout mot qu'un enfant lit s'écrit en Andika (a et g à un étage, l et I
+   distincts) : cartes, étiquettes, mots sous les images, lettres, tableaux,
+   défis. Règle du socle, hors couche : ni le thème ni une feuille de cahier
+   ne la défont (verifier-theme.py refuse qu'un thème y touche). La consigne,
+   l'en-tête et le pied d'une fiche, qui s'adressent à l'adulte, restent dans
+   la police du texte. */
+.fiche :is(.case, .appariement .item, .alphabet .al, .bande .c, .carte-lettre, .plaque, .bande-lettres,
+  .mot-grand, .quadrillage td, .trace, .modele, table.tab td, table.tab th, .defi, .domino .total,
+  .graphisme, .seriation, .lettres-decoupe, .grandes-cases, .motif),
+.carte .mot, .etiquette .mot, .mot-tri, .mot-script, .couverture-titre,
+/* à l'écran, un mot de l'enfant que montre un gabarit (le nom d'une espèce,
+   un mot d'un corpus) : le thème en règle la taille, jamais la police */
+.mot-enfant { font-family: var(--police-enfant); }

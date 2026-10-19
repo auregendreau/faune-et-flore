@@ -1,0 +1,259 @@
+# La classe — la seule source de ce qui distingue cette classe d'une autre.
+#
+# Le moteur (site/*.js, scripts/) n'écrit en dur ni l'année, ni le niveau,
+# ni le thème, ni les milieux : il les lit ici. Après toute modification :
+#
+#   python3 scripts/classe.py generer    # site/classe.json et site/classe.js
+#   python3 scripts/classe.py verifier   # code 1 si une donnée de classe traîne dans le moteur
+#
+# puis régénérer les cahiers (generer-imagier.py, generer-cartes-corpus.py).
+
+nom: Ma Grande Section
+niveau:
+  code: GS
+  libelle: Grande Section
+annee: 2026-2027
+projet: À la découverte de la faune et de la flore
+sous_titre: la faune et la flore
+accroche: >-
+  Un milieu par période, de la ville à la mer. Tout le matériel de l’année est
+  ici : le projet, la programmation, les progressions de chaque domaine, les
+  évaluations, et les cahiers à imprimer pour la classe.
+conformite: >-
+  Conforme au programme officiel de l'école maternelle (cycle 1, 2024-2026) et
+  au programme d'éducation à la vie affective et relationnelle.
+
+# Le style du thème : un dossier de site/charte/themes/ (couleurs des périodes,
+# polices de l'adulte, gabarits du mini-site). Le socle commun — Andika,
+# espacements, mécanique des périodes — est site/charte/socle.css ;
+# classe.py assemble les deux dans site/charte/charte.css. « promenade » :
+# le mini-site « La Promenade » à l'écran ; sur le papier, la reprise fidèle
+# du Carnet de terrain (le thème faune-flore, gardé pour mémoire).
+theme: promenade
+
+# Comment l'outil s'adresse à l'enseignant : `tu` par défaut, comme entre
+# collègues ; `vous` s'il l'a demandé à la première question de l'entretien
+# (skill nouvelle-classe). Les skills qui lui parlent le lisent ici.
+ton: tu
+
+# La signature de l'enseignante (skill nouvelle-classe, « Comment veux-tu
+# signer ta classe ? ») : son nom tel qu'elle veut le voir sur le site, ou
+# rien ; `mot`, un petit mot d'accueil, facultatif. Le site est public : ni
+# l'école ni la ville.
+enseignant:
+  signature: Aurélie
+
+# Celui qui a préparé la classe pour l'enseignante (skill nouvelle-classe,
+# « Pour quelqu'un d'autre ») : `nom`, le prénom que nomme PRISE-EN-MAIN.md,
+# et `github`, son identifiant, pour le garder collaborateur après le
+# transfert (skill reprendre-ma-classe).
+accompagnant:
+  nom: Jean-Louis
+  github: jlrigau
+
+# La date où l'enseignante a relu et validé le contenu de sa classe.
+valide_le: 2026-10-18
+
+# Le dépôt GitHub de CETTE classe, « propriétaire/dépôt ».
+depot: jlrigau/faune-et-flore
+
+# Le moteur dont la classe dérive (skills synchroniser-moteur et
+# remonter-au-moteur) : `depot` le dépôt modèle, `propriétaire/dépôt` ;
+# `version` le commit du moteur copié à la dernière synchronisation.
+moteur:
+  depot: encrine-ai/moteur
+  version: f150c1c
+
+# La galerie de la plateforme, où une classe se partage si l'enseignant le
+# veut (skill partager-ma-classe) : `depot` le dépôt de la galerie,
+# `propriétaire/dépôt`.
+galerie:
+  depot: encrine-ai/encrine-ai.github.io
+
+# Ce que l'enseignant a déclaré avant un partage (scripts/verifier-partage.py) :
+#   prenoms_fictifs  — les prénoms des énoncés, qui ne sont pas des élèves ;
+#   textes_autorises — les passages recopiés en entier, avec leur raison
+#                      (domaine public, écrit par l'enseignant…), par leurs
+#                      premiers mots : {debut: …, raison: …}.
+# Les quatre prénoms ci-dessous sont les personnages des problèmes de
+# mathématiques (« Léa a 4 crabes, Tom en a 2 de plus ») ; l'enseignante a
+# confirmé qu'ils sont inventés. Léon est le héros de l'album « L'école de
+# Léon » (projet annuel, période 5), repris dans classe/projet.yml.
+partage:
+  prenoms_fictifs: [Julie, Léa, Sacha, Tom, Léon]
+  textes_autorises: []
+
+# Le contenu propre à la classe, hors du code moteur. Les scripts lisent ces
+# chemins ici, jamais en dur : une autre classe pointe vers ses propres fichiers.
+#   referentiel  — le programme du niveau, en lignes numérotées (moteur, partagé)
+#   annotations  — ce que l'année traite, période par période (couverture.py)
+#   imagier      — les espèces de l'imagier et leurs photographies retenues
+#   corpus       — les mots des cartes-corpus et l'origine de chaque image
+#   projet       — le projet en données pour le site (mascottes, albums,
+#                  œuvres, sorties… par milieu), recopié du projet annuel
+contenu:
+  referentiel: referentiel/cycle1-gs.yml
+  annotations: classe/annotations.yml
+  imagier: classe/imagier.py
+  corpus: classe/corpus.py
+  projet: classe/projet.yml
+
+# La zone de vacances de la classe, seul réglage du calendrier. Les dates des
+# trois zones sont dans le moteur (referentiel/calendrier-<annee>.yml) ; les
+# cinq périodes en découlent : rentrée → Toussaint → Noël → hiver → printemps
+# → fin d'année. Un pont propre à l'école s'ajouterait ici (`ponts`).
+calendrier:
+  zone: C
+
+# Un milieu par période. `icone` : un symbole du sprite site/charte/icones.svg ;
+# `couleur` : le nom de la couleur de période du style du thème (site/charte/),
+# tel qu'on le dit à l'enseignante (« le filet bleu ») ; `imagier` : la phrase
+# de la page de garde de l'imagier.
+periodes:
+  - cle: ville
+    milieu: La ville
+    icone: building-2
+    emoji: 🏙️
+    couleur: bleu
+    imagier: Les animaux et les plantes de la ville, des parcs et des trottoirs.
+  - cle: foret
+    milieu: La forêt
+    icone: trees
+    emoji: 🌳
+    couleur: vert
+    imagier: Les animaux et les plantes des bois et des sous-bois.
+  - cle: montagne
+    milieu: La montagne
+    icone: mountain-snow
+    emoji: ⛰️
+    couleur: violet
+    imagier: Les animaux et les plantes de l’étage montagnard et alpin.
+  - cle: campagne
+    milieu: La campagne
+    icone: wheat
+    emoji: 🌾
+    couleur: ocre
+    imagier: Les animaux de la ferme et des prés, les cultures et les fleurs des champs.
+  - cle: mer
+    milieu: La mer
+    icone: waves
+    emoji: 🌊
+    couleur: turquoise
+    imagier: Les animaux du bord de mer, les plantes du littoral et les algues.
+
+# Comment l'accueil nomme les périodes : « L'année en cinq milieux ».
+periodes_nom: milieux
+
+# Le matériel à imprimer, cahier par cahier, et les périodes qui l'ont.
+# `cle` : entrainement, evaluation, imagier ou cartes-corpus (le moteur en
+# déduit la page source et le PDF, scripts/classe.py) ; `icone` : un symbole
+# du sprite ; `desc` : la ligne sous le titre, à l'accueil ; `intitule` : ce
+# que le cahier rassemble, dans son titre imprimé (« Imagier faune et flore ») ;
+# `fichier` : le nom du PDF téléchargé, sans le niveau ni la période.
+# `classe.py verifier` refuse un cahier déclaré sans page, ou une page sans
+# déclaration : l'accueil n'annonce que ce qui existe.
+materiel:
+  - cle: entrainement
+    titre: Entraînement
+    icone: pencil
+    desc: 12 fiches, 2 niveaux (★ / ★★) et défis
+    periodes: [1, 2, 3, 4, 5]
+  - cle: evaluation
+    titre: Évaluation
+    icone: printer
+    desc: les fiches élève de fin de période
+    periodes: [1, 2, 3, 4, 5]
+  - cle: imagier
+    titre: Imagier
+    icone: image
+    desc: 18 animaux et 18 plantes en photographies
+    intitule: faune et flore
+    fichier: imagier-faune-flore
+    periodes: [1, 2, 3, 4, 5]
+  - cle: cartes-corpus
+    titre: Cartes-corpus
+    icone: layers
+    desc: les mots des trois corpus et les étiquettes de tri
+    periodes: [1, 2, 3, 4, 5]
+
+# Les documents de l'application, dans l'ordre du menu. `md` : chemin dans le
+# site assemblé ; `par_periode` : extraits « Période N » imprimés à part ;
+# `fiches` : la période dont les cahiers s'attachent au document.
+documents:
+  - {id: accueil, titre: Accueil, icone: house}
+  - id: projet-annuel
+    titre: Le projet annuel
+    icone: target
+    md: content/01-projet-annuel.md
+    groupe: Pour piloter l’année
+    desc: Le fil rouge, les thèmes, les albums, les chants, les sorties.
+  - id: programmation
+    titre: La programmation annuelle
+    icone: calendar-range
+    md: content/02-programmation-annuelle.md
+    groupe: Pour piloter l’année
+    desc: Tous les domaines période par période, en un coup d’œil.
+  - id: langage
+    titre: Langage oral et écrit
+    icone: message-circle
+    md: content/03-progressions/01-langage-oral-ecrit.md
+    groupe: Mes progressions
+    par_periode: true
+    desc: Vocabulaire, phonologie, lettres, écriture, compréhension.
+  - id: maths
+    titre: Mathématiques
+    icone: shapes
+    md: content/03-progressions/02-mathematiques.md
+    groupe: Mes progressions
+    par_periode: true
+    desc: Nombres, problèmes, formes, grandeurs, motifs.
+  - id: eps
+    titre: Activités physiques
+    icone: person-standing
+    md: content/03-progressions/03-activites-physiques.md
+    groupe: Mes progressions
+    par_periode: true
+    desc: Les unités d’apprentissage de l’année, séance par séance.
+  - id: arts
+    titre: Activités artistiques
+    icone: palette
+    md: content/03-progressions/04-activites-artistiques.md
+    groupe: Mes progressions
+    par_periode: true
+    desc: Dessin, graphisme, compositions, musique, spectacle vivant.
+  - id: temps-espace
+    titre: Temps et espace
+    icone: compass
+    md: content/03-progressions/05-temps-espace.md
+    groupe: Mes progressions
+    par_periode: true
+    desc: Rituels, chronologie, plans, quadrillages, planisphère.
+  - id: monde
+    titre: Le monde du vivant et des objets
+    icone: sprout
+    md: content/03-progressions/06-monde-vivant-matiere-objets.md
+    groupe: Mes progressions
+    par_periode: true
+    desc: Élevages, plantations, matière, fabrications.
+  - id: evar
+    titre: Vie affective et relationnelle
+    icone: heart-handshake
+    md: content/03-progressions/07-evar.md
+    groupe: Mes progressions
+    desc: Les 3 séances obligatoires et le fil continu.
+  - id: eval-guide
+    titre: Mode d’emploi et livret de suivi
+    icone: clipboard-list
+    md: content/04-evaluations/00-mode-emploi-et-livret-de-suivi.md
+    groupe: Mes évaluations
+    desc: Principes, codage, livret annuel, grille de vocabulaire.
+  - {id: eval-p1, fiches: 1, md: content/04-evaluations/periode-1-ville.md, groupe: Mes évaluations, desc: 13 fiches + grilles d’observation (octobre).}
+  - {id: eval-p2, fiches: 2, md: content/04-evaluations/periode-2-foret.md, groupe: Mes évaluations, desc: 14 fiches + grilles d’observation (décembre).}
+  - {id: eval-p3, fiches: 3, md: content/04-evaluations/periode-3-montagne.md, groupe: Mes évaluations, desc: 15 fiches + grilles d’observation (février).}
+  - {id: eval-p4, fiches: 4, md: content/04-evaluations/periode-4-campagne.md, groupe: Mes évaluations, desc: 15 fiches + grilles d’observation (avril).}
+  - {id: eval-p5, fiches: 5, md: content/04-evaluations/periode-5-mer.md, groupe: Mes évaluations, desc: Bilan de fin de GS + liaison CP (juin).}
+
+# Le nom sous l'icône de l'appli, qui doit tenir en une douzaine de lettres
+# (choisi par le propriétaire) ; le titre complet reste celui du site.
+appli:
+  nom_court: Faune et flore

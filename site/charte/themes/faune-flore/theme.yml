@@ -1,0 +1,23 @@
+# Le thème « faune-flore » : la charte « Carnet de terrain » de la classe.
+# Il porte ses jetons (theme.css) et n'habille aucun composant : pas
+# d'habillage.css, pas de motif. Contrôlé par scripts/verifier-theme.py
+# (skill charte-graphique, « Le contrat du thème »).
+nom: Carnet de terrain
+description: >-
+  Un carnet de naturaliste — un papier légèrement vert, une encre de sapin,
+  et une couleur par milieu (le filet bleu de la ville, le vert de la forêt,
+  le violet de la montagne, l'ocre de la campagne, le turquoise de la mer).
+polices:
+  - famille: Bricolage Grotesque
+    role: titres de l'adulte (--police-titre)
+    fichiers: [polices/bricolage-grotesque-latin.woff2, polices/bricolage-grotesque-latin-ext.woff2]
+    licence: OFL-1.1
+    auteur: The Bricolage Grotesque Project Authors
+    source: https://github.com/ateliertriay/bricolage
+  - famille: Atkinson Hyperlegible Next
+    role: texte de l'adulte (--police-texte)
+    fichiers: [polices/atkinson-next-latin.woff2, polices/atkinson-next-latin-ext.woff2, polices/atkinson-next-latin-italic.woff2]
+    licence: OFL-1.1
+    auteur: Braille Institute of America
+    source: https://www.brailleinstitute.org/freefont/
+motifs: []

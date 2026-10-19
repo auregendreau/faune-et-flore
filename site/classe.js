@@ -1,0 +1,3409 @@
+/* Fabriqué par scripts/classe.py depuis classe.yml : ne pas modifier à la main. */
+var CLASSE = {
+  "nom": "Ma Grande Section",
+  "niveau": {
+    "code": "GS",
+    "libelle": "Grande Section"
+  },
+  "annee": "2026-2027",
+  "projet": "À la découverte de la faune et de la flore",
+  "sous_titre": "la faune et la flore",
+  "accroche": "Un milieu par période, de la ville à la mer. Tout le matériel de l’année est ici : le projet, la programmation, les progressions de chaque domaine, les évaluations, et les cahiers à imprimer pour la classe.",
+  "conformite": "Conforme au programme officiel de l'école maternelle (cycle 1, 2024-2026) et au programme d'éducation à la vie affective et relationnelle.",
+  "theme": "promenade",
+  "ton": "tu",
+  "enseignant": {
+    "contact": "",
+    "ecole": "",
+    "mot": "",
+    "signature": "Aurélie",
+    "ville": ""
+  },
+  "accompagnant": {
+    "nom": "Jean-Louis",
+    "github": "jlrigau"
+  },
+  "valide_le": "2026-10-18",
+  "depot": "jlrigau/faune-et-flore",
+  "moteur": {
+    "depot": "encrine-ai/moteur",
+    "version": "f150c1c"
+  },
+  "galerie": {
+    "depot": "encrine-ai/encrine-ai.github.io"
+  },
+  "partage": {
+    "prenoms_fictifs": [
+      "Julie",
+      "Léa",
+      "Sacha",
+      "Tom",
+      "Léon"
+    ],
+    "textes_autorises": []
+  },
+  "contenu": {
+    "referentiel": "referentiel/cycle1-gs.yml",
+    "annotations": "classe/annotations.yml",
+    "imagier": "classe/imagier.py",
+    "corpus": "classe/corpus.py",
+    "projet": "classe/projet.yml"
+  },
+  "calendrier": {
+    "zone": "C",
+    "rentree": "2026-09-01",
+    "fin": "2027-07-02",
+    "toussaint": {
+      "debut": "2026-10-17",
+      "reprise": "2026-11-02"
+    },
+    "noel": {
+      "debut": "2026-12-19",
+      "reprise": "2027-01-04"
+    },
+    "hiver": {
+      "debut": "2027-02-06",
+      "reprise": "2027-02-22"
+    },
+    "printemps": {
+      "debut": "2027-04-03",
+      "reprise": "2027-04-19"
+    },
+    "ponts": [
+      {
+        "nom": "Pont de l’Ascension",
+        "du": "2027-05-06",
+        "au": "2027-05-09"
+      }
+    ]
+  },
+  "periodes": [
+    {
+      "cle": "ville",
+      "milieu": "La ville",
+      "icone": "building-2",
+      "emoji": "🏙️",
+      "couleur": "bleu",
+      "imagier": "Les animaux et les plantes de la ville, des parcs et des trottoirs."
+    },
+    {
+      "cle": "foret",
+      "milieu": "La forêt",
+      "icone": "trees",
+      "emoji": "🌳",
+      "couleur": "vert",
+      "imagier": "Les animaux et les plantes des bois et des sous-bois."
+    },
+    {
+      "cle": "montagne",
+      "milieu": "La montagne",
+      "icone": "mountain-snow",
+      "emoji": "⛰️",
+      "couleur": "violet",
+      "imagier": "Les animaux et les plantes de l’étage montagnard et alpin."
+    },
+    {
+      "cle": "campagne",
+      "milieu": "La campagne",
+      "icone": "wheat",
+      "emoji": "🌾",
+      "couleur": "ocre",
+      "imagier": "Les animaux de la ferme et des prés, les cultures et les fleurs des champs."
+    },
+    {
+      "cle": "mer",
+      "milieu": "La mer",
+      "icone": "waves",
+      "emoji": "🌊",
+      "couleur": "turquoise",
+      "imagier": "Les animaux du bord de mer, les plantes du littoral et les algues."
+    }
+  ],
+  "periodes_nom": "milieux",
+  "materiel": [
+    {
+      "cle": "entrainement",
+      "titre": "Entraînement",
+      "icone": "pencil",
+      "desc": "12 fiches, 2 niveaux (★ / ★★) et défis",
+      "periodes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "source": "fiches/entrainement-periode-{n}.html",
+      "pdf": "pdf/fiches-entrainement-periode-{n}.pdf",
+      "nom": "fiches-entrainement",
+      "budget": 10000
+    },
+    {
+      "cle": "evaluation",
+      "titre": "Évaluation",
+      "icone": "printer",
+      "desc": "les fiches élève de fin de période",
+      "periodes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "source": "fiches/periode-{n}.html",
+      "pdf": "pdf/fiches-eleve-periode-{n}.pdf",
+      "nom": "fiches-eleve",
+      "budget": 10000
+    },
+    {
+      "cle": "imagier",
+      "titre": "Imagier",
+      "icone": "image",
+      "desc": "18 animaux et 18 plantes en photographies",
+      "intitule": "faune et flore",
+      "fichier": "imagier-faune-flore",
+      "periodes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "source": "imagier/periode-{n}.html",
+      "pdf": "pdf/imagier-periode-{n}.pdf",
+      "nom": "imagier",
+      "budget": 30000,
+      "couverture": true
+    },
+    {
+      "cle": "cartes-corpus",
+      "titre": "Cartes-corpus",
+      "icone": "layers",
+      "desc": "les mots des trois corpus et les étiquettes de tri",
+      "periodes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "source": "cartes-corpus/periode-{n}.html",
+      "pdf": "pdf/cartes-corpus-periode-{n}.pdf",
+      "nom": "cartes-corpus",
+      "budget": 30000,
+      "couverture": true
+    }
+  ],
+  "documents": [
+    {
+      "id": "accueil",
+      "titre": "Accueil",
+      "icone": "house"
+    },
+    {
+      "id": "projet-annuel",
+      "titre": "Le projet annuel",
+      "icone": "target",
+      "md": "content/01-projet-annuel.md",
+      "groupe": "Pour piloter l’année",
+      "desc": "Le fil rouge, les thèmes, les albums, les chants, les sorties."
+    },
+    {
+      "id": "programmation",
+      "titre": "La programmation annuelle",
+      "icone": "calendar-range",
+      "md": "content/02-programmation-annuelle.md",
+      "groupe": "Pour piloter l’année",
+      "desc": "Tous les domaines période par période, en un coup d’œil."
+    },
+    {
+      "id": "langage",
+      "titre": "Langage oral et écrit",
+      "icone": "message-circle",
+      "md": "content/03-progressions/01-langage-oral-ecrit.md",
+      "groupe": "Mes progressions",
+      "par_periode": true,
+      "desc": "Vocabulaire, phonologie, lettres, écriture, compréhension."
+    },
+    {
+      "id": "maths",
+      "titre": "Mathématiques",
+      "icone": "shapes",
+      "md": "content/03-progressions/02-mathematiques.md",
+      "groupe": "Mes progressions",
+      "par_periode": true,
+      "desc": "Nombres, problèmes, formes, grandeurs, motifs."
+    },
+    {
+      "id": "eps",
+      "titre": "Activités physiques",
+      "icone": "person-standing",
+      "md": "content/03-progressions/03-activites-physiques.md",
+      "groupe": "Mes progressions",
+      "par_periode": true,
+      "desc": "Les unités d’apprentissage de l’année, séance par séance."
+    },
+    {
+      "id": "arts",
+      "titre": "Activités artistiques",
+      "icone": "palette",
+      "md": "content/03-progressions/04-activites-artistiques.md",
+      "groupe": "Mes progressions",
+      "par_periode": true,
+      "desc": "Dessin, graphisme, compositions, musique, spectacle vivant."
+    },
+    {
+      "id": "temps-espace",
+      "titre": "Temps et espace",
+      "icone": "compass",
+      "md": "content/03-progressions/05-temps-espace.md",
+      "groupe": "Mes progressions",
+      "par_periode": true,
+      "desc": "Rituels, chronologie, plans, quadrillages, planisphère."
+    },
+    {
+      "id": "monde",
+      "titre": "Le monde du vivant et des objets",
+      "icone": "sprout",
+      "md": "content/03-progressions/06-monde-vivant-matiere-objets.md",
+      "groupe": "Mes progressions",
+      "par_periode": true,
+      "desc": "Élevages, plantations, matière, fabrications."
+    },
+    {
+      "id": "evar",
+      "titre": "Vie affective et relationnelle",
+      "icone": "heart-handshake",
+      "md": "content/03-progressions/07-evar.md",
+      "groupe": "Mes progressions",
+      "desc": "Les 3 séances obligatoires et le fil continu."
+    },
+    {
+      "id": "eval-guide",
+      "titre": "Mode d’emploi et livret de suivi",
+      "icone": "clipboard-list",
+      "md": "content/04-evaluations/00-mode-emploi-et-livret-de-suivi.md",
+      "groupe": "Mes évaluations",
+      "desc": "Principes, codage, livret annuel, grille de vocabulaire."
+    },
+    {
+      "id": "eval-p1",
+      "fiches": 1,
+      "md": "content/04-evaluations/periode-1-ville.md",
+      "groupe": "Mes évaluations",
+      "desc": "13 fiches + grilles d’observation (octobre).",
+      "titre": "Période 1 · La ville",
+      "icone": "building-2"
+    },
+    {
+      "id": "eval-p2",
+      "fiches": 2,
+      "md": "content/04-evaluations/periode-2-foret.md",
+      "groupe": "Mes évaluations",
+      "desc": "14 fiches + grilles d’observation (décembre).",
+      "titre": "Période 2 · La forêt",
+      "icone": "trees"
+    },
+    {
+      "id": "eval-p3",
+      "fiches": 3,
+      "md": "content/04-evaluations/periode-3-montagne.md",
+      "groupe": "Mes évaluations",
+      "desc": "15 fiches + grilles d’observation (février).",
+      "titre": "Période 3 · La montagne",
+      "icone": "mountain-snow"
+    },
+    {
+      "id": "eval-p4",
+      "fiches": 4,
+      "md": "content/04-evaluations/periode-4-campagne.md",
+      "groupe": "Mes évaluations",
+      "desc": "15 fiches + grilles d’observation (avril).",
+      "titre": "Période 4 · La campagne",
+      "icone": "wheat"
+    },
+    {
+      "id": "eval-p5",
+      "fiches": 5,
+      "md": "content/04-evaluations/periode-5-mer.md",
+      "groupe": "Mes évaluations",
+      "desc": "Bilan de fin de GS + liaison CP (juin).",
+      "titre": "Période 5 · La mer",
+      "icone": "waves"
+    }
+  ],
+  "appli": {
+    "nom": "Ma Grande Section — À la découverte de la faune et de la flore",
+    "nom_court": "Faune et flore",
+    "initiale": "F"
+  },
+  "donnees_projet": {
+    "annee": {
+      "mascotte": {
+        "cle": "mascottes",
+        "nom": "Les mascottes voyageuses",
+        "texte": "un animal-mascotte par période (pigeon → écureuil → marmotte → poule → poisson) qui « écrit » à la classe et introduit les situations-problèmes."
+      },
+      "fils_rouges": [
+        {
+          "cle": "carnet",
+          "nom": "Le carnet du petit explorateur",
+          "texte": "carnet individuel enrichi à chaque période (dessins d'observation légendés en dictée à l'adulte puis en essais d'écriture, photographies, collections, traces des expériences). Il matérialise les progrès (évaluation positive) et fait le lien avec les familles."
+        },
+        {
+          "cle": "fresque",
+          "nom": "La fresque des cinq milieux",
+          "texte": "fresque collective évolutive dans le couloir ; à chaque période, un nouveau paysage est ajouté avec ses animaux et ses végétaux (compositions plastiques)."
+        },
+        {
+          "cle": "imagier",
+          "nom": "L'imagier sonore et illustré de la classe",
+          "texte": "imagier numérique ou papier des corpus de vocabulaire, réactivé quotidiennement (rituel « le mot du jour »). Il s'appuie sur l'**imagier Montessori « faune et flore »** du site — un jeu de cartes de nomenclature par période (18 animaux et 18 plantes du milieu, photographies, cartes de contrôle, cartes-photos et étiquettes-mots à découper et à plastifier)."
+        },
+        {
+          "cle": "elevages",
+          "nom": "Élevages et plantations",
+          "texte": "escargotière (P1), plantations de bulbes (P2), expériences sur la glace (P3), semis et élevage de chenilles/papillons ou observation d'un poulailler (P4), aquarium ou bac marin (P5)."
+        }
+      ]
+    },
+    "periodes": {
+      "ville": {
+        "resume": "Les animaux et les plantes de la ville, des parcs et des trottoirs.",
+        "mascotte": {
+          "nom": "pigeon",
+          "embleme": {
+            "imagier": "pigeon-biset"
+          }
+        },
+        "albums": [
+          {
+            "titre": "Le jardin voyageur",
+            "auteur": "P. Brown",
+            "etude": true
+          },
+          {
+            "titre": "Une nuit, un chat",
+            "auteur": "Y. Pommaux"
+          },
+          {
+            "titre": "La ville",
+            "note": "imagiers"
+          },
+          {
+            "titre": "Aujourd'hui on va…"
+          }
+        ],
+        "documentaires": [
+          "la ville",
+          "les oiseaux des villes",
+          "l'escargot"
+        ],
+        "textes": [
+          "comptines de rentrée, « Dans Paris » (P. Éluard, version adaptée), chant « Petit escargot » revisité"
+        ],
+        "oeuvres": [
+          "Mondrian (lignes de la ville), S. Delaunay (cercles), Hundertwasser (façades)",
+          "fresque « notre quartier » à partir des photos de la sortie"
+        ],
+        "musique": [
+          "sons de la ville (paysage sonore)",
+          "chant choral",
+          "percussions corporelles"
+        ],
+        "spectacle": [
+          "mime des déplacements urbains",
+          "théâtre d'ombres « la nuit en ville »"
+        ],
+        "sorties": [
+          "Sortie « quartier » (bâtiments, arbres d'alignement, oiseaux des villes)",
+          "visite du parc municipal",
+          "Semaine du goût"
+        ],
+        "embleme": "images/tableau-ville.jpg",
+        "theme": {
+          "promenade": {
+            "elevage": "escargotière",
+            "programmation": [
+              {
+                "document": "langage",
+                "composantes": [
+                  {
+                    "nom": "**Vocabulaire** (3 corpus/période)",
+                    "texte": "ville, petites bêtes de la ville, arbres et parcs ; catégorisation (hyperonyme *bâtiment*, *animal*)"
+                  },
+                  {
+                    "nom": "**Syntaxe**",
+                    "texte": "phrases simples enrichies ; pronoms *nous/vous* ; connecteurs *et, puis, parce que*"
+                  },
+                  {
+                    "nom": "**Articulation**",
+                    "texte": "paires t/k, f/s (rituels d'imagier)"
+                  },
+                  {
+                    "nom": "**Discours variés**",
+                    "texte": "dire ce qu'on a fait/va faire ; se présenter"
+                  },
+                  {
+                    "nom": "**Phonologie**",
+                    "texte": "syllabes : scander, dénombrer, comparer ; localiser une syllabe"
+                  },
+                  {
+                    "nom": "**Lettres (nom, son, graphies)**",
+                    "texte": "lettres du prénom et des prénoms de la classe (3 graphies) ; abécédaire de la ville"
+                  },
+                  {
+                    "nom": "**Écriture (geste)**",
+                    "texte": "tenue du crayon, posture ; boucles, coupes ; capitales (révision)"
+                  },
+                  {
+                    "nom": "**Production d'écrits**",
+                    "texte": "dictée à l'adulte : légender les photos de la sortie quartier"
+                  },
+                  {
+                    "nom": "**Compréhension d'écrits**",
+                    "texte": "fonctions des écrits de la classe ; personnages d'une histoire en ville"
+                  },
+                  {
+                    "nom": "**Éveil à la diversité linguistique**",
+                    "texte": "se saluer dans plusieurs langues (langues de la classe)"
+                  }
+                ]
+              },
+              {
+                "document": "maths",
+                "composantes": [
+                  {
+                    "nom": "**Quantités et nombres**",
+                    "texte": "stabiliser jusqu'à **6** : collections, décompositions de 3, 4, 5 ; comptine jusqu'à 12 ; écriture chiffrée 1-6"
+                  },
+                  {
+                    "nom": "**Rang et position**",
+                    "texte": "premier/dernier/deuxième dans la file ; jeux de rangs (file des piétons)"
+                  },
+                  {
+                    "nom": "**Résolution de problèmes**",
+                    "texte": "parties-tout avec matériel (escargots cachés)"
+                  },
+                  {
+                    "nom": "**Solides et formes planes**",
+                    "texte": "formes planes dans la ville : carré, rectangle, triangle, disque (façades) ; tri toutes orientations"
+                  },
+                  {
+                    "nom": "**Grandeurs**",
+                    "texte": "longueur : comparaison directe (immeubles de briques)"
+                  },
+                  {
+                    "nom": "**Motifs organisés**",
+                    "texte": "motifs répétitifs simples : colliers, algorithmes de façades (AB, AAB)"
+                  }
+                ]
+              },
+              {
+                "document": "eps",
+                "composantes": [
+                  {
+                    "nom": "Se déplacer",
+                    "texte": "courir vite « traverser au feu vert » ; s'orienter dans l'école et la cour (photos)"
+                  },
+                  {
+                    "nom": "Construire des équilibres",
+                    "texte": "parcours « chantier » : marcher sur des bancs-« trottoirs »"
+                  },
+                  {
+                    "nom": "S'exprimer avec son corps",
+                    "texte": "rondes et jeux chantés de rentrée"
+                  },
+                  {
+                    "nom": "Coopérer et s'opposer",
+                    "texte": "jeux de poursuite simples (*Le chat et la souris* version « chat des villes »)"
+                  }
+                ]
+              },
+              {
+                "document": "arts",
+                "composantes": [
+                  {
+                    "nom": "**Dessin**",
+                    "texte": "dessin d'observation : ma rue, un immeuble ; dessin du bonhomme (référence de rentrée)"
+                  },
+                  {
+                    "nom": "**Graphisme artistique**",
+                    "texte": "lignes verticales/horizontales, quadrillages (façades, fenêtres) — Mondrian"
+                  },
+                  {
+                    "nom": "**Compositions plastiques**",
+                    "texte": "maquette du quartier (boîtes peintes) ; fresque collective n°1"
+                  },
+                  {
+                    "nom": "**Univers sonores**",
+                    "texte": "paysage sonore de la ville ; percussions corporelles ; 2 chants"
+                  },
+                  {
+                    "nom": "**Spectacle vivant**",
+                    "texte": "mime des déplacements urbains ; découverte de l'espace scénique"
+                  }
+                ]
+              },
+              {
+                "document": "temps-espace",
+                "composantes": [
+                  {
+                    "nom": "**Temps**",
+                    "texte": "jours de la semaine (rituel) ; hier/aujourd'hui/demain ; chronologie de la journée"
+                  },
+                  {
+                    "nom": "**Espace**",
+                    "texte": "espaces proches : plan de la classe, **maquette puis plan du quartier** ; vocabulaire spatial"
+                  },
+                  {
+                    "nom": "**Environnement proche**",
+                    "texte": "sortie quartier : bâtiments publics, commerces, habitat"
+                  }
+                ]
+              },
+              {
+                "document": "monde",
+                "composantes": [
+                  {
+                    "nom": "**Vivant : animaux et végétaux**",
+                    "texte": "élevage d'**escargots** (besoins, morphologie, soins) ; oiseaux des villes ; arbres du quartier (feuilles)"
+                  },
+                  {
+                    "nom": "**Corps humain et santé**",
+                    "texte": "parties du corps (rappel) ; hygiène des mains ; se repérer : la toise de septembre"
+                  },
+                  {
+                    "nom": "**Matière**",
+                    "texte": "l'air : moulinets, manches à air dans la cour"
+                  },
+                  {
+                    "nom": "**Objets et fabrications**",
+                    "texte": "fabriquer un hôtel à insectes simple ; sécurité : pictogrammes de la classe"
+                  }
+                ]
+              },
+              {
+                "document": "evar",
+                "composantes": [
+                  {
+                    "nom": "Séance spécifique obligatoire",
+                    "texte": "**Séance 1 — « Mon corps, mes sensations, mes émotions »** : identifier ses émotions et celles des autres (rentrée) ; météo des émotions"
+                  },
+                  {
+                    "nom": "Fil continu",
+                    "texte": "règles de vie co-construites ; marguerite des adultes de confiance (rappel MS)"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "foret": {
+        "resume": "Les animaux et les plantes des bois et des sous-bois.",
+        "mascotte": {
+          "nom": "écureuil",
+          "embleme": {
+            "imagier": "ecureuil-roux"
+          }
+        },
+        "albums": [
+          {
+            "titre": "Gruffalo",
+            "auteur": "J. Donaldson",
+            "etude": true
+          },
+          {
+            "titre": "La chasse à l'ours",
+            "auteur": "M. Rosen"
+          },
+          {
+            "titre": "Une soupe au caillou",
+            "auteur": "A. Vaugelade"
+          },
+          {
+            "titre": "Trois courageux petits gorilles",
+            "note": "… en réseau « loup/renard rusé »"
+          }
+        ],
+        "documentaires": [
+          "la forêt",
+          "l'écureuil",
+          "le hérisson",
+          "les arbres"
+        ],
+        "textes": [
+          "« Colchiques dans les prés »",
+          "poème sur l'automne",
+          "« Promenons-nous dans les bois » (réinvestissement MS)"
+        ],
+        "oeuvres": [
+          "A. Goldsworthy (land art ★ sortie), empreintes de feuilles, camaïeux d'automne",
+          "Klimt (arbres)"
+        ],
+        "musique": [
+          "♪ **Vivaldi, « L'automne » (Les Quatre Saisons)** (œuvre patrimoniale 1)",
+          "loto sonore des animaux de la forêt"
+        ],
+        "spectacle": [
+          "marionnettes du Gruffalo",
+          "jeu théâtral des personnages archétypaux"
+        ],
+        "sorties": [
+          "Sortie en forêt ou parc boisé (collecte de feuilles, fruits d'automne, empreintes)",
+          "spectacle de fin d'année"
+        ],
+        "embleme": "images/tableau-foret.jpg",
+        "theme": {
+          "promenade": {
+            "elevage": "plantations de bulbes",
+            "programmation": [
+              {
+                "document": "langage",
+                "composantes": [
+                  {
+                    "nom": "**Vocabulaire** (3 corpus/période)",
+                    "texte": "forêt, animaux de la forêt, fruits d'automne ; dérivations (*champignon/champignonnière*), contraires"
+                  },
+                  {
+                    "nom": "**Syntaxe**",
+                    "texte": "récits avec *d'abord/ensuite/enfin* ; imparfait/passé composé (rappels de la sortie)"
+                  },
+                  {
+                    "nom": "**Articulation**",
+                    "texte": "ch/s, ch/j (*chaud/seau, mouche/mousse*)"
+                  },
+                  {
+                    "nom": "**Discours variés**",
+                    "texte": "décrire une action menée par un autre ; rappel de récit avec marottes"
+                  },
+                  {
+                    "nom": "**Phonologie**",
+                    "texte": "syllabes : fusion, suppression, ajout ; **rimes** et assonances"
+                  },
+                  {
+                    "nom": "**Lettres (nom, son, graphies)**",
+                    "texte": "alphabet en capitales + script ; valeur sonore des voyelles"
+                  },
+                  {
+                    "nom": "**Écriture (geste)**",
+                    "texte": "premières lettres cursives (e, l, i, u, t) ; ligature"
+                  },
+                  {
+                    "nom": "**Production d'écrits**",
+                    "texte": "dictée à l'adulte : recette de la soupe ; premiers **encodages** de syllabes (LU, RI…)"
+                  },
+                  {
+                    "nom": "**Compréhension d'écrits**",
+                    "texte": "personnages **archétypaux** (loup, ogre, renard rusé) ; structure répétitive (*Gruffalo*)"
+                  },
+                  {
+                    "nom": "**Éveil à la diversité linguistique**",
+                    "texte": "comptine en anglais sur les animaux"
+                  }
+                ]
+              },
+              {
+                "document": "maths",
+                "composantes": [
+                  {
+                    "nom": "**Quantités et nombres**",
+                    "texte": "jusqu'à **8** : compositions/décompositions (doubles 2+2, 3+3, 4+4) ; surcomptage ; comptine jusqu'à 20"
+                  },
+                  {
+                    "nom": "**Rang et position**",
+                    "texte": "rang jusqu'au 10e (file des animaux vers le terrier) ; changer le point de départ"
+                  },
+                  {
+                    "nom": "**Résolution de problèmes**",
+                    "texte": "ajout/retrait (provisions de l'écureuil) ; représentation sur papier"
+                  },
+                  {
+                    "nom": "**Solides et formes planes**",
+                    "texte": "reproduire des assemblages (jusqu'à 8 formes) : maquette de la forêt ; empreintes"
+                  },
+                  {
+                    "nom": "**Grandeurs**",
+                    "texte": "longueur : **bande témoin** (comparaisons indirectes de bâtons) ; ordonner 5 objets"
+                  },
+                  {
+                    "nom": "**Motifs organisés**",
+                    "texte": "motifs répétitifs complexes (ABC, AABB) : guirlandes, couronnes"
+                  }
+                ]
+              },
+              {
+                "document": "eps",
+                "composantes": [
+                  {
+                    "nom": "Se déplacer",
+                    "texte": "courir longtemps « le tour de la forêt » (durée matérialisée) ; sauter les « ruisseaux »"
+                  },
+                  {
+                    "nom": "Construire des équilibres",
+                    "texte": "quadrupédie, grimper, se suspendre (parcours des animaux de la forêt)"
+                  },
+                  {
+                    "nom": "S'exprimer avec son corps",
+                    "texte": "danse des feuilles (lent/rapide, léger/saccadé) ; mime des animaux"
+                  },
+                  {
+                    "nom": "Coopérer et s'opposer",
+                    "texte": "*Promenons-nous dans les bois* enrichi ; jeu des écureuils en cage"
+                  }
+                ]
+              },
+              {
+                "document": "arts",
+                "composantes": [
+                  {
+                    "nom": "**Dessin**",
+                    "texte": "dessiner un arbre d'après nature (sortie) ; animaux de la forêt d'après modèle"
+                  },
+                  {
+                    "nom": "**Graphisme artistique**",
+                    "texte": "boucles, spirales (escargots, feuilles) — Goldsworthy ; empreintes"
+                  },
+                  {
+                    "nom": "**Compositions plastiques**",
+                    "texte": "land art éphémère (sortie) ; tableaux d'automne (collage feuilles) ; fresque n°2"
+                  },
+                  {
+                    "nom": "**Univers sonores**",
+                    "texte": "Vivaldi « L'automne » ♪ ; loto sonore forêt ; 2-3 chants"
+                  },
+                  {
+                    "nom": "**Spectacle vivant**",
+                    "texte": "jeu théâtral *Gruffalo* (marionnettes) ; spectateur actif"
+                  }
+                ]
+              },
+              {
+                "document": "temps-espace",
+                "composantes": [
+                  {
+                    "nom": "**Temps**",
+                    "texte": "**la date complète** (jour + mois) ; ordonner les photos de la sortie ; l'automne"
+                  },
+                  {
+                    "nom": "**Espace**",
+                    "texte": "parcours et labyrinthes ; coder un déplacement (flèches) ; devant/derrière/entre"
+                  },
+                  {
+                    "nom": "**Environnement proche**",
+                    "texte": "la forêt : milieu moins familier (sortie) ; comparaison ville/forêt"
+                  }
+                ]
+              },
+              {
+                "document": "monde",
+                "composantes": [
+                  {
+                    "nom": "**Vivant : animaux et végétaux**",
+                    "texte": "animaux de la forêt : régimes, traces, **hibernation** ; cycle de l'arbre ; plantation de bulbes"
+                  },
+                  {
+                    "nom": "**Corps humain et santé**",
+                    "texte": "les 5 sens en forêt (toucher, odorat, ouïe) ; équilibre alimentaire (soupe)"
+                  },
+                  {
+                    "nom": "**Matière**",
+                    "texte": "transformations : la soupe (cru/cuit) ; feuilles qui sèchent ; tri et matériaux"
+                  },
+                  {
+                    "nom": "**Objets et fabrications**",
+                    "texte": "fabriquer des cadres-empreintes ; outils de la collecte (loupes, boîtes)"
+                  }
+                ]
+              },
+              {
+                "document": "evar",
+                "composantes": [
+                  {
+                    "nom": "Fil continu",
+                    "texte": "messages clairs (initiation) ; émotions des personnages du *Gruffalo*"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "montagne": {
+        "resume": "Les animaux et les plantes de l’étage montagnard et alpin.",
+        "mascotte": {
+          "nom": "marmotte",
+          "embleme": {
+            "imagier": "marmotte-alpine"
+          }
+        },
+        "albums": [
+          {
+            "titre": "La moufle",
+            "note": "conte russe, structure répétitive",
+            "etude": true
+          },
+          {
+            "titre": "Neige",
+            "auteur": "U. Shulevitz"
+          },
+          {
+            "titre": "Perlette, goutte d'eau"
+          },
+          {
+            "titre": "Le bonhomme de neige",
+            "auteur": "R. Briggs",
+            "note": "album sans texte"
+          }
+        ],
+        "documentaires": [
+          "la montagne",
+          "la marmotte",
+          "l'eau et la glace"
+        ],
+        "textes": [
+          "« Neige, neige blanche »",
+          "virelangues sur [s]/[ch]",
+          "chant d'hiver"
+        ],
+        "oeuvres": [
+          "Hokusai (montagnes), photographies de flocons (W. Bentley), blanc sur bleu (gouache, craies)"
+        ],
+        "musique": [
+          "♪ **Vivaldi, « L'hiver »** (œuvre patrimoniale 2)",
+          "paysages sonores du vent et de la tempête"
+        ],
+        "spectacle": [
+          "danse « flocons » (lent/rapide, léger/lourd)",
+          "théâtre de la moufle"
+        ],
+        "sorties": [
+          "Intervention « milieu montagnard » ou malle documentaire",
+          "expériences neige/glace",
+          "carnaval éventuel"
+        ],
+        "embleme": "images/tableau-montagne.jpg",
+        "theme": {
+          "promenade": {
+            "elevage": "expériences sur la glace",
+            "programmation": [
+              {
+                "document": "langage",
+                "composantes": [
+                  {
+                    "nom": "**Vocabulaire** (3 corpus/période)",
+                    "texte": "montagne, animaux de montagne, neige et glace ; mots des émotions et états mentaux ; mots phonologiquement proches"
+                  },
+                  {
+                    "nom": "**Syntaxe**",
+                    "texte": "système à 3 temps (imparfait/plus-que-parfait/« allait ») ; *pour que, si*"
+                  },
+                  {
+                    "nom": "**Articulation**",
+                    "texte": "doubles consonnes br/cr/bl (*brrr, flocon, glace*)"
+                  },
+                  {
+                    "nom": "**Discours variés**",
+                    "texte": "expliquer une expérience (langage d'évocation) ; émettre une hypothèse"
+                  },
+                  {
+                    "nom": "**Phonologie**",
+                    "texte": "**attaque/rime** ; premiers phonèmes voyelles [a] [i] [o] [u] ; discriminer on/en/un"
+                  },
+                  {
+                    "nom": "**Lettres (nom, son, graphies)**",
+                    "texte": "correspondances capitale/script/**cursive** ; consonnes fricatives et liquides"
+                  },
+                  {
+                    "nom": "**Écriture (geste)**",
+                    "texte": "cursives rondes (c, o, a, d) ; prénom en cursive avec modèle"
+                  },
+                  {
+                    "nom": "**Production d'écrits**",
+                    "texte": "encodage de mots transparents (MOTO, VÉLO, LAMA…) ; lettre à la mascotte"
+                  },
+                  {
+                    "nom": "**Compréhension d'écrits**",
+                    "texte": "implicite : émotions et intentions (la moufle : pourquoi refuser ?) ; rappel sans support"
+                  },
+                  {
+                    "nom": "**Éveil à la diversité linguistique**",
+                    "texte": "chants de montagne (occitan, savoyard…) ; comparaison de sonorités"
+                  }
+                ]
+              },
+              {
+                "document": "maths",
+                "composantes": [
+                  {
+                    "nom": "**Quantités et nombres**",
+                    "texte": "jusqu'à **10** : décompositions de 10, doubles 5+5 ; comptine jusqu'à 30 ; décomptage de 10 à 1 ; écriture chiffrée 1-10"
+                  },
+                  {
+                    "nom": "**Rang et position**",
+                    "texte": "bande numérique jusqu'à 10 : construire, compléter ; jeu de l'oie « télésiège » (avancer/reculer)"
+                  },
+                  {
+                    "nom": "**Résolution de problèmes**",
+                    "texte": "écarts et comparaison (« 3 de plus ») ; position initiale/finale"
+                  },
+                  {
+                    "nom": "**Solides et formes planes**",
+                    "texte": "**solides** : cube, pavé, pyramide, cylindre, cône, boule (chalets, sommets) ; description (faces, sommets)"
+                  },
+                  {
+                    "nom": "**Grandeurs**",
+                    "texte": "masse : soupeser, **balance de Roberval** (boules de neige, glaçons)"
+                  },
+                  {
+                    "nom": "**Motifs organisés**",
+                    "texte": "**motifs évolutifs** (ABAABBAAABBB) : frises de flocons ; verbaliser la règle"
+                  }
+                ]
+              },
+              {
+                "document": "eps",
+                "composantes": [
+                  {
+                    "nom": "Se déplacer",
+                    "texte": "lancer haut et loin (boules de « neige ») ; franchir des obstacles « crevasses »"
+                  },
+                  {
+                    "nom": "Construire des équilibres",
+                    "texte": "**glisser** : patins-chaussons, planches à roulettes ; équilibres dynamiques « skieur » ; rouler"
+                  },
+                  {
+                    "nom": "S'exprimer avec son corps",
+                    "texte": "danse « flocons et tempête » (énergie, espace) ; statues de glace"
+                  },
+                  {
+                    "nom": "Coopérer et s'opposer",
+                    "texte": "jeux de conquête « décrocher le coquillage » adapté « le drapeau du sommet » ; relais « cordée » (coopération)"
+                  }
+                ]
+              },
+              {
+                "document": "arts",
+                "composantes": [
+                  {
+                    "nom": "**Dessin**",
+                    "texte": "paysage de montagne ; personnage en mouvement (skieur) d'après mannequin articulé"
+                  },
+                  {
+                    "nom": "**Graphisme artistique**",
+                    "texte": "lignes brisées (sommets), étoiles/flocons ; blanc sur fond froid"
+                  },
+                  {
+                    "nom": "**Compositions plastiques**",
+                    "texte": "sculptures de glace colorée ; montagnes en relief (papier froissé) ; fresque n°3"
+                  },
+                  {
+                    "nom": "**Univers sonores**",
+                    "texte": "Vivaldi « L'hiver » ♪ ; traduire la musique en dessin ; 2 chants"
+                  },
+                  {
+                    "nom": "**Spectacle vivant**",
+                    "texte": "théâtre de *La moufle* (personnages successifs, coulisses)"
+                  }
+                ]
+              },
+              {
+                "document": "temps-espace",
+                "composantes": [
+                  {
+                    "nom": "**Temps**",
+                    "texte": "les mois de l'année ; les 4 saisons ; comparer des durées (sablier, chronomètre) ; l'hiver"
+                  },
+                  {
+                    "nom": "**Espace**",
+                    "texte": "gauche/droite sur soi et en déplacement ; lire un parcours sur plan (pistes de ski)"
+                  },
+                  {
+                    "nom": "**Environnement proche**",
+                    "texte": "la montagne par documents (milieu lointain) ; comparaison avec notre milieu"
+                  }
+                ]
+              },
+              {
+                "document": "monde",
+                "composantes": [
+                  {
+                    "nom": "**Vivant : animaux et végétaux**",
+                    "texte": "adaptation au froid (pelage, hibernation de la marmotte, migration) ; classement des animaux (poils, plumes, écailles)"
+                  },
+                  {
+                    "nom": "**Corps humain et santé**",
+                    "texte": "**articulations et segments** (pantin, danse) ; se protéger du froid ; croissance (toise)"
+                  },
+                  {
+                    "nom": "**Matière**",
+                    "texte": "**états de l'eau** ★ : glace/eau/vapeur, fusion, solidification ; le givre ; mélanges réfrigérants"
+                  },
+                  {
+                    "nom": "**Objets et fabrications**",
+                    "texte": "fabriquer un thermomètre-témoin décoré ; luge de poupée (plan incliné)"
+                  }
+                ]
+              },
+              {
+                "document": "evar",
+                "composantes": [
+                  {
+                    "nom": "Séance spécifique obligatoire",
+                    "texte": "**Séance 2 — « Mes relations aux autres »** : identifier les types de sentiments (amitié, entraide) ; la confiance (jeux type colin-maillard)"
+                  },
+                  {
+                    "nom": "Fil continu",
+                    "texte": "coopération dans les jeux collectifs ; « le coin de l'aide »"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "campagne": {
+        "resume": "Les animaux de la ferme et des prés, les cultures et les fleurs des champs.",
+        "mascotte": {
+          "nom": "poule",
+          "embleme": {
+            "imagier": "poule"
+          }
+        },
+        "albums": [
+          {
+            "titre": "La petite poule rousse",
+            "auteur": "B. Barton",
+            "etude": true
+          },
+          {
+            "titre": "Quel radis dis donc !"
+          },
+          {
+            "titre": "La chenille qui fait des trous",
+            "auteur": "E. Carle"
+          },
+          {
+            "titre": "Toujours rien ?",
+            "auteur": "C. Voltz"
+          }
+        ],
+        "documentaires": [
+          "de la graine à la plante",
+          "de l'œuf à la poule",
+          "l'abeille"
+        ],
+        "textes": [
+          "« Une poule sur un mur » (détournée), poème sur le printemps, chant « Mon petit lapin »"
+        ],
+        "oeuvres": [
+          "Arcimboldo (portraits-légumes), Van Gogh (champs, tournesols)",
+          "modelage d'animaux de la ferme"
+        ],
+        "musique": [
+          "♪ **Saint-Saëns, « Le Carnaval des animaux »** (œuvre patrimoniale 3 — poules, coucou)",
+          "rythmes et bruits de la ferme"
+        ],
+        "spectacle": [
+          "mise en scène de *La petite poule rousse*",
+          "rondes et jeux chantés traditionnels"
+        ],
+        "sorties": [
+          "**Sortie à la ferme pédagogique** (temps fort de l'année)",
+          "semis et potager de l'école"
+        ],
+        "embleme": "images/tableau-campagne.jpg",
+        "theme": {
+          "promenade": {
+            "elevage": "semis et élevage de chenilles/papillons ou observation d'un poulailler",
+            "programmation": [
+              {
+                "document": "langage",
+                "composantes": [
+                  {
+                    "nom": "**Vocabulaire** (3 corpus/période)",
+                    "texte": "ferme, animaux de la ferme, graines et plantations ; familles de mots (*planter/plantation*), synonymes"
+                  },
+                  {
+                    "nom": "**Syntaxe**",
+                    "texte": "futur simple et futur antérieur (projets de semis : « quand on aura planté… »)"
+                  },
+                  {
+                    "nom": "**Articulation**",
+                    "texte": "ch/z, p/b (*bijou/bisou*) ; virelangues"
+                  },
+                  {
+                    "nom": "**Discours variés**",
+                    "texte": "expliquer une démarche (semis) à qui ne l'a pas vécue ; reformuler"
+                  },
+                  {
+                    "nom": "**Phonologie**",
+                    "texte": "phonèmes fricatives [s] [f] [v] [z] [ch] ; localiser un phonème dans un mot"
+                  },
+                  {
+                    "nom": "**Lettres (nom, son, graphies)**",
+                    "texte": "toutes les lettres dans les 3 graphies ; épellation de mots connus"
+                  },
+                  {
+                    "nom": "**Écriture (geste)**",
+                    "texte": "cursives complexes (m, n, p, b, f, k) ; **prénom en cursive sans modèle**"
+                  },
+                  {
+                    "nom": "**Production d'écrits**",
+                    "texte": "encodage guidé (RADIS, SALADE…) ; étiquettes du potager"
+                  },
+                  {
+                    "nom": "**Compréhension d'écrits**",
+                    "texte": "structure du conte en randonnée ; motivations des personnages (*Petite poule rousse*)"
+                  },
+                  {
+                    "nom": "**Éveil à la diversité linguistique**",
+                    "texte": "noms des animaux de la ferme en plusieurs langues"
+                  }
+                ]
+              },
+              {
+                "document": "maths",
+                "composantes": [
+                  {
+                    "nom": "**Quantités et nombres**",
+                    "texte": "**au-delà de 10** ; compléments à 10 ; comptage de 2 en 2 jusqu'à 20 ; comparer des écritures chiffrées"
+                  },
+                  {
+                    "nom": "**Rang et position**",
+                    "texte": "déplacements sur piste (jeu du poulailler) ; lien ajout/avancement, retrait/recul"
+                  },
+                  {
+                    "nom": "**Résolution de problèmes**",
+                    "texte": "**groupements** (œufs par boîtes) et **partage équitable** (graines) avec reste"
+                  },
+                  {
+                    "nom": "**Solides et formes planes**",
+                    "texte": "tangrams et pavages (animaux de la ferme) ; règle comme outil de tracé"
+                  },
+                  {
+                    "nom": "**Grandeurs**",
+                    "texte": "masse : ordonner 3 objets, égalité, transitivité (récoltes)"
+                  },
+                  {
+                    "nom": "**Motifs organisés**",
+                    "texte": "transcrire un motif avec d'autres symboles ; motifs sonores et gestuels"
+                  }
+                ]
+              },
+              {
+                "document": "eps",
+                "composantes": [
+                  {
+                    "nom": "Se déplacer",
+                    "texte": "courir vite et franchir la « rivière » sans ralentir ; enchaîner courir-sauter"
+                  },
+                  {
+                    "nom": "Construire des équilibres",
+                    "texte": "brouettes, échasses ; parcours « de la ferme » avec transport"
+                  },
+                  {
+                    "nom": "S'exprimer avec son corps",
+                    "texte": "danse des animaux (poules, papillons) ; arts du cirque (jonglage foulards)"
+                  },
+                  {
+                    "nom": "Coopérer et s'opposer",
+                    "texte": "jeux collectifs avec rôles : *Renards, poules, serpents* ★ (attaquant/défenseur/arbitre)"
+                  }
+                ]
+              },
+              {
+                "document": "arts",
+                "composantes": [
+                  {
+                    "nom": "**Dessin**",
+                    "texte": "dessin d'observation : semis, poussin ; portrait à la manière d'Arcimboldo"
+                  },
+                  {
+                    "nom": "**Graphisme artistique**",
+                    "texte": "ponts, vagues de labours, semis de points ; répertoire réinvesti en fresque"
+                  },
+                  {
+                    "nom": "**Compositions plastiques**",
+                    "texte": "modelage : animaux de la ferme (argile) ; totems du printemps ; fresque n°4"
+                  },
+                  {
+                    "nom": "**Univers sonores**",
+                    "texte": "Saint-Saëns « Le Carnaval des animaux » ♪ ; rythmes avec instruments ; 2-3 chants"
+                  },
+                  {
+                    "nom": "**Spectacle vivant**",
+                    "texte": "mise en scène *La petite poule rousse* ; rencontres avec des artistes si possible"
+                  }
+                ]
+              },
+              {
+                "document": "temps-espace",
+                "composantes": [
+                  {
+                    "nom": "**Temps**",
+                    "texte": "étapes d'un processus long : semis, œuf-poussin (frises chronologiques) ; le printemps"
+                  },
+                  {
+                    "nom": "**Espace**",
+                    "texte": "quadrillages (potager en carrés) ; se repérer sur un plan de la ferme"
+                  },
+                  {
+                    "nom": "**Environnement proche**",
+                    "texte": "la campagne : sortie ferme ; comparaison des 4 milieux"
+                  }
+                ]
+              },
+              {
+                "document": "monde",
+                "composantes": [
+                  {
+                    "nom": "**Vivant : animaux et végétaux**",
+                    "texte": "**cycles de vie** : graine→plante (semis), œuf→poule, chenille→papillon ; besoins des plantes (expérience) ; l'abeille et la biodiversité"
+                  },
+                  {
+                    "nom": "**Corps humain et santé**",
+                    "texte": "alimentation : d'où viennent les aliments ; le goût ; prendre soin de soi"
+                  },
+                  {
+                    "nom": "**Matière**",
+                    "texte": "dissolution (sucre, sel / sable) ; l'eau et les plantes ; terre, sable, graviers"
+                  },
+                  {
+                    "nom": "**Objets et fabrications**",
+                    "texte": "fabriquer un moulin à vent ; semoir-entonnoir ; suite d'instructions (3-5) pour planter"
+                  }
+                ]
+              },
+              {
+                "document": "evar",
+                "composantes": [
+                  {
+                    "nom": "Fil continu",
+                    "texte": "entraide aux semis ; respecter le vivant ; égalité filles-garçons dans les rôles de jeux"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "mer": {
+        "resume": "Les animaux du bord de mer, les plantes du littoral et les algues.",
+        "mascotte": {
+          "nom": "poisson"
+        },
+        "albums": [
+          {
+            "titre": "Arc-en-ciel, le plus beau poisson des océans",
+            "auteur": "M. Pfister",
+            "etude": true
+          },
+          {
+            "titre": "Petit poisson blanc",
+            "auteur": "G. Van Genechten"
+          },
+          {
+            "titre": "L'école de Léon",
+            "note": "liaison CP"
+          },
+          "contes des mers"
+        ],
+        "documentaires": [
+          "la mer",
+          "les animaux du littoral",
+          "les bateaux"
+        ],
+        "textes": [
+          "« Il était un petit navire »",
+          "« La baleine bleue »",
+          "poème sur la mer",
+          "chants pour la fête de fin d'année"
+        ],
+        "oeuvres": [
+          "Hokusai, *La Grande Vague de Kanagawa*",
+          "Matisse (papiers découpés, *Polynésie, la mer*)",
+          "Niki de Saint-Phalle"
+        ],
+        "musique": [
+          "♪ Debussy, *La Mer* (extraits)",
+          "création d'un paysage sonore marin enregistré pour l'exposition"
+        ],
+        "spectacle": [
+          "chorégraphie « vagues et poissons » présentée aux familles"
+        ],
+        "sorties": [
+          "Sortie aquarium (ou classe de mer selon projet d'école)",
+          "exposition de fin d'année « Notre tour des cinq milieux » présentée aux familles",
+          "liaison GS-CP"
+        ],
+        "embleme": "images/tableau-mer.jpg",
+        "theme": {
+          "promenade": {
+            "elevage": "aquarium ou bac marin",
+            "programmation": [
+              {
+                "document": "langage",
+                "composantes": [
+                  {
+                    "nom": "**Vocabulaire** (3 corpus/période)",
+                    "texte": "mer, animaux marins, plage et bateaux ; sens propre/figuré ; réinvestissement des 15 corpus, inférence de mots inconnus"
+                  },
+                  {
+                    "nom": "**Syntaxe**",
+                    "texte": "introducteurs *où, quand, comme* ; complexification autonome ; récits complets"
+                  },
+                  {
+                    "nom": "**Articulation**",
+                    "texte": "consolidation : tous les couples, débit et intonation"
+                  },
+                  {
+                    "nom": "**Discours variés**",
+                    "texte": "exposé « mon animal marin » ; conversation argumentée ; hypothèses et conclusions"
+                  },
+                  {
+                    "nom": "**Phonologie**",
+                    "texte": "manipulation de phonèmes (ajout, suppression) ; intrus à l'initiale ; préparation CP"
+                  },
+                  {
+                    "nom": "**Lettres (nom, son, graphies)**",
+                    "texte": "nom de toutes les lettres + valeur sonore (hors occlusives) ; distinction b/d, p/q"
+                  },
+                  {
+                    "nom": "**Écriture (geste)**",
+                    "texte": "enchaînement de mots courts en cursive ; mots transparents avec/sans modèle"
+                  },
+                  {
+                    "nom": "**Production d'écrits**",
+                    "texte": "écriture autonome de mots transparents ; carte postale de la mer (dictée + essais)"
+                  },
+                  {
+                    "nom": "**Compréhension d'écrits**",
+                    "texte": "raconter une histoire entière sans support ; lien avec sa propre expérience ; structure de la lettre/carte postale"
+                  },
+                  {
+                    "nom": "**Éveil à la diversité linguistique**",
+                    "texte": "comptine en anglais sur la mer ; imagier bilingue"
+                  }
+                ]
+              },
+              {
+                "document": "maths",
+                "composantes": [
+                  {
+                    "nom": "**Quantités et nombres**",
+                    "texte": "consolidation ; réciter à partir d'un nombre donné ; toutes représentations (constellations, doigts, chiffres)"
+                  },
+                  {
+                    "nom": "**Rang et position**",
+                    "texte": "bande numérique lacunaire ; coder des positions (bataille navale simplifiée)"
+                  },
+                  {
+                    "nom": "**Résolution de problèmes**",
+                    "texte": "problèmes variés à énoncés concordants et discordants ; choix de la procédure"
+                  },
+                  {
+                    "nom": "**Solides et formes planes**",
+                    "texte": "consolidation : décrire, trier, classer ; constructions libres à intention (le port)"
+                  },
+                  {
+                    "nom": "**Grandeurs**",
+                    "texte": "longueur + masse : produire un objet de même longueur ; classements complexes (coquillages)"
+                  },
+                  {
+                    "nom": "**Motifs organisés**",
+                    "texte": "créer un motif et le faire reproduire ; identifier la structure commune de motifs différents (colliers de coquillages)"
+                  }
+                ]
+              },
+              {
+                "document": "eps",
+                "composantes": [
+                  {
+                    "nom": "Se déplacer",
+                    "texte": "lancer avec précision (cibles « rochers ») ; course longue « régate » ; s'orienter au parc (5 indices photo)"
+                  },
+                  {
+                    "nom": "Construire des équilibres",
+                    "texte": "*(si piscine possible : aisance aquatique)* ; sinon équilibres « sur le pont du bateau », rouler-tanguer"
+                  },
+                  {
+                    "nom": "S'exprimer avec son corps",
+                    "texte": "chorégraphie « la mer » (entrée, développement, fin marquée) présentée aux familles"
+                  },
+                  {
+                    "nom": "Coopérer et s'opposer",
+                    "texte": "jeux d'opposition « sortir les crabes du rocher » (tirer/pousser) ; stratégies d'équipe (*La forêt* → « Les récifs »)"
+                  }
+                ]
+              },
+              {
+                "document": "arts",
+                "composantes": [
+                  {
+                    "nom": "**Dessin**",
+                    "texte": "dessiner un poisson, une vague ; croquis à l'aquarium ; dessin du bonhomme (comparaison annuelle)"
+                  },
+                  {
+                    "nom": "**Graphisme artistique**",
+                    "texte": "vagues, écailles, spirales de coquillages — Hokusai ; composition à contraintes (3 motifs, 2 outils)"
+                  },
+                  {
+                    "nom": "**Compositions plastiques**",
+                    "texte": "poissons en papiers découpés (Matisse) ; mobile marin ; fresque n°5 et exposition finale"
+                  },
+                  {
+                    "nom": "**Univers sonores**",
+                    "texte": "Debussy *La Mer* (extraits) ; création d'un paysage sonore marin ; chants du spectacle (≥ 10 chants cumulés dans l'année)"
+                  },
+                  {
+                    "nom": "**Spectacle vivant**",
+                    "texte": "représentation devant les familles ; être spectateur des autres classes"
+                  }
+                ]
+              },
+              {
+                "document": "temps-espace",
+                "composantes": [
+                  {
+                    "nom": "**Temps**",
+                    "texte": "l'année écoulée : ordonner les 5 périodes ; temps long (« il y a très longtemps ») ; l'été ; vers le CP"
+                  },
+                  {
+                    "nom": "**Espace**",
+                    "texte": "**planisphère et globe** : la mer et la terre, continents et océans ; dessiner le plan de la classe"
+                  },
+                  {
+                    "nom": "**Environnement proche**",
+                    "texte": "la mer par documents/sortie ; synthèse : les 5 milieux, leurs habitants"
+                  }
+                ]
+              },
+              {
+                "document": "monde",
+                "composantes": [
+                  {
+                    "nom": "**Vivant : animaux et végétaux**",
+                    "texte": "animaux marins : morphologie (nageoires, pinces, coquilles), modes de déplacement ; classement ; protection du milieu marin (action collective)"
+                  },
+                  {
+                    "nom": "**Corps humain et santé**",
+                    "texte": "le corps qui grandit (bilan toise/photos) ; se protéger du soleil ; sécurité à l'eau"
+                  },
+                  {
+                    "nom": "**Matière**",
+                    "texte": "**flottabilité** ★ : flotte/coule selon la matière ; eau salée/eau douce ; sable mouillé/sec ; les déchets du littoral (ce qui reste, ce qui disparaît)"
+                  },
+                  {
+                    "nom": "**Objets et fabrications**",
+                    "texte": "fabriquer un **bateau qui flotte** (défi technologique) ; épuisettes ; règles de sécurité"
+                  }
+                ]
+              },
+              {
+                "document": "evar",
+                "composantes": [
+                  {
+                    "nom": "Séance spécifique obligatoire",
+                    "texte": "**Séance 3 — « Tous différents, tous respectés »** : ressemblances et différences filles/garçons ; respect et empathie"
+                  },
+                  {
+                    "nom": "Fil continu",
+                    "texte": "bilan des relations de l'année ; préparation sereine du passage au CP"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "images": []
+  },
+  "imagier": {
+    "1": {
+      "faune": [
+        {
+          "slug": "pigeon-biset",
+          "nom": "le pigeon biset",
+          "chemin": "imagier/img/pigeon-biset.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/207899113"
+        },
+        {
+          "slug": "moineau-domestique",
+          "nom": "le moineau domestique",
+          "chemin": "imagier/img/moineau-domestique.jpg",
+          "auteur": "Esteban Poveda",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/83153529"
+        },
+        {
+          "slug": "merle-noir",
+          "nom": "le merle noir",
+          "chemin": "imagier/img/merle-noir.jpg",
+          "auteur": "Codrin Bucur",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/110684075"
+        },
+        {
+          "slug": "mesange-charbonniere",
+          "nom": "la mésange charbonnière",
+          "chemin": "imagier/img/mesange-charbonniere.jpg",
+          "auteur": "William Stephens",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/144741127"
+        },
+        {
+          "slug": "martinet-noir",
+          "nom": "le martinet noir",
+          "chemin": "imagier/img/martinet-noir.jpg",
+          "auteur": "Константин Селивёрстов",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/36153985"
+        },
+        {
+          "slug": "herisson-europe",
+          "nom": "le hérisson",
+          "chemin": "imagier/img/herisson-europe.jpg",
+          "auteur": "Esteban Stefano Pavan",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/50172897"
+        },
+        {
+          "slug": "ecureuil-roux",
+          "nom": "l’écureuil roux",
+          "chemin": "imagier/img/ecureuil-roux.jpg",
+          "auteur": "Stephan Mende",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/202286710"
+        },
+        {
+          "slug": "coccinelle-7-points",
+          "nom": "la coccinelle",
+          "chemin": "imagier/img/coccinelle-7-points.jpg",
+          "auteur": "Gavin Slater",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/110733852"
+        },
+        {
+          "slug": "abeille-domestique",
+          "nom": "l’abeille",
+          "chemin": "imagier/img/abeille-domestique.jpg",
+          "auteur": "Corey Farwell",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/201429383"
+        },
+        {
+          "slug": "pie-bavarde",
+          "nom": "la pie bavarde",
+          "chemin": "imagier/img/pie-bavarde.jpg",
+          "auteur": "Andrejus Gaidamavičius",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/257350003"
+        },
+        {
+          "slug": "corneille-noire",
+          "nom": "la corneille noire",
+          "chemin": "imagier/img/corneille-noire.jpg",
+          "auteur": "Nasser Halaweh",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/18803996"
+        },
+        {
+          "slug": "tourterelle-turque",
+          "nom": "la tourterelle turque",
+          "chemin": "imagier/img/tourterelle-turque.jpg",
+          "auteur": "zebedeugalinha",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/253298182"
+        },
+        {
+          "slug": "rougegorge",
+          "nom": "le rougegorge",
+          "chemin": "imagier/img/rougegorge.jpg",
+          "auteur": "Nigel Voaden",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/8640718"
+        },
+        {
+          "slug": "lezard-murailles",
+          "nom": "le lézard des murailles",
+          "chemin": "imagier/img/lezard-murailles.jpg",
+          "auteur": "Yves Bas",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/266159322"
+        },
+        {
+          "slug": "escargot-petit-gris",
+          "nom": "l’escargot",
+          "chemin": "imagier/img/escargot-petit-gris.jpg",
+          "auteur": "Óscar Sampedro",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/162041337"
+        },
+        {
+          "slug": "paon-du-jour",
+          "nom": "le paon-du-jour",
+          "chemin": "imagier/img/paon-du-jour.jpg",
+          "auteur": "Cheongweei Gan",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/313591112"
+        },
+        {
+          "slug": "bourdon-terrestre",
+          "nom": "le bourdon",
+          "chemin": "imagier/img/bourdon-terrestre.jpg",
+          "auteur": "Craig A. C. Symonds",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/386199156"
+        },
+        {
+          "slug": "epeire-diademe",
+          "nom": "l’épeire",
+          "chemin": "imagier/img/epeire-diademe.jpg",
+          "auteur": "Ludivine Lamare",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/185352417"
+        }
+      ],
+      "flore": [
+        {
+          "slug": "platane",
+          "nom": "le platane",
+          "chemin": "imagier/img/platane.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/35061699"
+        },
+        {
+          "slug": "marronnier",
+          "nom": "le marronnier",
+          "chemin": "imagier/img/marronnier.jpg",
+          "auteur": "Brian White",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/46298422"
+        },
+        {
+          "slug": "tilleul",
+          "nom": "le tilleul",
+          "chemin": "imagier/img/tilleul.jpg",
+          "auteur": "carnifex",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/44527671"
+        },
+        {
+          "slug": "lierre",
+          "nom": "le lierre",
+          "chemin": "imagier/img/lierre.jpg",
+          "auteur": "Marianna Boi",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/24846027"
+        },
+        {
+          "slug": "mousse-trottoir",
+          "nom": "la mousse",
+          "chemin": "imagier/img/mousse-trottoir.jpg",
+          "auteur": "Andrew Thornhill",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/58939426"
+        },
+        {
+          "slug": "paquerette",
+          "nom": "la pâquerette",
+          "chemin": "imagier/img/paquerette.jpg",
+          "auteur": "Gianni Del Bufalo bygdb",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/331409118"
+        },
+        {
+          "slug": "pissenlit",
+          "nom": "le pissenlit",
+          "chemin": "imagier/img/pissenlit.jpg",
+          "auteur": "Gavin Slater",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/156701280"
+        },
+        {
+          "slug": "rose-tremiere",
+          "nom": "la rose trémière",
+          "chemin": "imagier/img/rose-tremiere.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/157434530"
+        },
+        {
+          "slug": "geranium-balcon",
+          "nom": "le géranium",
+          "chemin": "imagier/img/geranium-balcon.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/11109927"
+        },
+        {
+          "slug": "erable-sycomore",
+          "nom": "l’érable",
+          "chemin": "imagier/img/erable-sycomore.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/224328397"
+        },
+        {
+          "slug": "robinier",
+          "nom": "le robinier",
+          "chemin": "imagier/img/robinier.jpg",
+          "auteur": "Dave Richardson",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/132661703"
+        },
+        {
+          "slug": "lilas",
+          "nom": "le lilas",
+          "chemin": "imagier/img/lilas.jpg",
+          "auteur": "Juraj Ahel",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/216203303"
+        },
+        {
+          "slug": "buis",
+          "nom": "le buis",
+          "chemin": "imagier/img/buis.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/162884358"
+        },
+        {
+          "slug": "vigne-vierge",
+          "nom": "la vigne vierge",
+          "chemin": "imagier/img/vigne-vierge.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/234404317"
+        },
+        {
+          "slug": "plantain",
+          "nom": "le plantain",
+          "chemin": "imagier/img/plantain.jpg",
+          "auteur": "kitbeard",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/30249668"
+        },
+        {
+          "slug": "trefle-blanc",
+          "nom": "le trèfle blanc",
+          "chemin": "imagier/img/trefle-blanc.jpg",
+          "auteur": "Alexis Tinker-Tsavalas",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/53033322"
+        },
+        {
+          "slug": "veronique",
+          "nom": "la véronique",
+          "chemin": "imagier/img/veronique.jpg",
+          "auteur": "Andrea Albani",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/267038350"
+        },
+        {
+          "slug": "capillaire-murailles",
+          "nom": "la capillaire",
+          "chemin": "imagier/img/capillaire-murailles.jpg",
+          "auteur": "Letizia Weichgrebe",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/365853755"
+        }
+      ]
+    },
+    "2": {
+      "faune": [
+        {
+          "slug": "cerf-elaphe",
+          "nom": "le cerf",
+          "chemin": "imagier/img/cerf-elaphe.jpg",
+          "auteur": "Andrew Melton",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/64532082"
+        },
+        {
+          "slug": "chevreuil",
+          "nom": "le chevreuil",
+          "chemin": "imagier/img/chevreuil.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/287703482"
+        },
+        {
+          "slug": "sanglier",
+          "nom": "le sanglier",
+          "chemin": "imagier/img/sanglier.jpg",
+          "auteur": "Donald Davesne",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/333334542"
+        },
+        {
+          "slug": "renard-roux",
+          "nom": "le renard roux",
+          "chemin": "imagier/img/renard-roux.jpg",
+          "auteur": "Genevieve Early",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/301768846"
+        },
+        {
+          "slug": "blaireau-europeen",
+          "nom": "le blaireau",
+          "chemin": "imagier/img/blaireau-europeen.jpg",
+          "auteur": "gwynmwilliams",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/319202836"
+        },
+        {
+          "slug": "chouette-hulotte",
+          "nom": "la chouette hulotte",
+          "chemin": "imagier/img/chouette-hulotte.jpg",
+          "auteur": "Christoph Moning",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/73835627"
+        },
+        {
+          "slug": "pic-vert",
+          "nom": "le pic vert",
+          "chemin": "imagier/img/pic-vert.jpg",
+          "auteur": "SteveM4560",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/148448012"
+        },
+        {
+          "slug": "salamandre-tachetee",
+          "nom": "la salamandre",
+          "chemin": "imagier/img/salamandre-tachetee.jpg",
+          "auteur": "carnifex",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/110282789"
+        },
+        {
+          "slug": "fourmi-rousse",
+          "nom": "la fourmi rousse",
+          "chemin": "imagier/img/fourmi-rousse.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/164495603"
+        },
+        {
+          "slug": "lapin-garenne",
+          "nom": "le lapin de garenne",
+          "chemin": "imagier/img/lapin-garenne.jpg",
+          "auteur": "Yves Bas",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/126483868"
+        },
+        {
+          "slug": "martre",
+          "nom": "la martre",
+          "chemin": "imagier/img/martre.jpg",
+          "auteur": "Christoph Moning",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/37840983"
+        },
+        {
+          "slug": "loir",
+          "nom": "le loir",
+          "chemin": "imagier/img/loir.jpg",
+          "auteur": "Kazimieras Martinaitis",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/185109114"
+        },
+        {
+          "slug": "geai-des-chenes",
+          "nom": "le geai des chênes",
+          "chemin": "imagier/img/geai-des-chenes.jpg",
+          "auteur": "Alexis Lours",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/71941146"
+        },
+        {
+          "slug": "pinson-des-arbres",
+          "nom": "le pinson des arbres",
+          "chemin": "imagier/img/pinson-des-arbres.jpg",
+          "auteur": "Donald Davesne",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/83075710"
+        },
+        {
+          "slug": "mulot",
+          "nom": "le mulot",
+          "chemin": "imagier/img/mulot.jpg",
+          "auteur": "Donald Hobern",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/4066339"
+        },
+        {
+          "slug": "lucane-cerf-volant",
+          "nom": "le lucane cerf-volant",
+          "chemin": "imagier/img/lucane-cerf-volant.jpg",
+          "auteur": "Diego González Dopico",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/377908216"
+        },
+        {
+          "slug": "crapaud-commun",
+          "nom": "le crapaud",
+          "chemin": "imagier/img/crapaud-commun.jpg",
+          "auteur": "Johannes S.",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/302939781"
+        },
+        {
+          "slug": "couleuvre-a-collier",
+          "nom": "la couleuvre à collier",
+          "chemin": "imagier/img/couleuvre-a-collier.jpg",
+          "auteur": "Ryan van Huyssteen",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/163280469"
+        }
+      ],
+      "flore": [
+        {
+          "slug": "chene",
+          "nom": "le chêne",
+          "chemin": "imagier/img/chene.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/127718410"
+        },
+        {
+          "slug": "hetre",
+          "nom": "le hêtre",
+          "chemin": "imagier/img/hetre.jpg",
+          "auteur": "Julia Palmer",
+          "licence": "CC BY-SA",
+          "observation": "https://www.inaturalist.org/observations/158554665"
+        },
+        {
+          "slug": "sapin-blanc",
+          "nom": "le sapin",
+          "chemin": "imagier/img/sapin-blanc.jpg",
+          "auteur": "Matteo Martini",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/362517214"
+        },
+        {
+          "slug": "bouleau",
+          "nom": "le bouleau",
+          "chemin": "imagier/img/bouleau.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/80462765"
+        },
+        {
+          "slug": "houx",
+          "nom": "le houx",
+          "chemin": "imagier/img/houx.jpg",
+          "auteur": "zebedeugalinha",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/250983210"
+        },
+        {
+          "slug": "fougere-aigle",
+          "nom": "la fougère",
+          "chemin": "imagier/img/fougere-aigle.jpg",
+          "auteur": "Nick Kleinschmidt",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/196049523"
+        },
+        {
+          "slug": "ronce",
+          "nom": "la ronce",
+          "chemin": "imagier/img/ronce.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/127398653"
+        },
+        {
+          "slug": "jacinthe-des-bois",
+          "nom": "la jacinthe des bois",
+          "chemin": "imagier/img/jacinthe-des-bois.jpg",
+          "auteur": "Jarro Nevsbaru",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/207230707"
+        },
+        {
+          "slug": "muguet",
+          "nom": "le muguet",
+          "chemin": "imagier/img/muguet.jpg",
+          "auteur": "Jay Pruett",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/116515563"
+        },
+        {
+          "slug": "chataignier",
+          "nom": "le châtaignier",
+          "chemin": "imagier/img/chataignier.jpg",
+          "auteur": "scolym",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/138143163"
+        },
+        {
+          "slug": "charme",
+          "nom": "le charme",
+          "chemin": "imagier/img/charme.jpg",
+          "auteur": "Alexis Tinker-Tsavalas",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/156760408"
+        },
+        {
+          "slug": "frene",
+          "nom": "le frêne",
+          "chemin": "imagier/img/frene.jpg",
+          "auteur": "jamie-aa",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/220067923"
+        },
+        {
+          "slug": "noisetier",
+          "nom": "le noisetier",
+          "chemin": "imagier/img/noisetier.jpg",
+          "auteur": "David Ashcroft",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/48892041"
+        },
+        {
+          "slug": "pin-sylvestre",
+          "nom": "le pin sylvestre",
+          "chemin": "imagier/img/pin-sylvestre.jpg",
+          "auteur": "Andrew Bazdyrev",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/70032820"
+        },
+        {
+          "slug": "if",
+          "nom": "l’if",
+          "chemin": "imagier/img/if.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/43618467"
+        },
+        {
+          "slug": "anemone-des-bois",
+          "nom": "l’anémone des bois",
+          "chemin": "imagier/img/anemone-des-bois.jpg",
+          "auteur": "Dmitry Kulakov",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/33808433"
+        },
+        {
+          "slug": "primevere",
+          "nom": "la primevère",
+          "chemin": "imagier/img/primevere.jpg",
+          "auteur": "Вячеслав Юсупов",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/19069564"
+        },
+        {
+          "slug": "digitale",
+          "nom": "la digitale",
+          "chemin": "imagier/img/digitale.jpg",
+          "auteur": "Galyna Mykytynets",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/196293293"
+        }
+      ]
+    },
+    "3": {
+      "faune": [
+        {
+          "slug": "bouquetin-alpes",
+          "nom": "le bouquetin",
+          "chemin": "imagier/img/bouquetin-alpes.jpg",
+          "auteur": "Romain Boisseau",
+          "licence": "CC BY-SA",
+          "observation": "https://www.inaturalist.org/observations/332059833"
+        },
+        {
+          "slug": "chamois",
+          "nom": "le chamois",
+          "chemin": "imagier/img/chamois.jpg",
+          "auteur": "nbasargin",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/224942877"
+        },
+        {
+          "slug": "marmotte-alpine",
+          "nom": "la marmotte",
+          "chemin": "imagier/img/marmotte-alpine.jpg",
+          "auteur": "Patrick Hacker",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/195303251"
+        },
+        {
+          "slug": "aigle-royal",
+          "nom": "l’aigle royal",
+          "chemin": "imagier/img/aigle-royal.jpg",
+          "auteur": "Brooke J.",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/346314808"
+        },
+        {
+          "slug": "gypaete-barbu",
+          "nom": "le gypaète barbu",
+          "chemin": "imagier/img/gypaete-barbu.jpg",
+          "auteur": "Justin Ponder",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/205957319"
+        },
+        {
+          "slug": "lievre-variable",
+          "nom": "le lièvre variable",
+          "chemin": "imagier/img/lievre-variable.jpg",
+          "auteur": "Nigel Voaden",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/2585372"
+        },
+        {
+          "slug": "hermine",
+          "nom": "l’hermine",
+          "chemin": "imagier/img/hermine.jpg",
+          "auteur": "Diego González Dopico",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/271841257"
+        },
+        {
+          "slug": "lagopede-alpin",
+          "nom": "le lagopède",
+          "chemin": "imagier/img/lagopede-alpin.jpg",
+          "auteur": "Paolo Zucca",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/13638833"
+        },
+        {
+          "slug": "lynx-boreal",
+          "nom": "le lynx",
+          "chemin": "imagier/img/lynx-boreal.jpg",
+          "auteur": "Julia Moning",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/143728649"
+        },
+        {
+          "slug": "chocard",
+          "nom": "le chocard",
+          "chemin": "imagier/img/chocard.jpg",
+          "auteur": "rainerburkard",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/68963903"
+        },
+        {
+          "slug": "tetras-lyre",
+          "nom": "le tétras lyre",
+          "chemin": "imagier/img/tetras-lyre.jpg",
+          "auteur": "Nigel Voaden",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/5750423"
+        },
+        {
+          "slug": "cincle-plongeur",
+          "nom": "le cincle plongeur",
+          "chemin": "imagier/img/cincle-plongeur.jpg",
+          "auteur": "Frank Sengpiel",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/45783324"
+        },
+        {
+          "slug": "loup-gris",
+          "nom": "le loup",
+          "chemin": "imagier/img/loup-gris.jpg",
+          "auteur": "Gianluca Congi🪶🦆🌲",
+          "licence": "CC BY-SA",
+          "observation": "https://www.inaturalist.org/observations/143821085"
+        },
+        {
+          "slug": "apollon",
+          "nom": "l’apollon",
+          "chemin": "imagier/img/apollon.jpg",
+          "auteur": "Emanuele Santarelli",
+          "licence": "CC BY-SA",
+          "observation": "https://www.inaturalist.org/observations/126496439"
+        },
+        {
+          "slug": "vautour-fauve",
+          "nom": "le vautour fauve",
+          "chemin": "imagier/img/vautour-fauve.jpg",
+          "auteur": "Людмила Алимова",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/236273282"
+        },
+        {
+          "slug": "vipere-aspic",
+          "nom": "la vipère aspic",
+          "chemin": "imagier/img/vipere-aspic.jpg",
+          "auteur": "Lennart Hudel",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/228498537"
+        },
+        {
+          "slug": "triton-alpestre",
+          "nom": "le triton alpestre",
+          "chemin": "imagier/img/triton-alpestre.jpg",
+          "auteur": "Dr. Sven Gippner",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/264492657"
+        },
+        {
+          "slug": "grand-corbeau",
+          "nom": "le grand corbeau",
+          "chemin": "imagier/img/grand-corbeau.jpg",
+          "auteur": "Сергей Неклюдов",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/337462182"
+        }
+      ],
+      "flore": [
+        {
+          "slug": "epicea",
+          "nom": "l’épicéa",
+          "chemin": "imagier/img/epicea.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/45572827"
+        },
+        {
+          "slug": "meleze",
+          "nom": "le mélèze",
+          "chemin": "imagier/img/meleze.jpg",
+          "auteur": "Karsten Rohweder",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/35532973"
+        },
+        {
+          "slug": "pin-cembro",
+          "nom": "l’arolle",
+          "chemin": "imagier/img/pin-cembro.jpg",
+          "auteur": "CorentinD",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/122071027"
+        },
+        {
+          "slug": "rhododendron-ferrugineux",
+          "nom": "le rhododendron",
+          "chemin": "imagier/img/rhododendron-ferrugineux.jpg",
+          "auteur": "Philipp Pavelka",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/84602451"
+        },
+        {
+          "slug": "myrtille",
+          "nom": "la myrtille",
+          "chemin": "imagier/img/myrtille.jpg",
+          "auteur": "zebedeugalinha",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/367001173"
+        },
+        {
+          "slug": "gentiane-acaule",
+          "nom": "la gentiane",
+          "chemin": "imagier/img/gentiane-acaule.jpg",
+          "auteur": "Björn Sothmann",
+          "licence": "CC BY-SA",
+          "observation": "https://www.inaturalist.org/observations/14847918"
+        },
+        {
+          "slug": "edelweiss",
+          "nom": "l’edelweiss",
+          "chemin": "imagier/img/edelweiss.jpg",
+          "auteur": "Elias",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/310529115"
+        },
+        {
+          "slug": "arnica-montagnes",
+          "nom": "l’arnica",
+          "chemin": "imagier/img/arnica-montagnes.jpg",
+          "auteur": "zebedeugalinha",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/259769885"
+        },
+        {
+          "slug": "joubarbe",
+          "nom": "la joubarbe",
+          "chemin": "imagier/img/joubarbe.jpg",
+          "auteur": "Marc Riera",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/178720070"
+        },
+        {
+          "slug": "pin-a-crochets",
+          "nom": "le pin à crochets",
+          "chemin": "imagier/img/pin-a-crochets.jpg",
+          "auteur": "Tom Field",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/364805678"
+        },
+        {
+          "slug": "genevrier",
+          "nom": "le genévrier",
+          "chemin": "imagier/img/genevrier.jpg",
+          "auteur": "zebedeugalinha",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/259089618"
+        },
+        {
+          "slug": "sorbier",
+          "nom": "le sorbier",
+          "chemin": "imagier/img/sorbier.jpg",
+          "auteur": "zebedeugalinha",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/334896651"
+        },
+        {
+          "slug": "airelle-rouge",
+          "nom": "l’airelle rouge",
+          "chemin": "imagier/img/airelle-rouge.jpg",
+          "auteur": "skysvetlana",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/53303364"
+        },
+        {
+          "slug": "lis-martagon",
+          "nom": "le lis martagon",
+          "chemin": "imagier/img/lis-martagon.jpg",
+          "auteur": "Stephan Mende",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/337855422"
+        },
+        {
+          "slug": "campanule",
+          "nom": "la campanule",
+          "chemin": "imagier/img/campanule.jpg",
+          "auteur": "Emanuele Santarelli",
+          "licence": "CC BY-SA",
+          "observation": "https://www.inaturalist.org/observations/30265722"
+        },
+        {
+          "slug": "crocus",
+          "nom": "le crocus",
+          "chemin": "imagier/img/crocus.jpg",
+          "auteur": "Thierry Arbault",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/214354023"
+        },
+        {
+          "slug": "soldanelle",
+          "nom": "la soldanelle",
+          "chemin": "imagier/img/soldanelle.jpg",
+          "auteur": "Thierry Arbault",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/207752328"
+        },
+        {
+          "slug": "silene-acaule",
+          "nom": "le silène acaule",
+          "chemin": "imagier/img/silene-acaule.jpg",
+          "auteur": "Antoine Guiguet",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/308848824"
+        }
+      ]
+    },
+    "4": {
+      "faune": [
+        {
+          "slug": "vache",
+          "nom": "la vache",
+          "chemin": "imagier/img/vache.jpg",
+          "auteur": "Julien Lepage",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/32582558"
+        },
+        {
+          "slug": "mouton",
+          "nom": "le mouton",
+          "chemin": "imagier/img/mouton.jpg",
+          "auteur": "Christopher Stephens",
+          "licence": "CC BY-SA",
+          "observation": "https://www.inaturalist.org/observations/346767255"
+        },
+        {
+          "slug": "cheval",
+          "nom": "le cheval",
+          "chemin": "imagier/img/cheval.jpg",
+          "auteur": "John Krampl",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/61858839"
+        },
+        {
+          "slug": "cochon",
+          "nom": "le cochon",
+          "chemin": "imagier/img/cochon.jpg",
+          "auteur": "Dan Riley",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/182510578"
+        },
+        {
+          "slug": "poule",
+          "nom": "la poule",
+          "chemin": "imagier/img/poule.jpg",
+          "auteur": "zebedeugalinha",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/260510111"
+        },
+        {
+          "slug": "lievre-europe",
+          "nom": "le lièvre",
+          "chemin": "imagier/img/lievre-europe.jpg",
+          "auteur": "Phil James",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/82348232"
+        },
+        {
+          "slug": "cigogne-blanche",
+          "nom": "la cigogne blanche",
+          "chemin": "imagier/img/cigogne-blanche.jpg",
+          "auteur": "Вячеслав Юсупов",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/331422707"
+        },
+        {
+          "slug": "hirondelle-rustique",
+          "nom": "l’hirondelle",
+          "chemin": "imagier/img/hirondelle-rustique.jpg",
+          "auteur": "Donald Davesne",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/348326294"
+        },
+        {
+          "slug": "taupe-europe",
+          "nom": "la taupe",
+          "chemin": "imagier/img/taupe-europe.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/168345792"
+        },
+        {
+          "slug": "chevre",
+          "nom": "la chèvre",
+          "chemin": "imagier/img/chevre.jpg",
+          "auteur": "Nico Hernandez",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/261739009"
+        },
+        {
+          "slug": "ane",
+          "nom": "l’âne",
+          "chemin": "imagier/img/ane.jpg",
+          "auteur": "Paulo Galvão",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/118283861"
+        },
+        {
+          "slug": "chat",
+          "nom": "le chat",
+          "chemin": "imagier/img/chat.jpg",
+          "auteur": "Ryan Hodnett",
+          "licence": "CC BY-SA",
+          "observation": "https://www.inaturalist.org/observations/91979617"
+        },
+        {
+          "slug": "canard-colvert",
+          "nom": "le canard colvert",
+          "chemin": "imagier/img/canard-colvert.jpg",
+          "auteur": "Codrin Bucur",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/105737491"
+        },
+        {
+          "slug": "oie-cendree",
+          "nom": "l’oie",
+          "chemin": "imagier/img/oie-cendree.jpg",
+          "auteur": "Fyodor Pudovikov",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/259350209"
+        },
+        {
+          "slug": "buse-variable",
+          "nom": "la buse",
+          "chemin": "imagier/img/buse-variable.jpg",
+          "auteur": "Christoph Moning",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/192097624"
+        },
+        {
+          "slug": "machaon",
+          "nom": "le machaon",
+          "chemin": "imagier/img/machaon.jpg",
+          "auteur": "Björn Sothmann",
+          "licence": "CC BY-SA",
+          "observation": "https://www.inaturalist.org/observations/108883141"
+        },
+        {
+          "slug": "grenouille-rousse",
+          "nom": "la grenouille",
+          "chemin": "imagier/img/grenouille-rousse.jpg",
+          "auteur": "Lennart Hudel",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/385584899"
+        },
+        {
+          "slug": "hanneton",
+          "nom": "le hanneton",
+          "chemin": "imagier/img/hanneton.jpg",
+          "auteur": "Alexis Tinker-Tsavalas",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/114331823"
+        }
+      ],
+      "flore": [
+        {
+          "slug": "ble",
+          "nom": "le blé",
+          "chemin": "imagier/img/ble.jpg",
+          "auteur": "Patrick Hacker",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/69871858"
+        },
+        {
+          "slug": "mais",
+          "nom": "le maïs",
+          "chemin": "imagier/img/mais.jpg",
+          "auteur": "Diogo Luiz",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/138343488"
+        },
+        {
+          "slug": "tournesol",
+          "nom": "le tournesol",
+          "chemin": "imagier/img/tournesol.jpg",
+          "auteur": "Jay Pruett",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/93677655"
+        },
+        {
+          "slug": "colza",
+          "nom": "le colza",
+          "chemin": "imagier/img/colza.jpg",
+          "auteur": "Gianni Del Bufalo bygdb",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/69623963"
+        },
+        {
+          "slug": "pommier",
+          "nom": "le pommier",
+          "chemin": "imagier/img/pommier.jpg",
+          "auteur": "Alexander Dubynin",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/273510153"
+        },
+        {
+          "slug": "coquelicot",
+          "nom": "le coquelicot",
+          "chemin": "imagier/img/coquelicot.jpg",
+          "auteur": "Eleftherios Katsillis",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/70561290"
+        },
+        {
+          "slug": "bleuet",
+          "nom": "le bleuet",
+          "chemin": "imagier/img/bleuet.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/227483413"
+        },
+        {
+          "slug": "trefle-des-pres",
+          "nom": "le trèfle",
+          "chemin": "imagier/img/trefle-des-pres.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/91586"
+        },
+        {
+          "slug": "ortie",
+          "nom": "l’ortie",
+          "chemin": "imagier/img/ortie.jpg",
+          "auteur": "Randy A Nonenmacher",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/17449599"
+        },
+        {
+          "slug": "orge",
+          "nom": "l’orge",
+          "chemin": "imagier/img/orge.jpg",
+          "auteur": "Josep Gesti",
+          "licence": "CC BY-SA",
+          "observation": "https://www.inaturalist.org/observations/171962253"
+        },
+        {
+          "slug": "luzerne",
+          "nom": "la luzerne",
+          "chemin": "imagier/img/luzerne.jpg",
+          "auteur": "Louis Aureglia",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/286485733"
+        },
+        {
+          "slug": "betterave",
+          "nom": "la betterave",
+          "chemin": "imagier/img/betterave.jpg",
+          "auteur": "Bob",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/321651053"
+        },
+        {
+          "slug": "pomme-de-terre",
+          "nom": "la pomme de terre",
+          "chemin": "imagier/img/pomme-de-terre.jpg",
+          "auteur": "Andrea Mologni",
+          "licence": "CC BY-SA",
+          "observation": "https://www.inaturalist.org/observations/82347124"
+        },
+        {
+          "slug": "vigne",
+          "nom": "la vigne",
+          "chemin": "imagier/img/vigne.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/195279881"
+        },
+        {
+          "slug": "noyer",
+          "nom": "le noyer",
+          "chemin": "imagier/img/noyer.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/50528217"
+        },
+        {
+          "slug": "cerisier",
+          "nom": "le cerisier",
+          "chemin": "imagier/img/cerisier.jpg",
+          "auteur": "olrett",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/120964786"
+        },
+        {
+          "slug": "marguerite",
+          "nom": "la marguerite",
+          "chemin": "imagier/img/marguerite.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/8402419"
+        },
+        {
+          "slug": "mauve",
+          "nom": "la mauve",
+          "chemin": "imagier/img/mauve.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/54544776"
+        }
+      ]
+    },
+    "5": {
+      "faune": [
+        {
+          "slug": "dauphin-commun",
+          "nom": "le dauphin",
+          "chemin": "imagier/img/dauphin-commun.jpg",
+          "auteur": "Brooke J.",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/383038834"
+        },
+        {
+          "slug": "mouette-rieuse",
+          "nom": "la mouette rieuse",
+          "chemin": "imagier/img/mouette-rieuse.jpg",
+          "auteur": "Alexis Lours",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/214447342"
+        },
+        {
+          "slug": "goeland-argente",
+          "nom": "le goéland argenté",
+          "chemin": "imagier/img/goeland-argente.jpg",
+          "auteur": "Donald Davesne",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/164496582"
+        },
+        {
+          "slug": "crabe-vert",
+          "nom": "le crabe",
+          "chemin": "imagier/img/crabe-vert.jpg",
+          "auteur": "Bex Goreham",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/188970630"
+        },
+        {
+          "slug": "etoile-de-mer",
+          "nom": "l’étoile de mer",
+          "chemin": "imagier/img/etoile-de-mer.jpg",
+          "auteur": "Darren Obbard",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/151512394"
+        },
+        {
+          "slug": "hippocampe",
+          "nom": "l’hippocampe",
+          "chemin": "imagier/img/hippocampe.jpg",
+          "auteur": "Donald Davesne",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/254707693"
+        },
+        {
+          "slug": "meduse-commune",
+          "nom": "la méduse",
+          "chemin": "imagier/img/meduse-commune.jpg",
+          "auteur": "Fraser Higgins",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/356040248"
+        },
+        {
+          "slug": "phoque-veau-marin",
+          "nom": "le phoque",
+          "chemin": "imagier/img/phoque-veau-marin.jpg",
+          "auteur": "nbasargin",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/189347405"
+        },
+        {
+          "slug": "moule-commune",
+          "nom": "la moule",
+          "chemin": "imagier/img/moule-commune.jpg",
+          "auteur": "Steven Lamonde",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/93876011"
+        },
+        {
+          "slug": "bernard-l-ermite",
+          "nom": "le bernard-l’ermite",
+          "chemin": "imagier/img/bernard-l-ermite.jpg",
+          "auteur": "Donald Davesne",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/164842609"
+        },
+        {
+          "slug": "crevette-rose",
+          "nom": "la crevette",
+          "chemin": "imagier/img/crevette-rose.jpg",
+          "auteur": "Jamie O'Neill",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/336599429"
+        },
+        {
+          "slug": "oursin",
+          "nom": "l’oursin",
+          "chemin": "imagier/img/oursin.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/281600294"
+        },
+        {
+          "slug": "anemone-de-mer",
+          "nom": "l’anémone de mer",
+          "chemin": "imagier/img/anemone-de-mer.jpg",
+          "auteur": "Eric Tittley",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/129160647"
+        },
+        {
+          "slug": "patelle",
+          "nom": "la patelle",
+          "chemin": "imagier/img/patelle.jpg",
+          "auteur": "Don Loarie",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/4419337"
+        },
+        {
+          "slug": "bigorneau",
+          "nom": "le bigorneau",
+          "chemin": "imagier/img/bigorneau.jpg",
+          "auteur": "Kieran Roy Powell",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/266248292"
+        },
+        {
+          "slug": "cormoran",
+          "nom": "le cormoran",
+          "chemin": "imagier/img/cormoran.jpg",
+          "auteur": "Christoph Moning",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/269574033"
+        },
+        {
+          "slug": "huitrier-pie",
+          "nom": "l’huîtrier pie",
+          "chemin": "imagier/img/huitrier-pie.jpg",
+          "auteur": "Micha Baum",
+          "licence": "CC BY-SA",
+          "observation": "https://www.inaturalist.org/observations/358054139"
+        },
+        {
+          "slug": "sterne-pierregarin",
+          "nom": "la sterne",
+          "chemin": "imagier/img/sterne-pierregarin.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/287598986"
+        }
+      ],
+      "flore": [
+        {
+          "slug": "pin-maritime",
+          "nom": "le pin maritime",
+          "chemin": "imagier/img/pin-maritime.jpg",
+          "auteur": "zebedeugalinha",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/333645772"
+        },
+        {
+          "slug": "tamaris",
+          "nom": "le tamaris",
+          "chemin": "imagier/img/tamaris.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/227989799"
+        },
+        {
+          "slug": "oyat",
+          "nom": "l’oyat",
+          "chemin": "imagier/img/oyat.jpg",
+          "auteur": "Pål A. Olsvik",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/122864752"
+        },
+        {
+          "slug": "panicaut-maritime",
+          "nom": "le chardon des dunes",
+          "chemin": "imagier/img/panicaut-maritime.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/47714163"
+        },
+        {
+          "slug": "criste-marine",
+          "nom": "la criste marine",
+          "chemin": "imagier/img/criste-marine.jpg",
+          "auteur": "Žan Rode",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/228266422"
+        },
+        {
+          "slug": "salicorne",
+          "nom": "la salicorne",
+          "chemin": "imagier/img/salicorne.jpg",
+          "auteur": "Oleksandr Shynder",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/95381509"
+        },
+        {
+          "slug": "armerie-maritime",
+          "nom": "l’armérie",
+          "chemin": "imagier/img/armerie-maritime.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/276920825"
+        },
+        {
+          "slug": "fucus",
+          "nom": "le goémon",
+          "chemin": "imagier/img/fucus.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/60558495"
+        },
+        {
+          "slug": "laitue-de-mer",
+          "nom": "la laitue de mer",
+          "chemin": "imagier/img/laitue-de-mer.jpg",
+          "auteur": "Denis Zabin",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/154121602"
+        },
+        {
+          "slug": "liseron-des-dunes",
+          "nom": "le liseron des dunes",
+          "chemin": "imagier/img/liseron-des-dunes.jpg",
+          "auteur": "Jamie O'Neill",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/386223284"
+        },
+        {
+          "slug": "euphorbe-des-dunes",
+          "nom": "l’euphorbe des dunes",
+          "chemin": "imagier/img/euphorbe-des-dunes.jpg",
+          "auteur": "Ronald Flipphi",
+          "licence": "CC BY-SA",
+          "observation": "https://www.inaturalist.org/observations/24444925"
+        },
+        {
+          "slug": "roquette-de-mer",
+          "nom": "la roquette de mer",
+          "chemin": "imagier/img/roquette-de-mer.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/3036330"
+        },
+        {
+          "slug": "obione",
+          "nom": "l’obione",
+          "chemin": "imagier/img/obione.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/215997037"
+        },
+        {
+          "slug": "lavande-de-mer",
+          "nom": "la lavande de mer",
+          "chemin": "imagier/img/lavande-de-mer.jpg",
+          "auteur": "Björn Sothmann",
+          "licence": "CC BY-SA",
+          "observation": "https://www.inaturalist.org/observations/305492551"
+        },
+        {
+          "slug": "immortelle-des-dunes",
+          "nom": "l’immortelle",
+          "chemin": "imagier/img/immortelle-des-dunes.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/207355900"
+        },
+        {
+          "slug": "laminaire",
+          "nom": "la laminaire",
+          "chemin": "imagier/img/laminaire.jpg",
+          "auteur": "Susan Marley",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/126249260"
+        },
+        {
+          "slug": "dulse",
+          "nom": "la dulse",
+          "chemin": "imagier/img/dulse.jpg",
+          "auteur": "no rights reserved",
+          "licence": "CC0",
+          "observation": "https://www.inaturalist.org/observations/374443141"
+        },
+        {
+          "slug": "argousier",
+          "nom": "l’argousier",
+          "chemin": "imagier/img/argousier.jpg",
+          "auteur": "Вячеслав Юсупов",
+          "licence": "CC BY",
+          "observation": "https://www.inaturalist.org/observations/28690556"
+        }
+      ]
+    }
+  },
+  "corpus": {
+    "1": {
+      "corpus": [
+        {
+          "groupe": "milieu",
+          "titre": "la ville",
+          "mots": [
+            "la rue",
+            "le trottoir",
+            "l’immeuble",
+            "le quartier",
+            "la place",
+            "le magasin",
+            "la mairie",
+            "le feu tricolore",
+            "le passage piéton"
+          ]
+        },
+        {
+          "groupe": "faune",
+          "titre": "la faune de la ville",
+          "mots": [
+            "le pigeon",
+            "le moineau",
+            "le merle",
+            "l’escargot",
+            "la fourmi",
+            "la coccinelle",
+            "la plume",
+            "le bec",
+            "la patte"
+          ]
+        },
+        {
+          "groupe": "flore",
+          "titre": "les arbres et le jardin",
+          "mots": [
+            "l’arbre",
+            "le tronc",
+            "la branche",
+            "la feuille",
+            "la racine",
+            "le parc",
+            "le jardin",
+            "la jardinière"
+          ]
+        }
+      ],
+      "sans_carte": [
+        "traverser",
+        "circuler",
+        "habiter",
+        "bruyant",
+        "calme",
+        "picorer",
+        "voler",
+        "ramper",
+        "se cacher",
+        "planter",
+        "arroser",
+        "pousser",
+        "fleuri"
+      ]
+    },
+    "2": {
+      "corpus": [
+        {
+          "groupe": "milieu",
+          "titre": "la forêt",
+          "mots": [
+            "la forêt",
+            "le sentier",
+            "la clairière",
+            "le sous-bois",
+            "la mousse",
+            "le champignon",
+            "l’automne"
+          ]
+        },
+        {
+          "groupe": "faune",
+          "titre": "la faune de la forêt",
+          "mots": [
+            "l’écureuil",
+            "le hérisson",
+            "le renard",
+            "le cerf",
+            "la chouette",
+            "le sanglier",
+            "le terrier",
+            "le nid",
+            "le pelage",
+            "les piquants"
+          ]
+        },
+        {
+          "groupe": "flore",
+          "titre": "les arbres et leurs fruits",
+          "mots": [
+            "le chêne",
+            "le sapin",
+            "le gland",
+            "la châtaigne",
+            "le marron",
+            "la pomme de pin",
+            "l’écorce",
+            "la brindille"
+          ]
+        }
+      ],
+      "sans_carte": [
+        "se promener",
+        "ramasser",
+        "s'orienter",
+        "sombre",
+        "profond",
+        "hiberner",
+        "grimper",
+        "bondir",
+        "se nourrir",
+        "tomber",
+        "rouler",
+        "piquant",
+        "lisse",
+        "rugueux"
+      ]
+    },
+    "3": {
+      "corpus": [
+        {
+          "groupe": "milieu",
+          "titre": "la montagne",
+          "mots": [
+            "la montagne",
+            "le sommet",
+            "la pente",
+            "la vallée",
+            "le glacier",
+            "la neige",
+            "le flocon",
+            "la luge",
+            "le ski"
+          ]
+        },
+        {
+          "groupe": "faune",
+          "titre": "la faune de la montagne",
+          "mots": [
+            "la marmotte",
+            "le chamois",
+            "le bouquetin",
+            "l’aigle",
+            "le lièvre variable",
+            "la corne",
+            "la griffe"
+          ]
+        },
+        {
+          "groupe": "flore",
+          "titre": "le froid et les conifères",
+          "mots": [
+            "l’épicéa",
+            "l’edelweiss",
+            "la gentiane",
+            "l’aiguille",
+            "le givre",
+            "la glace",
+            "l’hiver"
+          ]
+        }
+      ],
+      "sans_carte": [
+        "glisser",
+        "grimper",
+        "escalader",
+        "haut",
+        "bas",
+        "pentu",
+        "gelé",
+        "hiberner",
+        "siffler",
+        "planer",
+        "bondir",
+        "épais (pelage)",
+        "fondre",
+        "geler",
+        "blanc",
+        "brillant",
+        "froid"
+      ]
+    },
+    "4": {
+      "corpus": [
+        {
+          "groupe": "milieu",
+          "titre": "la campagne",
+          "mots": [
+            "la campagne",
+            "la ferme",
+            "le champ",
+            "le pré",
+            "la haie",
+            "le potager",
+            "le verger",
+            "la grange",
+            "le tracteur",
+            "le printemps"
+          ]
+        },
+        {
+          "groupe": "faune",
+          "titre": "les animaux de la ferme",
+          "mots": [
+            "la poule",
+            "le poussin",
+            "le coq",
+            "la vache",
+            "le veau",
+            "le mouton",
+            "l’agneau",
+            "le cochon",
+            "l’abeille",
+            "la chenille",
+            "le papillon",
+            "la ruche",
+            "le troupeau"
+          ]
+        },
+        {
+          "groupe": "flore",
+          "titre": "le potager et les plantes",
+          "mots": [
+            "la graine",
+            "la pousse",
+            "la tige",
+            "le bourgeon",
+            "la fleur",
+            "le fruit",
+            "le légume",
+            "le radis",
+            "la salade"
+          ]
+        }
+      ],
+      "sans_carte": [
+        "semer",
+        "récolter",
+        "cultiver",
+        "labourer",
+        "pondre",
+        "éclore",
+        "se métamorphoser",
+        "germer",
+        "fleurir",
+        "mûrir",
+        "butiner"
+      ]
+    },
+    "5": {
+      "corpus": [
+        {
+          "groupe": "milieu",
+          "titre": "la mer",
+          "mots": [
+            "la mer",
+            "l’océan",
+            "la plage",
+            "la vague",
+            "le sable",
+            "le rocher",
+            "la marée",
+            "le phare",
+            "le port",
+            "le bateau"
+          ]
+        },
+        {
+          "groupe": "faune",
+          "titre": "la faune du bord de mer",
+          "mots": [
+            "le poisson",
+            "le crabe",
+            "l’étoile de mer",
+            "la méduse",
+            "la mouette",
+            "le dauphin",
+            "la crevette",
+            "le coquillage",
+            "la nageoire",
+            "l’écaille",
+            "la pince",
+            "la carapace"
+          ]
+        },
+        {
+          "groupe": "flore",
+          "titre": "le littoral et les algues",
+          "mots": [
+            "l’algue",
+            "le varech",
+            "le galet",
+            "la dune",
+            "l’écume",
+            "le corail"
+          ]
+        }
+      ],
+      "sans_carte": [
+        "flotter",
+        "couler",
+        "nager",
+        "plonger",
+        "salé",
+        "mouillé",
+        "pincer",
+        "glisser",
+        "ramasser",
+        "s'accrocher",
+        "onduler",
+        "transparent",
+        "brillant"
+      ]
+    }
+  },
+  "images_theme": [
+    {
+      "fichier": "images/tableau-ville.jpg",
+      "titre": "The Boulevard Montmartre on a Winter Morning",
+      "auteur": "Camille Pissarro",
+      "date": 1897,
+      "institution": "The Metropolitan Museum of Art",
+      "source": "https://www.metmuseum.org/art/collection/search/437310",
+      "licence": "CC0-1.0",
+      "alt": "Un grand boulevard de Paris un matin d'hiver, vu d'en haut, avec ses immeubles, ses arbres nus et ses voitures à chevaux.",
+      "chemin": "charte/themes/promenade/images/tableau-ville.jpg"
+    },
+    {
+      "fichier": "images/tableau-foret.jpg",
+      "titre": "The Edge of the Woods at Monts-Girard, Fontainebleau Forest",
+      "auteur": "Théodore Rousseau",
+      "date": "1852-1854",
+      "institution": "The Metropolitan Museum of Art",
+      "source": "https://www.metmuseum.org/art/collection/search/437514",
+      "licence": "CC0-1.0",
+      "alt": "La lisière d'une forêt, de grands chênes sous un ciel nuageux et un chemin qui descend dans les herbes.",
+      "chemin": "charte/themes/promenade/images/tableau-foret.jpg"
+    },
+    {
+      "fichier": "images/tableau-montagne.jpg",
+      "titre": "South Wind, Clear Sky (Gaifū kaisei), also known as Red Fuji, from the series Thirty-six Views of Mount Fuji (Fugaku sanjūrokkei)",
+      "auteur": "Katsushika Hokusai",
+      "date": "vers 1830-1832",
+      "institution": "The Metropolitan Museum of Art",
+      "source": "https://www.metmuseum.org/art/collection/search/36490",
+      "licence": "CC0-1.0",
+      "alt": "Le mont Fuji tout rouge sous un ciel bleu plein de petits nuages blancs, estampe japonaise.",
+      "chemin": "charte/themes/promenade/images/tableau-montagne.jpg"
+    },
+    {
+      "fichier": "images/tableau-campagne.jpg",
+      "titre": "Wheat Field with Cypresses",
+      "auteur": "Vincent van Gogh",
+      "date": 1889,
+      "institution": "The Metropolitan Museum of Art",
+      "source": "https://www.metmuseum.org/art/collection/search/436535",
+      "licence": "CC0-1.0",
+      "alt": "Un champ de blé doré, de grands cyprès vert sombre et un ciel bleu aux nuages tourbillonnants.",
+      "chemin": "charte/themes/promenade/images/tableau-campagne.jpg"
+    },
+    {
+      "fichier": "images/tableau-mer.jpg",
+      "titre": "Under the Wave off Kanagawa (Kanagawa oki nami ura), also known as The Great Wave, from the series Thirty-six Views of Mount Fuji (Fugaku sanjūrokkei)",
+      "auteur": "Katsushika Hokusai",
+      "date": "vers 1830-1832",
+      "institution": "The Metropolitan Museum of Art",
+      "source": "https://www.metmuseum.org/art/collection/search/56353",
+      "licence": "CC0-1.0",
+      "alt": "Une immense vague bleue à l'écume blanche se dresse au-dessus de barques, le mont Fuji au loin, estampe japonaise.",
+      "chemin": "charte/themes/promenade/images/tableau-mer.jpg"
+    }
+  ],
+  "polices_theme": [
+    {
+      "famille": "Bagel Fat One",
+      "auteur": "Kyoungwon Lee",
+      "licence": "OFL-1.1",
+      "source": "https://fontsource.org/fonts/bagel-fat-one"
+    },
+    {
+      "famille": "Barlow Condensed",
+      "auteur": "Jeremy Tribby",
+      "licence": "OFL-1.1",
+      "source": "https://fontsource.org/fonts/barlow-condensed"
+    },
+    {
+      "famille": "Figtree",
+      "auteur": "Erik Kennedy",
+      "licence": "OFL-1.1",
+      "source": "https://fontsource.org/fonts/figtree"
+    },
+    {
+      "famille": "Bricolage Grotesque",
+      "auteur": "The Bricolage Grotesque Project Authors",
+      "licence": "OFL-1.1",
+      "source": "https://github.com/ateliertriay/bricolage"
+    },
+    {
+      "famille": "Atkinson Hyperlegible Next",
+      "auteur": "Braille Institute of America",
+      "licence": "OFL-1.1",
+      "source": "https://www.brailleinstitute.org/freefont/"
+    }
+  ]
+};

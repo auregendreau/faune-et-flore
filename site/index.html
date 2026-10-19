@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- apercu:debut -->
+  <!-- L'aperçu de lien (scripts/apercu.py) : écrit par classe.py generer,
+       en adresses absolues au déploiement (estampiller --adresse). Ne pas
+       retoucher à la main : les messageries lisent ces balises sans JavaScript. -->
+  <title>Encrine – À la découverte de la faune et de la flore</title>
+  <meta name="description" content="Un milieu par période, de la ville à la mer. Tout le matériel de l’année est ici : le projet, la programmation, les progressions de chaque domaine, les évaluations, et les cahiers à imprimer pour la classe. La classe d’Aurélie.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Encrine">
+  <meta property="og:title" content="Encrine – À la découverte de la faune et de la flore">
+  <meta property="og:description" content="Un milieu par période, de la ville à la mer. Tout le matériel de l’année est ici : le projet, la programmation, les progressions de chaque domaine, les évaluations, et les cahiers à imprimer pour la classe. La classe d’Aurélie.">
+  <meta property="og:url" content="./">
+  <meta property="og:image" content="partage.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="L’accueil du site de la classe « À la découverte de la faune et de la flore » : Grande Section, 2026-2027.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Encrine – À la découverte de la faune et de la flore">
+  <meta name="twitter:description" content="Un milieu par période, de la ville à la mer. Tout le matériel de l’année est ici : le projet, la programmation, les progressions de chaque domaine, les évaluations, et les cahiers à imprimer pour la classe. La classe d’Aurélie.">
+  <meta name="twitter:image" content="partage.png">
+  <meta name="twitter:image:alt" content="L’accueil du site de la classe « À la découverte de la faune et de la flore » : Grande Section, 2026-2027.">
+  <!-- apercu:fin -->
+  <!-- L'appli installable (scripts/appli.py) : le manifeste et les icônes
+       sont fabriqués pour la classe ; la couleur de la barre et le nom sous
+       l'icône d'iOS, posés par appli.js depuis le thème et classe.yml. -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="icones/appli.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icones/apple-touch-icon.png">
+  <link rel="stylesheet" href="charte/charte.css">
+  <link rel="stylesheet" href="app.css">
+  <!-- Le garde-fou : jamais « Chargement… » pour toujours. Une erreur avant
+       le premier rendu (un script qui manque, ou d'une autre publication),
+       ou pas de rendu au bout de 15 s (sur un réseau lent, plus tôt serait un faux départ) : un message et « Recharger », qui
+       désinscrit le service worker de la classe, vide ses caches et
+       recharge. app.js pose data-rendu="ok" sur <html> au premier rendu.
+       Autonome et en ES5 : il doit marcher quand tout le reste échoue. -->
+  <script id="garde-fou">
+  (function () {
+    var d = document, html = d.documentElement, montre = false;
+    function rendu() { return html.getAttribute('data-rendu') === 'ok'; }
+    function reparer() {
+      var dossier = location.href.replace(/[?#].*$/, '').replace(/[^\/]*$/, '');
+      var fin = function () { location.reload(); };
+      setTimeout(fin, 4000);
+      var sw = navigator.serviceWorker && navigator.serviceWorker.getRegistrations ?
+        navigator.serviceWorker.getRegistrations().then(function (rs) {
+          return Promise.all(rs.map(function (r) { return r.scope.indexOf(dossier) === 0 ? r.unregister() : null; }));
+        }) : Promise.resolve();
+      var cs = window.caches ? caches.keys().then(function (ns) {
+        return Promise.all(ns.map(function (n) { return n.indexOf('encrine ' + dossier) === 0 ? caches['delete'](n) : null; }));
+      }) : Promise.resolve();
+      Promise.all([sw, cs]).then(fin, fin);
+    }
+    function secours() {
+      var c = d.getElementById('contenu');
+      if (montre || rendu() || !c) return;
+      montre = true;
+      html.setAttribute('data-rendu', 'echec');
+      c.removeAttribute('aria-busy');
+      c.innerHTML = '<div class="garde-fou" role="alert" style="max-width:34em;margin:12vh auto;padding:0 24px;font:18px/1.6 system-ui,sans-serif">' +
+        '<p><strong>Le site n’a pas pu se charger.</strong></p><p>Touchez « Recharger » : la dernière version sera téléchargée.</p>' +
+        '<p><button type="button" class="btn btn-principal" style="font:inherit;padding:.5em 1.2em">Recharger</button></p></div>';
+      c.querySelector('button').onclick = function () { this.disabled = true; this.textContent = 'Rechargement…'; reparer(); };
+    }
+    window.addEventListener('error', function (e) {
+      // une erreur de script, ou un script qui n'a pas pu se charger (pas une image)
+      var t = e.target;
+      if (t && t !== window && t.tagName !== 'SCRIPT') return;
+      if (!rendu()) secours();
+    }, true);
+    window.addEventListener('unhandledrejection', function () { if (!rendu()) secours(); });
+    setTimeout(secours, 15000);
+  })();
+  </script>
+</head>
+<body data-support="ecran">
+  <!-- Trois emplacements, que remplissent les gabarits (site/gabarits.js, ou
+       ceux du thème : charte/gabarits.js) à partir du modèle (modele.js) ;
+       app.js garde la logique : routage, documents, menu, focus. -->
+  <a class="saut" href="#contenu">Aller au contenu</a>
+  <header id="entete" data-composant="entete"></header>
+  <main id="contenu" data-composant="page" tabindex="-1"><p class="chargement">Chargement…</p></main>
+  <footer id="pied" data-composant="pied"></footer>
+
+  <script src="marked.min.js"></script>
+  <script src="classe.js"></script>
+  <script src="commun.js"></script>
+  <script src="modele.js"></script>
+  <script src="gabarits.js"></script>
+  <script src="charte/gabarits.js"></script>
+  <script src="app.js"></script>
+  <script src="appli.js"></script>
+</body>
+</html>

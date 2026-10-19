@@ -1,0 +1,204 @@
+# Ce que l'année 2026-2027 traite, période par période.
+#
+# Chaque bloc dit : dans ce document, à cette période, ces attendus-là sont
+# travaillés — l'équivalent, pour une année déjà écrite en prose, de ce que
+# chaque séance porterait si elle déclarait elle-même ce qu'elle sert.
+#
+# Granularité : le document et la période. C'est ce que permettent les
+# tableaux existants (un tableau par période, une ligne par champ). Dans la
+# plateforme, la maille sera la séance — ce qui donnera en plus le nombre de
+# rencontres de chaque attendu, et non seulement leur existence.
+#
+# Établi en relisant les cinq tableaux de chacune des sept progressions.
+
+annee: 2026-2027
+classe: Grande Section
+projet: À la découverte de la faune et de la flore
+
+blocs:
+
+# ─────────────────────────────── LANGAGE ────────────────────────────────
+- document: 03-progressions/01-langage-oral-ecrit.md
+  periode: 1
+  attendus: [lang.voc.corpus, lang.voc.categories, lang.synt.pronoms,
+             lang.phono.syllabes, lang.let.trois-graphies, lang.geste.pince,
+             lang.ecr.types, lang.prod.dictee, lang.disc.memorisation]
+- document: 03-progressions/01-langage-oral-ecrit.md
+  periode: 2
+  attendus: [lang.voc.corpus, lang.voc.reseaux, lang.disc.decrire-action,
+             lang.synt.temps-passe, lang.phono.syllabes, lang.phono.rimes,
+             lang.let.trois-graphies, lang.let.valeur-sonore,
+             lang.geste.cursive, lang.geste.ligatures, lang.ecr.archetypes,
+             lang.ecr.emotions-perso, lang.prod.dictee, lang.prod.encoder,
+             lang.art.ch-s, lang.disc.memorisation]
+- document: 03-progressions/01-langage-oral-ecrit.md
+  periode: 3
+  attendus: [lang.voc.corpus, lang.voc.emotions, lang.voc.proches,
+             lang.disc.hypothese, lang.synt.temps-passe, lang.phono.rimes,
+             lang.phono.phonemes, lang.let.trois-graphies,
+             lang.prod.phonie-graphie, lang.art.ch-s, lang.art.doubles,
+             lang.geste.cursive,
+             lang.ecr.raconter, lang.prod.encoder, lang.geste.mots,
+             lang.disc.memorisation]
+- document: 03-progressions/01-langage-oral-ecrit.md
+  periode: 4
+  attendus: [lang.voc.corpus, lang.voc.reseaux, lang.disc.adulte-absent,
+             lang.synt.futur, lang.phono.phonemes, lang.let.trois-graphies,
+             lang.let.epeler, lang.art.ch-s, lang.geste.cursive, lang.geste.prenom,
+             lang.ecr.types, lang.ecr.emotions-perso, lang.prod.encoder,
+             lang.prod.dictee, lang.disc.memorisation]
+- document: 03-progressions/01-langage-oral-ecrit.md
+  periode: 5
+  attendus: [lang.voc.corpus, lang.voc.sens-figure, lang.disc.conversation,
+             lang.synt.complexite, lang.phono.phonemes, lang.prod.segmenter,
+             lang.let.trois-graphies, lang.let.valeur-sonore, lang.let.proches,
+             lang.geste.cursive, lang.geste.mots, lang.ecr.raconter,
+             lang.ecr.types, lang.prod.encoder, lang.prod.norme,
+             lang.art.phonemes-36, lang.art.doubles, lang.art.ch-s,
+             lang.disc.memorisation]
+
+# ───────────────────────────── MATHÉMATIQUES ────────────────────────────
+- document: 03-progressions/02-mathematiques.md
+  periode: 1
+  attendus: [math.qte.collections, math.qte.decompositions, math.qte.comparaison,
+             math.qte.ecriture, math.qte.comptine-30, math.rang.ordinaux,
+             math.pb.parties-tout, math.for.figures, math.mot.repetitifs]
+- document: 03-progressions/02-mathematiques.md
+  periode: 2
+  attendus: [math.qte.collections, math.qte.enumeration, math.qte.decompositions,
+             math.qte.surcomptage, math.qte.comptine-30, math.rang.jusqu-10,
+             math.pb.ajout-retrait, math.for.assemblages, math.for.solides,
+             math.gr.long-indirecte, math.gr.long-ordonner,
+             math.mot.repetitifs, math.mot.decrire]
+- document: 03-progressions/02-mathematiques.md
+  periode: 3
+  attendus: [math.qte.collections, math.qte.decompositions, math.qte.comptine-30,
+             math.qte.rebours, math.qte.ecriture, math.rang.bande,
+             math.rang.deplacement, math.pb.ecarts, math.pb.position,
+             math.for.solides, math.gr.masse-roberval, math.mot.evolutifs,
+             math.mot.decrire]
+- document: 03-progressions/02-mathematiques.md
+  periode: 4
+  attendus: [math.qte.collections, math.qte.deux-en-deux, math.qte.comparaison,
+             math.rang.deplacement, math.pb.groupements, math.pb.partage,
+             math.for.assemblages, math.for.regle, math.gr.masse-ordonner,
+             math.gr.long-produire, math.mot.transcrire, te.esp.assemblages]
+- document: 03-progressions/02-mathematiques.md
+  periode: 5
+  attendus: [math.qte.depart-donne, math.qte.collections, math.rang.bande,
+             math.pb.ajout-retrait, math.pb.ecarts, math.pb.groupements,
+             math.for.solides, math.for.figures, math.gr.long-ordonner,
+             math.gr.masse-roberval, math.mot.creer, math.mot.decrire]
+
+# ─────────────────────────── ACTIVITÉS PHYSIQUES ────────────────────────
+- document: 03-progressions/03-activites-physiques.md
+  periode: 1
+  attendus: [eps.dep.courir-vite, eps.dep.orientation, eps.eq.securite]
+- document: 03-progressions/03-activites-physiques.md
+  periode: 2
+  attendus: [eps.dep.courir-longtemps, eps.eq.combinaisons, eps.eq.securite,
+             eps.exp.geste-danse, eps.exp.espace-scenique]
+- document: 03-progressions/03-activites-physiques.md
+  periode: 3
+  attendus: [eps.eq.glisser, eps.eq.securite, eps.dep.lancer,
+             eps.exp.geste-danse, eps.exp.choregraphie]
+- document: 03-progressions/03-activites-physiques.md
+  periode: 4
+  attendus: [eps.dep.sauter, eps.dep.courir-vite, eps.coop.strategies,
+             eps.coop.roles, eps.coop.equipe, eps.exp.geste-danse]
+- document: 03-progressions/03-activites-physiques.md
+  periode: 5
+  attendus: [eps.eq.aquatique, eps.dep.lancer, eps.exp.choregraphie,
+             eps.exp.espace-scenique, eps.exp.spectateur]
+
+# ────────────────────────── ACTIVITÉS ARTISTIQUES ───────────────────────
+- document: 03-progressions/04-activites-artistiques.md
+  periode: 1
+  attendus: [arts.des.modele, arts.des.vocabulaire, arts.des.collective,
+             arts.pla.combiner, arts.img.elements, arts.voix.inventivite,
+             arts.voix.collectif, arts.voix.repertoire, arts.ins.paysage,
+             arts.spec.scene]
+- document: 03-progressions/04-activites-artistiques.md
+  periode: 2
+  attendus: [arts.des.modele, arts.des.representer, arts.gra.detourner,
+             arts.pla.combiner, arts.des.collective, arts.img.types,
+             arts.voix.repertoire, arts.eco.patrimoine, arts.eco.elements,
+             arts.spec.emotions, arts.spec.scene]
+- document: 03-progressions/04-activites-artistiques.md
+  periode: 3
+  attendus: [arts.des.representer, arts.eco.dessin, arts.gra.contraintes,
+             arts.pla.combiner, arts.des.collective, arts.img.types,
+             arts.voix.repertoire, arts.eco.patrimoine, arts.eco.elements,
+             arts.spec.emotions, arts.spec.scene]
+- document: 03-progressions/04-activites-artistiques.md
+  periode: 4
+  attendus: [arts.des.modele, arts.des.representer, arts.gra.creer,
+             arts.pla.combiner, arts.pla.expression, arts.img.types,
+             arts.voix.repertoire, arts.eco.patrimoine, arts.eco.elements,
+             arts.ins.son-geste, arts.spec.scene, arts.spec.spectateur]
+- document: 03-progressions/04-activites-artistiques.md
+  periode: 5
+  attendus: [arts.des.modele, arts.gra.contraintes, te.tps.organiser,
+             arts.pla.combiner, arts.pla.expression, arts.des.collective,
+             arts.img.elements, arts.img.types, arts.voix.repertoire,
+             arts.voix.memoire, arts.voix.collectif, arts.ins.collective,
+             arts.spec.scene, arts.spec.spectateur, arts.spec.emotions]
+
+# ────────────────────────── SE REPÉRER : TEMPS ET ESPACE ────────────────
+- document: 03-progressions/05-temps-espace.md
+  periode: 1
+  attendus: [te.tps.semaine, te.tps.chronologie, te.esp.situer, te.esp.plan,
+             te.env.ecole, te.env.architecture]
+- document: 03-progressions/05-temps-espace.md
+  periode: 2
+  attendus: [te.tps.date, te.tps.chronologie, te.tps.saisons, te.esp.trajets,
+             te.esp.coder, te.esp.situer, te.env.milieux]
+- document: 03-progressions/05-temps-espace.md
+  periode: 3
+  attendus: [te.tps.mois, te.tps.saisons, te.tps.durees, te.esp.gauche-droite,
+             te.esp.parcours-plan, te.env.milieux]
+- document: 03-progressions/05-temps-espace.md
+  periode: 4
+  attendus: [te.tps.chronologie, te.tps.relations, te.tps.saisons,
+             te.esp.page, te.esp.parcours-plan, te.env.milieux]
+- document: 03-progressions/05-temps-espace.md
+  periode: 5
+  attendus: [te.tps.temps-long, te.tps.saisons, te.esp.planisphere,
+             te.esp.plan, te.esp.assemblages, te.env.milieux]
+
+# ───────────── EXPLORER LE MONDE DU VIVANT, DE LA MATIÈRE, DES OBJETS ───
+- document: 03-progressions/06-monde-vivant-matiere-objets.md
+  periode: 1
+  attendus: [monde.viv.morphologie, monde.viv.besoins, monde.corps.etapes-vie,
+             monde.mat.air, monde.obj.fabriquer, monde.mat.risques,
+             monde.viv.biodiversite]
+- document: 03-progressions/06-monde-vivant-matiere-objets.md
+  periode: 2
+  attendus: [monde.viv.besoins, monde.viv.classer, monde.viv.etapes,
+             monde.obj.fonction, monde.obj.recette, monde.obj.risques,
+             monde.mat.environnement]
+- document: 03-progressions/06-monde-vivant-matiere-objets.md
+  periode: 3
+  attendus: [monde.viv.morphologie, monde.viv.classer,
+             monde.corps.articulations, monde.corps.mouvement,
+             monde.mat.eau, monde.obj.fabriquer]
+- document: 03-progressions/06-monde-vivant-matiere-objets.md
+  periode: 4
+  attendus: [monde.viv.etapes, monde.viv.besoins, monde.corps.etapes-vie,
+             monde.mat.dissolution, monde.obj.recette, monde.obj.instructions]
+- document: 03-progressions/06-monde-vivant-matiere-objets.md
+  periode: 5
+  attendus: [monde.viv.morphologie, monde.viv.deplacement, monde.viv.classer,
+             monde.obj.flottabilite, monde.obj.fabriquer, monde.mat.risques,
+             monde.mat.environnement]
+
+# ──────────────────────────────── EVAR ──────────────────────────────────
+- document: 03-progressions/07-evar.md
+  periode: 1
+  attendus: [evar.corps.sensations]
+- document: 03-progressions/07-evar.md
+  periode: 3
+  attendus: [evar.rel.sentiments]
+- document: 03-progressions/07-evar.md
+  periode: 5
+  attendus: [evar.soc.differences, evar.soc.respect, evar.soc.protection]

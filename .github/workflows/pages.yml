@@ -1,0 +1,63 @@
+name: Déploiement du site
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Seul le dépôt du moteur ne publie rien : sa démonstration est une classe
+  # à part (encrine-ai/tour-du-monde). Toute classe publie son site, ses PDF
+  # compris, même cochée « Template repository » pour qu'on puisse partir
+  # d'elle.
+  build:
+    if: ${{ github.repository != 'encrine-ai/moteur' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Polices emoji et outils PDF
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-color-emoji poppler-utils
+      - name: La classe vient de classe.yml, et de nulle part ailleurs
+        run: pip install -q pyyaml pillow && python3 scripts/classe.py verifier
+      - name: Assembler le site (application + contenus)
+        run: |
+          mkdir -p _site/content
+          cp -r site/. _site/
+          cp 01-projet-annuel.md 02-programmation-annuelle.md _site/content/
+          for d in 03-progressions 04-evaluations; do [ -d "$d" ] && cp -r "$d" _site/content/ || true; done
+      # Avant l'estampille : elle a besoin de l'adresse publique du site
+      # (base_url), pour l'aperçu de lien en adresses absolues.
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: L'aperçu de lien (image de partage, adresses absolues) et la version de l'appli (sw.js), sur le site assemblé
+        run: python3 scripts/classe.py estampiller _site --adresse "${{ steps.pages.outputs.base_url }}"
+      - name: Générer les PDF (documents de la zone de la classe + cahiers)
+        run: bash scripts/generer-pdf.sh _site
+      - name: Une page par fiche, une page par planche
+        run: python3 scripts/verifier-pagination.py _site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

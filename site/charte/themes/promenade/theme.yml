@@ -1,0 +1,125 @@
+# Le thème « promenade » : le mini-site de la classe d'Aurélie, « La
+# Promenade ». Déclare chaque police et chaque image du thème, avec sa
+# licence ; contrôlé par scripts/verifier-theme.py (skill charte-graphique,
+# « Le mini-site »).
+nom: La Promenade
+description: >-
+  L'année est une promenade à travers cinq grands tableaux du domaine public
+  — Pissarro pour la ville, Rousseau pour la forêt, Hokusai pour la montagne
+  et pour la mer, Van Gogh pour la campagne — qu'on suit sur un sentier en
+  pointillés, guidé par des panneaux de randonnée jaunes ; sur téléphone, le
+  menu s'ouvre par « Où va-t-on ? ». Ciel clair, crème, encre d'ardoise,
+  jaune des balisages ; Bagel Fat One pour les titres, Barlow Condensed pour
+  les plaques, Figtree pour la lecture, Andika pour les mots de l'enfant. Le
+  papier ne change pas : il reprend fidèlement le « Carnet de terrain »
+  (thème faune-flore) — mêmes couleurs de fiches, mêmes polices
+  (Bricolage Grotesque, Atkinson Hyperlegible Next), mêmes couvertures et
+  mêmes cartes.
+retenu_le: 2026-10-18
+gabarits: gabarits.js
+polices:
+  - famille: Bagel Fat One
+    role: titres de l'écran (--police-titre)
+    fichiers: [polices/bagel-latin.woff2, polices/bagel-latin-ext.woff2]
+    licence: OFL-1.1
+    auteur: Kyoungwon Lee
+    source: https://fontsource.org/fonts/bagel-fat-one
+  - famille: Barlow Condensed
+    role: les plaques, les étiquettes et les numéros de l'écran (--police-etiquette)
+    fichiers: [polices/barlow-cond-latin-600.woff2, polices/barlow-cond-latin-ext-600.woff2,
+               polices/barlow-cond-latin-800.woff2, polices/barlow-cond-latin-ext-800.woff2]
+    licence: OFL-1.1
+    auteur: Jeremy Tribby
+    source: https://fontsource.org/fonts/barlow-condensed
+  - famille: Figtree
+    role: texte de l'écran (--police-texte)
+    fichiers: [polices/figtree-latin.woff2, polices/figtree-latin-ext.woff2,
+               polices/figtree-latin-italic.woff2, polices/figtree-latin-ext-italic.woff2]
+    licence: OFL-1.1
+    auteur: Erik Kennedy
+    source: https://fontsource.org/fonts/figtree
+  - famille: Bricolage Grotesque
+    role: titres du papier et des cahiers (--police-titre hors du mini-site), comme le Carnet de terrain
+    fichiers: [polices/bricolage-grotesque-latin.woff2, polices/bricolage-grotesque-latin-ext.woff2]
+    licence: OFL-1.1
+    auteur: The Bricolage Grotesque Project Authors
+    source: https://github.com/ateliertriay/bricolage
+  - famille: Atkinson Hyperlegible Next
+    role: texte du papier et des cahiers (--police-texte hors du mini-site), comme le Carnet de terrain
+    fichiers: [polices/atkinson-next-latin.woff2, polices/atkinson-next-latin-ext.woff2, polices/atkinson-next-latin-italic.woff2]
+    licence: OFL-1.1
+    auteur: Braille Institute of America
+    source: https://www.brailleinstitute.org/freefont/
+motifs: []
+# L'icône de l'appli : le panneau de randonnée jaune du site, choisi par le
+# propriétaire parmi cinq propositions (19 octobre 2026).
+icone:
+  svg: icone/panneau.svg
+  petite: icone/panneau-petite.svg
+  fond: '#d7e9f1'
+  licence: CC0-1.0
+  auteur: tracé pour le thème
+# Les cinq tableaux de la promenade : œuvres du domaine public, The
+# Metropolitan Museum of Art (Open Access, CC0), trouvées par Openverse.
+# Regardées en grand : aucune figure dénudée ni violente. Redimensionnées à
+# 1800 px de large, sans autre retouche. Jamais Wikimedia.
+images:
+  - fichier: images/tableau-ville.jpg
+    titre: The Boulevard Montmartre on a Winter Morning
+    auteur: Camille Pissarro
+    date: 1897
+    institution: The Metropolitan Museum of Art
+    source: https://www.metmuseum.org/art/collection/search/437310
+    licence: CC0-1.0
+    alt: Un grand boulevard de Paris un matin d'hiver, vu d'en haut, avec ses immeubles, ses arbres nus et ses voitures à chevaux.
+  - fichier: images/tableau-foret.jpg
+    titre: The Edge of the Woods at Monts-Girard, Fontainebleau Forest
+    auteur: Théodore Rousseau
+    date: 1852-1854
+    institution: The Metropolitan Museum of Art
+    source: https://www.metmuseum.org/art/collection/search/437514
+    licence: CC0-1.0
+    alt: La lisière d'une forêt, de grands chênes sous un ciel nuageux et un chemin qui descend dans les herbes.
+  - fichier: images/tableau-montagne.jpg
+    titre: South Wind, Clear Sky (Gaifū kaisei), also known as Red Fuji, from the series Thirty-six Views of Mount Fuji (Fugaku sanjūrokkei)
+    auteur: Katsushika Hokusai
+    date: vers 1830-1832
+    institution: The Metropolitan Museum of Art
+    source: https://www.metmuseum.org/art/collection/search/36490
+    licence: CC0-1.0
+    alt: Le mont Fuji tout rouge sous un ciel bleu plein de petits nuages blancs, estampe japonaise.
+  - fichier: images/tableau-campagne.jpg
+    titre: Wheat Field with Cypresses
+    auteur: Vincent van Gogh
+    date: 1889
+    institution: The Metropolitan Museum of Art
+    source: https://www.metmuseum.org/art/collection/search/436535
+    licence: CC0-1.0
+    alt: Un champ de blé doré, de grands cyprès vert sombre et un ciel bleu aux nuages tourbillonnants.
+  - fichier: images/tableau-mer.jpg
+    titre: Under the Wave off Kanagawa (Kanagawa oki nami ura), also known as The Great Wave, from the series Thirty-six Views of Mount Fuji (Fugaku sanjūrokkei)
+    auteur: Katsushika Hokusai
+    date: vers 1830-1832
+    institution: The Metropolitan Museum of Art
+    source: https://www.metmuseum.org/art/collection/search/56353
+    licence: CC0-1.0
+    alt: Une immense vague bleue à l'écume blanche se dresse au-dessus de barques, le mont Fuji au loin, estampe japonaise.
+# Les icônes du sprite que demandent les gabarits (scripts/generer-icones.py)
+icones: [map-pin, download, printer, arrow-right, arrow-left, x, calendar-range, chevron-down, book-open, music]
+# Les jetons propres au thème, tenus à 4,5:1 comme les autres
+contrastes:
+  - [--t-encre, --t-blanc]
+  - [--t-encre, --t-jaune]
+  - [--t-encre, --t-jaune-vif]
+  - [--t-encre, --t-ciel]
+  - [--t-encre, --t-ciel-2]
+  - [--t-encre, --t-creme]
+  - [--t-encre, --t-pied]
+  - [--t-encre, --t-jaune-pale]
+  - [--t-encre, --t-vert-pale]
+  - [--t-encre-douce, --t-blanc]
+  - [--t-encre-douce, --t-ciel-2]
+  - [--t-encre-douce, --t-creme]
+  - [--t-encre-douce, --t-pied]
+  - [--t-jaune, --t-encre]
+  - [--t-blanc, --t-encre]

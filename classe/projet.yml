@@ -1,0 +1,696 @@
+# Le projet « À la découverte de la faune et de la flore », en données : ce
+# que l'accueil et la page de chaque milieu montrent (skill charte-graphique,
+# « La page de période » ; `classe.py verifier` en contrôle la forme).
+#
+# TOUT EST RECOPIÉ MOT POUR MOT de 01-projet-annuel.md (fils rouges,
+# mascottes, sorties, albums, documentaires, textes mémorisés, œuvres,
+# univers sonores, spectacle vivant, élevages et plantations) et de
+# 02-programmation-annuelle.md (`theme.promenade.programmation` : la colonne
+# de la période dans chaque tableau, cellule par cellule) : les cellules sont
+# découpées sur leurs séparateurs (« ; », « , »), jamais reformulées. Ces
+# deux documents font foi ; une retouche s'y fait d'abord, puis ici.
+# `resume` est la phrase du milieu dans classe.yml (periodes[].imagier).
+#
+# `embleme` : le tableau de la période (images du thème « promenade »).
+# `mascotte.embleme` : la photographie de l'imagier, quand l'imagier a
+# l'animal (le poisson de la mer n'y est pas : pas de photographie).
+# `theme.promenade` : les données propres au thème — l'élevage ou la
+# plantation de la période, et « ce qu'on y fait » (la programmation).
+
+annee:
+  mascotte:
+    cle: mascottes
+    nom: Les mascottes voyageuses
+    texte: un animal-mascotte par période (pigeon → écureuil → marmotte → poule → poisson) qui « écrit
+      » à la classe et introduit les situations-problèmes.
+  fils_rouges:
+  - cle: carnet
+    nom: Le carnet du petit explorateur
+    texte: carnet individuel enrichi à chaque période (dessins d'observation légendés en dictée à l'adulte
+      puis en essais d'écriture, photographies, collections, traces des expériences). Il matérialise les
+      progrès (évaluation positive) et fait le lien avec les familles.
+  - cle: fresque
+    nom: La fresque des cinq milieux
+    texte: fresque collective évolutive dans le couloir ; à chaque période, un nouveau paysage est ajouté
+      avec ses animaux et ses végétaux (compositions plastiques).
+  - cle: imagier
+    nom: L'imagier sonore et illustré de la classe
+    texte: imagier numérique ou papier des corpus de vocabulaire, réactivé quotidiennement (rituel « le
+      mot du jour »). Il s'appuie sur l'**imagier Montessori « faune et flore »** du site — un jeu de
+      cartes de nomenclature par période (18 animaux et 18 plantes du milieu, photographies, cartes de
+      contrôle, cartes-photos et étiquettes-mots à découper et à plastifier).
+  - cle: elevages
+    nom: Élevages et plantations
+    texte: escargotière (P1), plantations de bulbes (P2), expériences sur la glace (P3), semis et élevage
+      de chenilles/papillons ou observation d'un poulailler (P4), aquarium ou bac marin (P5).
+periodes:
+  ville:
+    resume: Les animaux et les plantes de la ville, des parcs et des trottoirs.
+    mascotte:
+      nom: pigeon
+      embleme:
+        imagier: pigeon-biset
+    albums:
+    - titre: Le jardin voyageur
+      auteur: P. Brown
+      etude: true
+    - titre: Une nuit, un chat
+      auteur: Y. Pommaux
+    - titre: La ville
+      note: imagiers
+    - titre: Aujourd'hui on va…
+    documentaires:
+    - la ville
+    - les oiseaux des villes
+    - l'escargot
+    textes:
+    - comptines de rentrée, « Dans Paris » (P. Éluard, version adaptée), chant « Petit escargot » revisité
+    oeuvres:
+    - Mondrian (lignes de la ville), S. Delaunay (cercles), Hundertwasser (façades)
+    - fresque « notre quartier » à partir des photos de la sortie
+    musique:
+    - sons de la ville (paysage sonore)
+    - chant choral
+    - percussions corporelles
+    spectacle:
+    - mime des déplacements urbains
+    - théâtre d'ombres « la nuit en ville »
+    sorties:
+    - Sortie « quartier » (bâtiments, arbres d'alignement, oiseaux des villes)
+    - visite du parc municipal
+    - Semaine du goût
+    embleme: images/tableau-ville.jpg
+    theme:
+      promenade:
+        elevage: escargotière
+        programmation:
+        - document: langage
+          composantes:
+          - nom: '**Vocabulaire** (3 corpus/période)'
+            texte: ville, petites bêtes de la ville, arbres et parcs ; catégorisation (hyperonyme *bâtiment*,
+              *animal*)
+          - nom: '**Syntaxe**'
+            texte: phrases simples enrichies ; pronoms *nous/vous* ; connecteurs *et, puis, parce que*
+          - nom: '**Articulation**'
+            texte: paires t/k, f/s (rituels d'imagier)
+          - nom: '**Discours variés**'
+            texte: dire ce qu'on a fait/va faire ; se présenter
+          - nom: '**Phonologie**'
+            texte: 'syllabes : scander, dénombrer, comparer ; localiser une syllabe'
+          - nom: '**Lettres (nom, son, graphies)**'
+            texte: lettres du prénom et des prénoms de la classe (3 graphies) ; abécédaire de la ville
+          - nom: '**Écriture (geste)**'
+            texte: tenue du crayon, posture ; boucles, coupes ; capitales (révision)
+          - nom: '**Production d''écrits**'
+            texte: 'dictée à l''adulte : légender les photos de la sortie quartier'
+          - nom: '**Compréhension d''écrits**'
+            texte: fonctions des écrits de la classe ; personnages d'une histoire en ville
+          - nom: '**Éveil à la diversité linguistique**'
+            texte: se saluer dans plusieurs langues (langues de la classe)
+        - document: maths
+          composantes:
+          - nom: '**Quantités et nombres**'
+            texte: 'stabiliser jusqu''à **6** : collections, décompositions de 3, 4, 5 ; comptine jusqu''à
+              12 ; écriture chiffrée 1-6'
+          - nom: '**Rang et position**'
+            texte: premier/dernier/deuxième dans la file ; jeux de rangs (file des piétons)
+          - nom: '**Résolution de problèmes**'
+            texte: parties-tout avec matériel (escargots cachés)
+          - nom: '**Solides et formes planes**'
+            texte: 'formes planes dans la ville : carré, rectangle, triangle, disque (façades) ; tri toutes
+              orientations'
+          - nom: '**Grandeurs**'
+            texte: 'longueur : comparaison directe (immeubles de briques)'
+          - nom: '**Motifs organisés**'
+            texte: 'motifs répétitifs simples : colliers, algorithmes de façades (AB, AAB)'
+        - document: eps
+          composantes:
+          - nom: Se déplacer
+            texte: courir vite « traverser au feu vert » ; s'orienter dans l'école et la cour (photos)
+          - nom: Construire des équilibres
+            texte: 'parcours « chantier » : marcher sur des bancs-« trottoirs »'
+          - nom: S'exprimer avec son corps
+            texte: rondes et jeux chantés de rentrée
+          - nom: Coopérer et s'opposer
+            texte: jeux de poursuite simples (*Le chat et la souris* version « chat des villes »)
+        - document: arts
+          composantes:
+          - nom: '**Dessin**'
+            texte: 'dessin d''observation : ma rue, un immeuble ; dessin du bonhomme (référence de rentrée)'
+          - nom: '**Graphisme artistique**'
+            texte: lignes verticales/horizontales, quadrillages (façades, fenêtres) — Mondrian
+          - nom: '**Compositions plastiques**'
+            texte: maquette du quartier (boîtes peintes) ; fresque collective n°1
+          - nom: '**Univers sonores**'
+            texte: paysage sonore de la ville ; percussions corporelles ; 2 chants
+          - nom: '**Spectacle vivant**'
+            texte: mime des déplacements urbains ; découverte de l'espace scénique
+        - document: temps-espace
+          composantes:
+          - nom: '**Temps**'
+            texte: jours de la semaine (rituel) ; hier/aujourd'hui/demain ; chronologie de la journée
+          - nom: '**Espace**'
+            texte: 'espaces proches : plan de la classe, **maquette puis plan du quartier** ; vocabulaire
+              spatial'
+          - nom: '**Environnement proche**'
+            texte: 'sortie quartier : bâtiments publics, commerces, habitat'
+        - document: monde
+          composantes:
+          - nom: '**Vivant : animaux et végétaux**'
+            texte: élevage d'**escargots** (besoins, morphologie, soins) ; oiseaux des villes ; arbres
+              du quartier (feuilles)
+          - nom: '**Corps humain et santé**'
+            texte: 'parties du corps (rappel) ; hygiène des mains ; se repérer : la toise de septembre'
+          - nom: '**Matière**'
+            texte: 'l''air : moulinets, manches à air dans la cour'
+          - nom: '**Objets et fabrications**'
+            texte: 'fabriquer un hôtel à insectes simple ; sécurité : pictogrammes de la classe'
+        - document: evar
+          composantes:
+          - nom: Séance spécifique obligatoire
+            texte: '**Séance 1 — « Mon corps, mes sensations, mes émotions »** : identifier ses émotions
+              et celles des autres (rentrée) ; météo des émotions'
+          - nom: Fil continu
+            texte: règles de vie co-construites ; marguerite des adultes de confiance (rappel MS)
+  foret:
+    resume: Les animaux et les plantes des bois et des sous-bois.
+    mascotte:
+      nom: écureuil
+      embleme:
+        imagier: ecureuil-roux
+    albums:
+    - titre: Gruffalo
+      auteur: J. Donaldson
+      etude: true
+    - titre: La chasse à l'ours
+      auteur: M. Rosen
+    - titre: Une soupe au caillou
+      auteur: A. Vaugelade
+    - titre: Trois courageux petits gorilles
+      note: … en réseau « loup/renard rusé »
+    documentaires:
+    - la forêt
+    - l'écureuil
+    - le hérisson
+    - les arbres
+    textes:
+    - « Colchiques dans les prés »
+    - poème sur l'automne
+    - « Promenons-nous dans les bois » (réinvestissement MS)
+    oeuvres:
+    - A. Goldsworthy (land art ★ sortie), empreintes de feuilles, camaïeux d'automne
+    - Klimt (arbres)
+    musique:
+    - ♪ **Vivaldi, « L'automne » (Les Quatre Saisons)** (œuvre patrimoniale 1)
+    - loto sonore des animaux de la forêt
+    spectacle:
+    - marionnettes du Gruffalo
+    - jeu théâtral des personnages archétypaux
+    sorties:
+    - Sortie en forêt ou parc boisé (collecte de feuilles, fruits d'automne, empreintes)
+    - spectacle de fin d'année
+    embleme: images/tableau-foret.jpg
+    theme:
+      promenade:
+        elevage: plantations de bulbes
+        programmation:
+        - document: langage
+          composantes:
+          - nom: '**Vocabulaire** (3 corpus/période)'
+            texte: forêt, animaux de la forêt, fruits d'automne ; dérivations (*champignon/champignonnière*),
+              contraires
+          - nom: '**Syntaxe**'
+            texte: récits avec *d'abord/ensuite/enfin* ; imparfait/passé composé (rappels de la sortie)
+          - nom: '**Articulation**'
+            texte: ch/s, ch/j (*chaud/seau, mouche/mousse*)
+          - nom: '**Discours variés**'
+            texte: décrire une action menée par un autre ; rappel de récit avec marottes
+          - nom: '**Phonologie**'
+            texte: 'syllabes : fusion, suppression, ajout ; **rimes** et assonances'
+          - nom: '**Lettres (nom, son, graphies)**'
+            texte: alphabet en capitales + script ; valeur sonore des voyelles
+          - nom: '**Écriture (geste)**'
+            texte: premières lettres cursives (e, l, i, u, t) ; ligature
+          - nom: '**Production d''écrits**'
+            texte: 'dictée à l''adulte : recette de la soupe ; premiers **encodages** de syllabes (LU,
+              RI…)'
+          - nom: '**Compréhension d''écrits**'
+            texte: personnages **archétypaux** (loup, ogre, renard rusé) ; structure répétitive (*Gruffalo*)
+          - nom: '**Éveil à la diversité linguistique**'
+            texte: comptine en anglais sur les animaux
+        - document: maths
+          composantes:
+          - nom: '**Quantités et nombres**'
+            texte: 'jusqu''à **8** : compositions/décompositions (doubles 2+2, 3+3, 4+4) ; surcomptage
+              ; comptine jusqu''à 20'
+          - nom: '**Rang et position**'
+            texte: rang jusqu'au 10e (file des animaux vers le terrier) ; changer le point de départ
+          - nom: '**Résolution de problèmes**'
+            texte: ajout/retrait (provisions de l'écureuil) ; représentation sur papier
+          - nom: '**Solides et formes planes**'
+            texte: 'reproduire des assemblages (jusqu''à 8 formes) : maquette de la forêt ; empreintes'
+          - nom: '**Grandeurs**'
+            texte: 'longueur : **bande témoin** (comparaisons indirectes de bâtons) ; ordonner 5 objets'
+          - nom: '**Motifs organisés**'
+            texte: 'motifs répétitifs complexes (ABC, AABB) : guirlandes, couronnes'
+        - document: eps
+          composantes:
+          - nom: Se déplacer
+            texte: courir longtemps « le tour de la forêt » (durée matérialisée) ; sauter les « ruisseaux
+              »
+          - nom: Construire des équilibres
+            texte: quadrupédie, grimper, se suspendre (parcours des animaux de la forêt)
+          - nom: S'exprimer avec son corps
+            texte: danse des feuilles (lent/rapide, léger/saccadé) ; mime des animaux
+          - nom: Coopérer et s'opposer
+            texte: '*Promenons-nous dans les bois* enrichi ; jeu des écureuils en cage'
+        - document: arts
+          composantes:
+          - nom: '**Dessin**'
+            texte: dessiner un arbre d'après nature (sortie) ; animaux de la forêt d'après modèle
+          - nom: '**Graphisme artistique**'
+            texte: boucles, spirales (escargots, feuilles) — Goldsworthy ; empreintes
+          - nom: '**Compositions plastiques**'
+            texte: land art éphémère (sortie) ; tableaux d'automne (collage feuilles) ; fresque n°2
+          - nom: '**Univers sonores**'
+            texte: Vivaldi « L'automne » ♪ ; loto sonore forêt ; 2-3 chants
+          - nom: '**Spectacle vivant**'
+            texte: jeu théâtral *Gruffalo* (marionnettes) ; spectateur actif
+        - document: temps-espace
+          composantes:
+          - nom: '**Temps**'
+            texte: '**la date complète** (jour + mois) ; ordonner les photos de la sortie ; l''automne'
+          - nom: '**Espace**'
+            texte: parcours et labyrinthes ; coder un déplacement (flèches) ; devant/derrière/entre
+          - nom: '**Environnement proche**'
+            texte: 'la forêt : milieu moins familier (sortie) ; comparaison ville/forêt'
+        - document: monde
+          composantes:
+          - nom: '**Vivant : animaux et végétaux**'
+            texte: 'animaux de la forêt : régimes, traces, **hibernation** ; cycle de l''arbre ; plantation
+              de bulbes'
+          - nom: '**Corps humain et santé**'
+            texte: les 5 sens en forêt (toucher, odorat, ouïe) ; équilibre alimentaire (soupe)
+          - nom: '**Matière**'
+            texte: 'transformations : la soupe (cru/cuit) ; feuilles qui sèchent ; tri et matériaux'
+          - nom: '**Objets et fabrications**'
+            texte: fabriquer des cadres-empreintes ; outils de la collecte (loupes, boîtes)
+        - document: evar
+          composantes:
+          - nom: Fil continu
+            texte: messages clairs (initiation) ; émotions des personnages du *Gruffalo*
+  montagne:
+    resume: Les animaux et les plantes de l’étage montagnard et alpin.
+    mascotte:
+      nom: marmotte
+      embleme:
+        imagier: marmotte-alpine
+    albums:
+    - titre: La moufle
+      note: conte russe, structure répétitive
+      etude: true
+    - titre: Neige
+      auteur: U. Shulevitz
+    - titre: Perlette, goutte d'eau
+    - titre: Le bonhomme de neige
+      auteur: R. Briggs
+      note: album sans texte
+    documentaires:
+    - la montagne
+    - la marmotte
+    - l'eau et la glace
+    textes:
+    - « Neige, neige blanche »
+    - virelangues sur [s]/[ch]
+    - chant d'hiver
+    oeuvres:
+    - Hokusai (montagnes), photographies de flocons (W. Bentley), blanc sur bleu (gouache, craies)
+    musique:
+    - ♪ **Vivaldi, « L'hiver »** (œuvre patrimoniale 2)
+    - paysages sonores du vent et de la tempête
+    spectacle:
+    - danse « flocons » (lent/rapide, léger/lourd)
+    - théâtre de la moufle
+    sorties:
+    - Intervention « milieu montagnard » ou malle documentaire
+    - expériences neige/glace
+    - carnaval éventuel
+    embleme: images/tableau-montagne.jpg
+    theme:
+      promenade:
+        elevage: expériences sur la glace
+        programmation:
+        - document: langage
+          composantes:
+          - nom: '**Vocabulaire** (3 corpus/période)'
+            texte: montagne, animaux de montagne, neige et glace ; mots des émotions et états mentaux
+              ; mots phonologiquement proches
+          - nom: '**Syntaxe**'
+            texte: système à 3 temps (imparfait/plus-que-parfait/« allait ») ; *pour que, si*
+          - nom: '**Articulation**'
+            texte: doubles consonnes br/cr/bl (*brrr, flocon, glace*)
+          - nom: '**Discours variés**'
+            texte: expliquer une expérience (langage d'évocation) ; émettre une hypothèse
+          - nom: '**Phonologie**'
+            texte: '**attaque/rime** ; premiers phonèmes voyelles [a] [i] [o] [u] ; discriminer on/en/un'
+          - nom: '**Lettres (nom, son, graphies)**'
+            texte: correspondances capitale/script/**cursive** ; consonnes fricatives et liquides
+          - nom: '**Écriture (geste)**'
+            texte: cursives rondes (c, o, a, d) ; prénom en cursive avec modèle
+          - nom: '**Production d''écrits**'
+            texte: encodage de mots transparents (MOTO, VÉLO, LAMA…) ; lettre à la mascotte
+          - nom: '**Compréhension d''écrits**'
+            texte: 'implicite : émotions et intentions (la moufle : pourquoi refuser ?) ; rappel sans
+              support'
+          - nom: '**Éveil à la diversité linguistique**'
+            texte: chants de montagne (occitan, savoyard…) ; comparaison de sonorités
+        - document: maths
+          composantes:
+          - nom: '**Quantités et nombres**'
+            texte: 'jusqu''à **10** : décompositions de 10, doubles 5+5 ; comptine jusqu''à 30 ; décomptage
+              de 10 à 1 ; écriture chiffrée 1-10'
+          - nom: '**Rang et position**'
+            texte: 'bande numérique jusqu''à 10 : construire, compléter ; jeu de l''oie « télésiège »
+              (avancer/reculer)'
+          - nom: '**Résolution de problèmes**'
+            texte: écarts et comparaison (« 3 de plus ») ; position initiale/finale
+          - nom: '**Solides et formes planes**'
+            texte: '**solides** : cube, pavé, pyramide, cylindre, cône, boule (chalets, sommets) ; description
+              (faces, sommets)'
+          - nom: '**Grandeurs**'
+            texte: 'masse : soupeser, **balance de Roberval** (boules de neige, glaçons)'
+          - nom: '**Motifs organisés**'
+            texte: '**motifs évolutifs** (ABAABBAAABBB) : frises de flocons ; verbaliser la règle'
+        - document: eps
+          composantes:
+          - nom: Se déplacer
+            texte: lancer haut et loin (boules de « neige ») ; franchir des obstacles « crevasses »
+          - nom: Construire des équilibres
+            texte: '**glisser** : patins-chaussons, planches à roulettes ; équilibres dynamiques « skieur
+              » ; rouler'
+          - nom: S'exprimer avec son corps
+            texte: danse « flocons et tempête » (énergie, espace) ; statues de glace
+          - nom: Coopérer et s'opposer
+            texte: jeux de conquête « décrocher le coquillage » adapté « le drapeau du sommet » ; relais
+              « cordée » (coopération)
+        - document: arts
+          composantes:
+          - nom: '**Dessin**'
+            texte: paysage de montagne ; personnage en mouvement (skieur) d'après mannequin articulé
+          - nom: '**Graphisme artistique**'
+            texte: lignes brisées (sommets), étoiles/flocons ; blanc sur fond froid
+          - nom: '**Compositions plastiques**'
+            texte: sculptures de glace colorée ; montagnes en relief (papier froissé) ; fresque n°3
+          - nom: '**Univers sonores**'
+            texte: Vivaldi « L'hiver » ♪ ; traduire la musique en dessin ; 2 chants
+          - nom: '**Spectacle vivant**'
+            texte: théâtre de *La moufle* (personnages successifs, coulisses)
+        - document: temps-espace
+          composantes:
+          - nom: '**Temps**'
+            texte: les mois de l'année ; les 4 saisons ; comparer des durées (sablier, chronomètre) ;
+              l'hiver
+          - nom: '**Espace**'
+            texte: gauche/droite sur soi et en déplacement ; lire un parcours sur plan (pistes de ski)
+          - nom: '**Environnement proche**'
+            texte: la montagne par documents (milieu lointain) ; comparaison avec notre milieu
+        - document: monde
+          composantes:
+          - nom: '**Vivant : animaux et végétaux**'
+            texte: adaptation au froid (pelage, hibernation de la marmotte, migration) ; classement des
+              animaux (poils, plumes, écailles)
+          - nom: '**Corps humain et santé**'
+            texte: '**articulations et segments** (pantin, danse) ; se protéger du froid ; croissance
+              (toise)'
+          - nom: '**Matière**'
+            texte: '**états de l''eau** ★ : glace/eau/vapeur, fusion, solidification ; le givre ; mélanges
+              réfrigérants'
+          - nom: '**Objets et fabrications**'
+            texte: fabriquer un thermomètre-témoin décoré ; luge de poupée (plan incliné)
+        - document: evar
+          composantes:
+          - nom: Séance spécifique obligatoire
+            texte: '**Séance 2 — « Mes relations aux autres »** : identifier les types de sentiments (amitié,
+              entraide) ; la confiance (jeux type colin-maillard)'
+          - nom: Fil continu
+            texte: coopération dans les jeux collectifs ; « le coin de l'aide »
+  campagne:
+    resume: Les animaux de la ferme et des prés, les cultures et les fleurs des champs.
+    mascotte:
+      nom: poule
+      embleme:
+        imagier: poule
+    albums:
+    - titre: La petite poule rousse
+      auteur: B. Barton
+      etude: true
+    - titre: Quel radis dis donc !
+    - titre: La chenille qui fait des trous
+      auteur: E. Carle
+    - titre: Toujours rien ?
+      auteur: C. Voltz
+    documentaires:
+    - de la graine à la plante
+    - de l'œuf à la poule
+    - l'abeille
+    textes:
+    - « Une poule sur un mur » (détournée), poème sur le printemps, chant « Mon petit lapin »
+    oeuvres:
+    - Arcimboldo (portraits-légumes), Van Gogh (champs, tournesols)
+    - modelage d'animaux de la ferme
+    musique:
+    - ♪ **Saint-Saëns, « Le Carnaval des animaux »** (œuvre patrimoniale 3 — poules, coucou)
+    - rythmes et bruits de la ferme
+    spectacle:
+    - mise en scène de *La petite poule rousse*
+    - rondes et jeux chantés traditionnels
+    sorties:
+    - '**Sortie à la ferme pédagogique** (temps fort de l''année)'
+    - semis et potager de l'école
+    embleme: images/tableau-campagne.jpg
+    theme:
+      promenade:
+        elevage: semis et élevage de chenilles/papillons ou observation d'un poulailler
+        programmation:
+        - document: langage
+          composantes:
+          - nom: '**Vocabulaire** (3 corpus/période)'
+            texte: ferme, animaux de la ferme, graines et plantations ; familles de mots (*planter/plantation*),
+              synonymes
+          - nom: '**Syntaxe**'
+            texte: 'futur simple et futur antérieur (projets de semis : « quand on aura planté… »)'
+          - nom: '**Articulation**'
+            texte: ch/z, p/b (*bijou/bisou*) ; virelangues
+          - nom: '**Discours variés**'
+            texte: expliquer une démarche (semis) à qui ne l'a pas vécue ; reformuler
+          - nom: '**Phonologie**'
+            texte: phonèmes fricatives [s] [f] [v] [z] [ch] ; localiser un phonème dans un mot
+          - nom: '**Lettres (nom, son, graphies)**'
+            texte: toutes les lettres dans les 3 graphies ; épellation de mots connus
+          - nom: '**Écriture (geste)**'
+            texte: cursives complexes (m, n, p, b, f, k) ; **prénom en cursive sans modèle**
+          - nom: '**Production d''écrits**'
+            texte: encodage guidé (RADIS, SALADE…) ; étiquettes du potager
+          - nom: '**Compréhension d''écrits**'
+            texte: structure du conte en randonnée ; motivations des personnages (*Petite poule rousse*)
+          - nom: '**Éveil à la diversité linguistique**'
+            texte: noms des animaux de la ferme en plusieurs langues
+        - document: maths
+          composantes:
+          - nom: '**Quantités et nombres**'
+            texte: '**au-delà de 10** ; compléments à 10 ; comptage de 2 en 2 jusqu''à 20 ; comparer des
+              écritures chiffrées'
+          - nom: '**Rang et position**'
+            texte: déplacements sur piste (jeu du poulailler) ; lien ajout/avancement, retrait/recul
+          - nom: '**Résolution de problèmes**'
+            texte: '**groupements** (œufs par boîtes) et **partage équitable** (graines) avec reste'
+          - nom: '**Solides et formes planes**'
+            texte: tangrams et pavages (animaux de la ferme) ; règle comme outil de tracé
+          - nom: '**Grandeurs**'
+            texte: 'masse : ordonner 3 objets, égalité, transitivité (récoltes)'
+          - nom: '**Motifs organisés**'
+            texte: transcrire un motif avec d'autres symboles ; motifs sonores et gestuels
+        - document: eps
+          composantes:
+          - nom: Se déplacer
+            texte: courir vite et franchir la « rivière » sans ralentir ; enchaîner courir-sauter
+          - nom: Construire des équilibres
+            texte: brouettes, échasses ; parcours « de la ferme » avec transport
+          - nom: S'exprimer avec son corps
+            texte: danse des animaux (poules, papillons) ; arts du cirque (jonglage foulards)
+          - nom: Coopérer et s'opposer
+            texte: 'jeux collectifs avec rôles : *Renards, poules, serpents* ★ (attaquant/défenseur/arbitre)'
+        - document: arts
+          composantes:
+          - nom: '**Dessin**'
+            texte: 'dessin d''observation : semis, poussin ; portrait à la manière d''Arcimboldo'
+          - nom: '**Graphisme artistique**'
+            texte: ponts, vagues de labours, semis de points ; répertoire réinvesti en fresque
+          - nom: '**Compositions plastiques**'
+            texte: 'modelage : animaux de la ferme (argile) ; totems du printemps ; fresque n°4'
+          - nom: '**Univers sonores**'
+            texte: Saint-Saëns « Le Carnaval des animaux » ♪ ; rythmes avec instruments ; 2-3 chants
+          - nom: '**Spectacle vivant**'
+            texte: mise en scène *La petite poule rousse* ; rencontres avec des artistes si possible
+        - document: temps-espace
+          composantes:
+          - nom: '**Temps**'
+            texte: 'étapes d''un processus long : semis, œuf-poussin (frises chronologiques) ; le printemps'
+          - nom: '**Espace**'
+            texte: quadrillages (potager en carrés) ; se repérer sur un plan de la ferme
+          - nom: '**Environnement proche**'
+            texte: 'la campagne : sortie ferme ; comparaison des 4 milieux'
+        - document: monde
+          composantes:
+          - nom: '**Vivant : animaux et végétaux**'
+            texte: '**cycles de vie** : graine→plante (semis), œuf→poule, chenille→papillon ; besoins
+              des plantes (expérience) ; l''abeille et la biodiversité'
+          - nom: '**Corps humain et santé**'
+            texte: 'alimentation : d''où viennent les aliments ; le goût ; prendre soin de soi'
+          - nom: '**Matière**'
+            texte: dissolution (sucre, sel / sable) ; l'eau et les plantes ; terre, sable, graviers
+          - nom: '**Objets et fabrications**'
+            texte: fabriquer un moulin à vent ; semoir-entonnoir ; suite d'instructions (3-5) pour planter
+        - document: evar
+          composantes:
+          - nom: Fil continu
+            texte: entraide aux semis ; respecter le vivant ; égalité filles-garçons dans les rôles de
+              jeux
+  mer:
+    resume: Les animaux du bord de mer, les plantes du littoral et les algues.
+    mascotte:
+      nom: poisson
+    albums:
+    - titre: Arc-en-ciel, le plus beau poisson des océans
+      auteur: M. Pfister
+      etude: true
+    - titre: Petit poisson blanc
+      auteur: G. Van Genechten
+    - titre: L'école de Léon
+      note: liaison CP
+    - contes des mers
+    documentaires:
+    - la mer
+    - les animaux du littoral
+    - les bateaux
+    textes:
+    - « Il était un petit navire »
+    - « La baleine bleue »
+    - poème sur la mer
+    - chants pour la fête de fin d'année
+    oeuvres:
+    - Hokusai, *La Grande Vague de Kanagawa*
+    - Matisse (papiers découpés, *Polynésie, la mer*)
+    - Niki de Saint-Phalle
+    musique:
+    - ♪ Debussy, *La Mer* (extraits)
+    - création d'un paysage sonore marin enregistré pour l'exposition
+    spectacle:
+    - chorégraphie « vagues et poissons » présentée aux familles
+    sorties:
+    - Sortie aquarium (ou classe de mer selon projet d'école)
+    - exposition de fin d'année « Notre tour des cinq milieux » présentée aux familles
+    - liaison GS-CP
+    embleme: images/tableau-mer.jpg
+    theme:
+      promenade:
+        elevage: aquarium ou bac marin
+        programmation:
+        - document: langage
+          composantes:
+          - nom: '**Vocabulaire** (3 corpus/période)'
+            texte: mer, animaux marins, plage et bateaux ; sens propre/figuré ; réinvestissement des 15
+              corpus, inférence de mots inconnus
+          - nom: '**Syntaxe**'
+            texte: introducteurs *où, quand, comme* ; complexification autonome ; récits complets
+          - nom: '**Articulation**'
+            texte: 'consolidation : tous les couples, débit et intonation'
+          - nom: '**Discours variés**'
+            texte: exposé « mon animal marin » ; conversation argumentée ; hypothèses et conclusions
+          - nom: '**Phonologie**'
+            texte: manipulation de phonèmes (ajout, suppression) ; intrus à l'initiale ; préparation CP
+          - nom: '**Lettres (nom, son, graphies)**'
+            texte: nom de toutes les lettres + valeur sonore (hors occlusives) ; distinction b/d, p/q
+          - nom: '**Écriture (geste)**'
+            texte: enchaînement de mots courts en cursive ; mots transparents avec/sans modèle
+          - nom: '**Production d''écrits**'
+            texte: écriture autonome de mots transparents ; carte postale de la mer (dictée + essais)
+          - nom: '**Compréhension d''écrits**'
+            texte: raconter une histoire entière sans support ; lien avec sa propre expérience ; structure
+              de la lettre/carte postale
+          - nom: '**Éveil à la diversité linguistique**'
+            texte: comptine en anglais sur la mer ; imagier bilingue
+        - document: maths
+          composantes:
+          - nom: '**Quantités et nombres**'
+            texte: consolidation ; réciter à partir d'un nombre donné ; toutes représentations (constellations,
+              doigts, chiffres)
+          - nom: '**Rang et position**'
+            texte: bande numérique lacunaire ; coder des positions (bataille navale simplifiée)
+          - nom: '**Résolution de problèmes**'
+            texte: problèmes variés à énoncés concordants et discordants ; choix de la procédure
+          - nom: '**Solides et formes planes**'
+            texte: 'consolidation : décrire, trier, classer ; constructions libres à intention (le port)'
+          - nom: '**Grandeurs**'
+            texte: 'longueur + masse : produire un objet de même longueur ; classements complexes (coquillages)'
+          - nom: '**Motifs organisés**'
+            texte: créer un motif et le faire reproduire ; identifier la structure commune de motifs différents
+              (colliers de coquillages)
+        - document: eps
+          composantes:
+          - nom: Se déplacer
+            texte: lancer avec précision (cibles « rochers ») ; course longue « régate » ; s'orienter
+              au parc (5 indices photo)
+          - nom: Construire des équilibres
+            texte: '*(si piscine possible : aisance aquatique)* ; sinon équilibres « sur le pont du bateau
+              », rouler-tanguer'
+          - nom: S'exprimer avec son corps
+            texte: chorégraphie « la mer » (entrée, développement, fin marquée) présentée aux familles
+          - nom: Coopérer et s'opposer
+            texte: jeux d'opposition « sortir les crabes du rocher » (tirer/pousser) ; stratégies d'équipe
+              (*La forêt* → « Les récifs »)
+        - document: arts
+          composantes:
+          - nom: '**Dessin**'
+            texte: dessiner un poisson, une vague ; croquis à l'aquarium ; dessin du bonhomme (comparaison
+              annuelle)
+          - nom: '**Graphisme artistique**'
+            texte: vagues, écailles, spirales de coquillages — Hokusai ; composition à contraintes (3
+              motifs, 2 outils)
+          - nom: '**Compositions plastiques**'
+            texte: poissons en papiers découpés (Matisse) ; mobile marin ; fresque n°5 et exposition finale
+          - nom: '**Univers sonores**'
+            texte: Debussy *La Mer* (extraits) ; création d'un paysage sonore marin ; chants du spectacle
+              (≥ 10 chants cumulés dans l'année)
+          - nom: '**Spectacle vivant**'
+            texte: représentation devant les familles ; être spectateur des autres classes
+        - document: temps-espace
+          composantes:
+          - nom: '**Temps**'
+            texte: 'l''année écoulée : ordonner les 5 périodes ; temps long (« il y a très longtemps »)
+              ; l''été ; vers le CP'
+          - nom: '**Espace**'
+            texte: '**planisphère et globe** : la mer et la terre, continents et océans ; dessiner le
+              plan de la classe'
+          - nom: '**Environnement proche**'
+            texte: 'la mer par documents/sortie ; synthèse : les 5 milieux, leurs habitants'
+        - document: monde
+          composantes:
+          - nom: '**Vivant : animaux et végétaux**'
+            texte: 'animaux marins : morphologie (nageoires, pinces, coquilles), modes de déplacement
+              ; classement ; protection du milieu marin (action collective)'
+          - nom: '**Corps humain et santé**'
+            texte: le corps qui grandit (bilan toise/photos) ; se protéger du soleil ; sécurité à l'eau
+          - nom: '**Matière**'
+            texte: '**flottabilité** ★ : flotte/coule selon la matière ; eau salée/eau douce ; sable mouillé/sec
+              ; les déchets du littoral (ce qui reste, ce qui disparaît)'
+          - nom: '**Objets et fabrications**'
+            texte: fabriquer un **bateau qui flotte** (défi technologique) ; épuisettes ; règles de sécurité
+        - document: evar
+          composantes:
+          - nom: Séance spécifique obligatoire
+            texte: '**Séance 3 — « Tous différents, tous respectés »** : ressemblances et différences
+              filles/garçons ; respect et empathie'
+          - nom: Fil continu
+            texte: bilan des relations de l'année ; préparation sereine du passage au CP
+images: []
