@@ -24,7 +24,7 @@ var CLASSE = {
     "github": "jlrigau"
   },
   "valide_le": "2026-10-18",
-  "depot": "jlrigau/faune-et-flore",
+  "depot": "auregendreau/faune-et-flore",
   "moteur": {
     "depot": "encrine-ai/moteur",
     "version": "f150c1c"

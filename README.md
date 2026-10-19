@@ -8,7 +8,7 @@
 
 Un milieu par période, de la ville à la mer. Tout le matériel de l’année est ici : le projet, la programmation, les progressions de chaque domaine, les évaluations, et les cahiers à imprimer pour la classe.
 
-**[Voir le site de la classe](https://jlrigau.github.io/faune-et-flore/)**
+**[Voir le site de la classe](https://auregendreau.github.io/faune-et-flore/)**
 
 Vous reprenez cette classe ? **[Prendre en main la classe](PRISE-EN-MAIN.md)** : ce qu’elle est, le premier lancement, ce qu’on peut demander, ce qui est protégé.
 

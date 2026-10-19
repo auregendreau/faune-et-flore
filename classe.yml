@@ -55,7 +55,7 @@ accompagnant:
 valide_le: 2026-10-18
 
 # Le dépôt GitHub de CETTE classe, « propriétaire/dépôt ».
-depot: jlrigau/faune-et-flore
+depot: auregendreau/faune-et-flore
 
 # Le moteur dont la classe dérive (skills synchroniser-moteur et
 # remonter-au-moteur) : `depot` le dépôt modèle, `propriétaire/dépôt` ;
