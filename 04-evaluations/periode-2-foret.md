@@ -31,9 +31,9 @@ Passation en ateliers de 4-6 élèves (sauf mention « individuel »). Codage : 
 
 - **Compétence** : nommer les lettres de l'alphabet en capitales, apparier capitale/script ; valeur sonore des voyelles.
 - **Matériel** : abécédaire, cartes « noisettes » (26 paires capitale/script).
-- **Où le trouver** : **fiche élève 2** ; abécédaire du **matériel de classe** ; les cartes « noisettes » (26 paires capitale/script) sont **à fabriquer en classe**.
-- **Passation** : ① nommer les capitales montrées dans le désordre (12 tirées). ② l'écureuil apparie 8 paires capitale/script. ③ « Quel bruit fait le A ? le O ? le I ? »
-- **Critères** : **A** = ≥ 10 capitales, ≥ 7 paires, 3 voyelles sonorisées ; **EC** = ≥ 7 capitales, ≥ 5 paires ; **NE** = en deçà.
+- **Où le trouver** : **fiche élève 2** ; abécédaire du **matériel de classe** ; les cartes « noisettes » (26 paires capitale/script) sont **à fabriquer en classe** ; **fiche élève 8** (« Je reconstitue les mots », lettres à découper).
+- **Passation** : ① nommer les capitales montrées dans le désordre (12 tirées). ② l'écureuil apparie 8 paires capitale/script. ③ « Quel bruit fait le A ? le O ? le I ? » ④ à la table, sur la fiche élève 8 : découper les lettres et reconstituer loup, hibou, écureuil, en script, sous le modèle lettre à lettre, puis écrire chaque mot au crayon sur la ligne.
+- **Critères** : **A** = ≥ 10 capitales, ≥ 7 paires, 3 voyelles sonorisées ; **EC** = ≥ 7 capitales, ≥ 5 paires ; **NE** = en deçà. — Fiche élève 8 : **A** = 3 mots reconstitués dans l'ordre ; **EC** = 2 mots, ou des lettres justes mal ordonnées ; **NE** = 1 mot ou moins. Le mot récrit au crayon sur la ligne s'observe, sans entrer dans le codage.
 
 ## Fiche 2.5 — Écriture : premières cursives *(groupe de 6, sur lignage)*
 

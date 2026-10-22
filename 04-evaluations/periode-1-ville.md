@@ -32,9 +32,9 @@ Passation en ateliers de 4-6 élèves (sauf mention « individuel »), intégré
 
 - **Compétence** : reconnaître et nommer des lettres en capitale et en script ; épeler son prénom.
 - **Matériel** : étiquettes-prénoms de la classe ; 15 lettres mobiles (capitales + scriptes).
-- **Où le trouver** : **à fabriquer en classe** — étiquettes-prénoms de la classe ; lettres mobiles du **matériel de classe**.
-- **Passation** : ① « Nomme les lettres que tu connais. » ② « Épelle ton prénom pour que je l'écrive. » ③ « Retrouve le prénom de deux camarades. »
-- **Critères** : **A** = ≥ 12 lettres nommées, prénom épelé sans erreur ; **EC** = 6-11 lettres, prénom épelé avec appui sur l'étiquette ; **NE** = < 6 lettres.
+- **Où le trouver** : **à fabriquer en classe** — étiquettes-prénoms de la classe ; lettres mobiles du **matériel de classe** ; **fiche élève 7** (« Je reconstitue les mots », lettres à découper).
+- **Passation** : ① « Nomme les lettres que tu connais. » ② « Épelle ton prénom pour que je l'écrive. » ③ « Retrouve le prénom de deux camarades. » ④ à la table, sur la fiche élève 7 : découper les lettres et reconstituer BUS, VÉLO, PIGEON, en capitales, sous le modèle lettre à lettre, puis écrire chaque mot au crayon sur la ligne.
+- **Critères** : **A** = ≥ 12 lettres nommées, prénom épelé sans erreur ; **EC** = 6-11 lettres, prénom épelé avec appui sur l'étiquette ; **NE** = < 6 lettres. — Fiche élève 7 : **A** = 3 mots reconstitués dans l'ordre ; **EC** = 2 mots, ou des lettres justes mal ordonnées ; **NE** = 1 mot ou moins. Le mot récrit au crayon sur la ligne s'observe, sans entrer dans le codage.
 
 ## Fiche 1.5 — Écriture : tracés et capitales *(groupe de 6, sur fiche)*
 

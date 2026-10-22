@@ -31,9 +31,9 @@ Passation en ateliers de 4-6 élèves (sauf mention « individuel »). Codage : 
 
 - **Compétence** : nommer les lettres dans les 3 graphies ; **épeler un mot pour qu'un tiers l'écrive**.
 - **Matériel** : mots-référents de la classe (RADIS, SALADE, POULE) en capitales.
-- **Où le trouver** : **à fabriquer en classe** — les mots-référents sont ceux affichés dans la classe.
-- **Passation** : ① « Épelle RADIS ; j'écris ce que tu me dictes. Vérifie. » ② nommer 8 lettres en cursive.
-- **Critères** : **A** = 2 mots épelés sans erreur + ≥ 6 lettres cursives nommées ; **EC** = épellation avec auto-corrections ; **NE** = ordre des lettres non respecté.
+- **Où le trouver** : **à fabriquer en classe** — les mots-référents sont ceux affichés dans la classe ; **fiche élève 9** (« Je reconstitue les mots », lettres à découper).
+- **Passation** : ① « Épelle RADIS ; j'écris ce que tu me dictes. Vérifie. » ② nommer 8 lettres en cursive. ③ à la table, sur la fiche élève 9 : découper les lettres et reconstituer VACHE, POULE, TRACTEUR : le modèle est en capitales, les lettres à coller en script, avec 4 lettres intruses, puis écrire chaque mot au crayon sur la ligne.
+- **Critères** : **A** = 2 mots épelés sans erreur + ≥ 6 lettres cursives nommées ; **EC** = épellation avec auto-corrections ; **NE** = ordre des lettres non respecté. — Fiche élève 9 : **A** = 3 mots reconstitués dans l'ordre ; **EC** = 2 mots, ou des lettres justes mal ordonnées ; **NE** = 1 mot ou moins. Le mot récrit au crayon sur la ligne s'observe, sans entrer dans le codage.
 
 ## Fiche 4.5 — Écriture : le prénom sans modèle *(individuel, sur lignage)*
 

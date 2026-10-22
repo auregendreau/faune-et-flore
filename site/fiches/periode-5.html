@@ -5,6 +5,35 @@
 <title>GS — Fiches élève · Période 5 · La mer</title>
 <link rel="stylesheet" href="../charte/charte.css">
 <link rel="stylesheet" href="fiches.css">
+<style>
+/* Fiche « Je reconstitue les mots » : modèle, cases à coller, lettres à découper */
+.reconstitue .mot-rec { display: flex; align-items: center; gap: 3mm; margin: 0 0 3mm; }
+.reconstitue .mot-rec .img { flex: 0 0 18mm; text-align: center; }
+.reconstitue .mot-rec .img .pic { height: 16mm; max-width: 18mm; }
+.reconstitue .rangees { display: flex; flex-direction: column; gap: 0; }
+.reconstitue .grandes-cases { margin: 0; gap: 0; flex-wrap: nowrap; }
+.reconstitue .grandes-cases .gc { width: 20mm; height: 20mm; border-radius: 0; margin: 0 -1.2pt -1.2pt 0;
+  display: flex; align-items: center; justify-content: center; font-size: 30pt; font-weight: 700; }
+.reconstitue .grandes-cases.colle .gc { background: #ececec; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.reconstitue .grandes-cases.colle.arrondies { gap: 2mm; margin-top: 2mm; }
+.reconstitue .grandes-cases.colle.arrondies .gc { border-radius: 2.5mm; margin: 0; background: #fff; }
+.reconstitue .mot-rec.script { margin-bottom: 3mm; }
+.reconstitue .ligne-ecriture { width: 150mm; height: 10.5mm; margin: 1mm 0 0; }
+.reconstitue .mot-grand .pic { height: 15mm; max-width: 22mm; margin-left: 6mm; vertical-align: -2mm; }
+.reconstitue .mot-grand { font-size: 28pt; letter-spacing: .06em; line-height: 1; }
+.reconstitue .ciseaux { display: block; margin-top: 1mm; overflow: hidden; white-space: nowrap; }
+.reconstitue .pied-fiche { margin-top: 3mm; }
+.reconstitue .lettres-decoupe { display: grid; grid-template-columns: repeat(9, 19mm); gap: 0; margin-top: 2mm;
+  border-top: 1.2pt dashed #555; border-left: 1.2pt dashed #555; width: max-content; }
+.reconstitue .lettres-decoupe .carte-lettre { width: 19mm; height: 19mm; border: 0; border-radius: 0;
+  border-right: 1.2pt dashed #555; border-bottom: 1.2pt dashed #555; font-size: 30pt; }
+/* la cursive : Marelle, la cursive scolaire soutenue par l'Éducation nationale (SIL OFL) */
+@font-face { font-family: "Marelle"; font-style: normal; font-weight: 400; font-display: block;
+  src: url("../marque/polices/marelle.woff2") format("woff2"); }
+.reconstitue .lettres-decoupe.cursive { grid-template-columns: repeat(12, 15mm); }
+.reconstitue .lettres-decoupe.cursive .carte-lettre { width: 15mm; height: 21mm; font-family: "Marelle", cursive; font-weight: 400; font-size: 20pt; line-height: 1; }
+.reconstitue.cursive .grandes-cases.colle .gc { height: 22mm; }
+</style>
 </head>
 <body data-periode="5">
 
@@ -291,6 +320,40 @@
     <div class="grand-espace" style="min-height:34mm"></div>
 </div>
   <div class="pied-fiche"><span>Compétences : prédire puis vérifier la flottabilité ; représenter sa fabrication.</span><span class="codage">A ☐ · EC ☐ · NE ☐</span></div>
+</section>
+
+<!-- ══════════ FICHE 9 — Je reconstitue les mots (lettres à découper) ══════════ -->
+<section class="fiche reconstitue cursive">
+  <div class="entete">
+    <div class="idext"><span class="champ">Prénom : <span class="trait"></span></span><span class="champ">Date : <span class="trait" style="min-width:28mm"></span></span></div>
+    <div class="cartouche"><div class="ref">Période 5 · Fiche élève 9</div><div class="dom">Lettres — reconstituer des mots (éval. 5.4)</div></div>
+</div>
+  <div class="titre">Je reconstitue les mots de la mer</div>
+  <div class="consigne"><strong>Consigne :</strong> <strong>1.</strong> Découpe les lettres en bas de la feuille. Colle-les dans les cases pour écrire <strong>CRABE, MOUETTE et DAUPHIN</strong>, comme le modèle, mais en lettres attachées. Attention : il y a des lettres en trop, elles ne vont dans aucun mot. <strong>2.</strong> Écris chaque mot au crayon sur la ligne.</div>
+  <div class="mot-rec script">
+    <div class="rangees">
+      <div class="mot-grand">CRABE <img class="pic" src="img/crabe.svg" alt=""></div>
+      <div class="grandes-cases colle arrondies"><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div></div>
+      <div class="ligne-ecriture"></div>
+    </div>
+  </div>
+  <div class="mot-rec script">
+    <div class="rangees">
+      <div class="mot-grand">MOUETTE <img class="pic" src="img/mouette.svg" alt=""></div>
+      <div class="grandes-cases colle arrondies"><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div></div>
+      <div class="ligne-ecriture"></div>
+    </div>
+  </div>
+  <div class="mot-rec script">
+    <div class="rangees">
+      <div class="mot-grand">DAUPHIN <img class="pic" src="img/dauphin.svg" alt=""></div>
+      <div class="grandes-cases colle arrondies"><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div></div>
+      <div class="ligne-ecriture"></div>
+    </div>
+  </div>
+  <span class="ciseaux">✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</span>
+  <div class="lettres-decoupe cursive"><div class="carte-lettre">t</div><div class="carte-lettre">a</div><div class="carte-lettre">d</div><div class="carte-lettre">i</div><div class="carte-lettre">e</div><div class="carte-lettre">n</div><div class="carte-lettre">u</div><div class="carte-lettre">c</div><div class="carte-lettre">d</div><div class="carte-lettre">m</div><div class="carte-lettre">b</div><div class="carte-lettre">a</div><div class="carte-lettre">p</div><div class="carte-lettre">o</div><div class="carte-lettre">e</div><div class="carte-lettre">p</div><div class="carte-lettre">r</div><div class="carte-lettre">u</div><div class="carte-lettre">n</div><div class="carte-lettre">e</div><div class="carte-lettre">h</div><div class="carte-lettre">q</div><div class="carte-lettre">b</div><div class="carte-lettre">t</div></div>
+  <div class="pied-fiche"><span>Compétences : passer des capitales à la cursive, remettre les lettres dans l’ordre, écrire le mot et écarter les intrus.</span><span class="codage" style="white-space:nowrap">A ☐ · EC ☐ · NE ☐</span></div>
 </section>
 
 <!-- CREDITS -->

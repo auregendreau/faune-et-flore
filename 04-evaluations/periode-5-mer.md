@@ -30,9 +30,9 @@ Cette batterie sert au **bilan de fin d'école maternelle** : elle alimente la s
 
 - **Compétence bilan** : nommer toutes les lettres dans les 3 graphies ; donner la valeur sonore (hors occlusives) ; distinguer b/d, p/q.
 - **Matériel** : cartes-lettres 3 graphies ; « coffre » à ouvrir en épelant MARIN.
-- **Où le trouver** : **fiche élève 2** ; cartes-lettres 3 graphies du **matériel de classe** ; le « coffre » est **à fabriquer en classe**.
-- **Passation** : ① nommer 12 lettres tirées (4 par graphie). ② « Quel son fait V ? S ? OU (digramme connu) ? » ③ montrer *b* puis *d* en script : « laquelle est le B ? » (vérification par la cursive). ④ épeler MARIN.
-- **Critères** : **A** = ≥ 10 lettres, 3 sons, b/d distingués, épellation juste ; **EC** = graphie cursive hésitante ; **NE** = < 7 lettres.
+- **Où le trouver** : **fiche élève 2** ; cartes-lettres 3 graphies du **matériel de classe** ; le « coffre » est **à fabriquer en classe** ; **fiche élève 9** (« Je reconstitue les mots », lettres à découper).
+- **Passation** : ① nommer 12 lettres tirées (4 par graphie). ② « Quel son fait V ? S ? OU (digramme connu) ? » ③ montrer *b* puis *d* en script : « laquelle est le B ? » (vérification par la cursive). ④ épeler MARIN. ⑤ à la table, sur la fiche élève 9 : découper les lettres et reconstituer CRABE, MOUETTE, DAUPHIN : le modèle est en capitales, les lettres à coller en cursive (police Marelle), avec 5 lettres intruses (b, d, p, q, n), puis écrire chaque mot au crayon sur la ligne.
+- **Critères** : **A** = ≥ 10 lettres, 3 sons, b/d distingués, épellation juste ; **EC** = graphie cursive hésitante ; **NE** = < 7 lettres. — Fiche élève 9 : **A** = 3 mots reconstitués dans l'ordre ; **EC** = 2 mots, ou des lettres justes mal ordonnées ; **NE** = 1 mot ou moins. Le mot récrit au crayon sur la ligne s'observe, sans entrer dans le codage.
 
 ## Fiche 5.5 — Écriture : la carte postale *(individuel, 10 min)*
 

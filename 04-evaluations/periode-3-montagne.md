@@ -31,9 +31,9 @@ Passation en ateliers de 4-6 élèves (sauf mention « individuel »). Codage : 
 
 - **Compétence** : associer capitale/script/cursive ; donner la valeur sonore des fricatives et liquides.
 - **Matériel** : cartes-lettres 3 graphies (10 lettres : A, I, O, U, L, M, S, F, R, V) ; mots de la classe écrits en script.
-- **Où le trouver** : **fiche élève 2** ; cartes-lettres 3 graphies du **matériel de classe** ; les mots-référents sont ceux affichés dans la classe.
-- **Passation** : ① relier les 3 graphies (« encorde les mêmes lettres »). ② « Quel bruit fait le S ? le F ? le L ? » ③ retrouver LUGE écrit en cursive parmi 3 mots.
-- **Critères** : **A** = ≥ 8 triplets + 3 sons ; **EC** = capitale/script sûrs, cursive hésitante ; **NE** = < 5 triplets.
+- **Où le trouver** : **fiche élève 2** ; cartes-lettres 3 graphies du **matériel de classe** ; les mots-référents sont ceux affichés dans la classe ; **fiche élève 9** (« Je reconstitue les mots », lettres à découper).
+- **Passation** : ① relier les 3 graphies (« encorde les mêmes lettres »). ② « Quel bruit fait le S ? le F ? le L ? » ③ retrouver LUGE écrit en cursive parmi 3 mots. ④ à la table, sur la fiche élève 9 : découper les lettres et reconstituer SKI, NEIGE, MARMOTTE : le modèle est en capitales, les lettres à coller en script, puis écrire chaque mot au crayon sur la ligne.
+- **Critères** : **A** = ≥ 8 triplets + 3 sons ; **EC** = capitale/script sûrs, cursive hésitante ; **NE** = < 5 triplets. — Fiche élève 9 : **A** = 3 mots reconstitués dans l'ordre ; **EC** = 2 mots, ou des lettres justes mal ordonnées ; **NE** = 1 mot ou moins. Le mot récrit au crayon sur la ligne s'observe, sans entrer dans le codage.
 
 ## Fiche 3.5 — Écriture : le prénom en cursive *(individuel, sur lignage)*
 
