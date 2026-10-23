@@ -6,19 +6,15 @@
 <link rel="stylesheet" href="../charte/charte.css">
 <link rel="stylesheet" href="fiches.css">
 <style>
-/* Fiche « Je place les images comme sur le modèle » : quadrillage à reproduire */
-.placer .deux-grilles { display: flex; gap: 8mm; align-items: flex-end; justify-content: center; margin-top: 3mm; }
+/* Fiche « Les cachettes de la forêt » : deux quadrillages à reproduire, matériel à part */
+.placer .deux-grilles { display: flex; gap: 8mm; align-items: flex-end; justify-content: center; margin-top: 2mm; }
 .placer .deux-grilles .legende { font-size: 9pt; color: #555; text-align: center; margin-bottom: 1.5mm; }
 .placer .quadrillage { margin: 0; }
-.placer .quadrillage.modele-q td { width: 19mm; height: 19mm; }
-.placer .quadrillage.modele-q .pic { height: 13mm; max-width: 15mm; }
-.placer .quadrillage.vide td { width: 25mm; height: 25mm; }
-.placer .a-decouper { display: grid; grid-template-columns: repeat(6, 23mm); margin: 5mm auto 0; width: max-content;
+.placer .a-decouper { display: grid; margin: 0 auto 2mm; width: max-content;
   border-top: 1.2pt dashed #555; border-left: 1.2pt dashed #555; }
-.placer .a-decouper div { width: 23mm; height: 23mm; display: flex; align-items: center; justify-content: center;
+.placer .a-decouper div { display: flex; align-items: center; justify-content: center;
   border-right: 1.2pt dashed #555; border-bottom: 1.2pt dashed #555; }
-.placer .a-decouper .pic { height: 17mm; max-width: 19mm; }
-.placer .ciseaux { display: block; margin-top: 14mm; overflow: hidden; white-space: nowrap; }
+.placer.materiel .jeu { margin-bottom: 5mm; }
 </style>
 <style>
 /* Fiche « Je reconstitue les mots » : modèle, cases à coller, lettres à découper */
@@ -338,33 +334,68 @@
     <div class="cartouche"><div class="ref">Période 2 · Fiche élève 9</div><div class="dom">Espace — se repérer sur un quadrillage (éval. 2.10)</div></div>
 </div>
   <div class="titre">Les cachettes de la forêt</div>
-  <div class="consigne"><strong>Consigne :</strong> Découpe les six images en bas de la feuille. Colle chaque image dans le grand quadrillage, dans la même case que sur le modèle.</div>
+  <div class="consigne"><strong>Consigne :</strong> <strong>1.</strong> Découpe les six images de ta première bande. Colle chaque image dans le quadrillage vide, dans la même case que sur le modèle. <strong>2.</strong> Fais pareil avec les sept images de ta deuxième bande.</div>
   <div class="exo">
-    <span class="num">1</span><span class="enonce">Je place les images comme sur le modèle.</span>
+    <span class="num">1</span><span class="enonce">Je place les 6 images comme sur le modèle.</span>
     <div class="deux-grilles">
       <div><div class="legende">Le modèle</div>
-    <table class="quadrillage modele-q">
-      <tr><td><img class="pic" src="img/sapin.svg" alt=""></td><td></td><td><img class="pic" src="img/hibou.svg" alt=""></td><td></td></tr>
-      <tr><td></td><td></td><td></td><td><img class="pic" src="img/champignon.svg" alt=""></td></tr>
-      <tr><td></td><td><img class="pic" src="img/ecureuil.svg" alt=""></td><td></td><td></td></tr>
-      <tr><td><img class="pic" src="img/gland.svg" alt=""></td><td></td><td></td><td><img class="pic" src="img/herisson.svg" alt=""></td></tr>
+    <table class="quadrillage">
+      <tr><td style="width:15mm;height:15mm"><img class="pic" src="img/sapin.svg" alt="" style="height:10.8mm;max-width:10.8mm"></td><td style="width:15mm;height:15mm"></td><td style="width:15mm;height:15mm"><img class="pic" src="img/hibou.svg" alt="" style="height:10.8mm;max-width:10.8mm"></td><td style="width:15mm;height:15mm"></td></tr>
+      <tr><td style="width:15mm;height:15mm"></td><td style="width:15mm;height:15mm"></td><td style="width:15mm;height:15mm"></td><td style="width:15mm;height:15mm"><img class="pic" src="img/champignon.svg" alt="" style="height:10.8mm;max-width:10.8mm"></td></tr>
+      <tr><td style="width:15mm;height:15mm"></td><td style="width:15mm;height:15mm"><img class="pic" src="img/ecureuil.svg" alt="" style="height:10.8mm;max-width:10.8mm"></td><td style="width:15mm;height:15mm"></td><td style="width:15mm;height:15mm"></td></tr>
+      <tr><td style="width:15mm;height:15mm"><img class="pic" src="img/gland.svg" alt="" style="height:10.8mm;max-width:10.8mm"></td><td style="width:15mm;height:15mm"></td><td style="width:15mm;height:15mm"></td><td style="width:15mm;height:15mm"><img class="pic" src="img/herisson.svg" alt="" style="height:10.8mm;max-width:10.8mm"></td></tr>
 </table>
       </div>
       <div><div class="legende">Je colle ici</div>
-    <table class="quadrillage vide">
-      <tr><td></td><td></td><td></td><td></td></tr>
-      <tr><td></td><td></td><td></td><td></td></tr>
-      <tr><td></td><td></td><td></td><td></td></tr>
-      <tr><td></td><td></td><td></td><td></td></tr>
+    <table class="quadrillage">
+      <tr><td style="width:21mm;height:21mm"></td><td style="width:21mm;height:21mm"></td><td style="width:21mm;height:21mm"></td><td style="width:21mm;height:21mm"></td></tr>
+      <tr><td style="width:21mm;height:21mm"></td><td style="width:21mm;height:21mm"></td><td style="width:21mm;height:21mm"></td><td style="width:21mm;height:21mm"></td></tr>
+      <tr><td style="width:21mm;height:21mm"></td><td style="width:21mm;height:21mm"></td><td style="width:21mm;height:21mm"></td><td style="width:21mm;height:21mm"></td></tr>
+      <tr><td style="width:21mm;height:21mm"></td><td style="width:21mm;height:21mm"></td><td style="width:21mm;height:21mm"></td><td style="width:21mm;height:21mm"></td></tr>
 </table>
       </div>
     </div>
   </div>
   <div class="exo">
-    <span class="ciseaux">✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</span>
-    <div class="a-decouper"><div><img class="pic" src="img/herisson.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div></div>
+    <span class="num">2</span><span class="enonce">Je place les 7 images comme sur le modèle.</span>
+    <div class="deux-grilles">
+      <div><div class="legende">Le modèle</div>
+    <table class="quadrillage">
+      <tr><td style="width:12.5mm;height:12.5mm"></td><td style="width:12.5mm;height:12.5mm"><img class="pic" src="img/renard.svg" alt="" style="height:9.0mm;max-width:9.0mm"></td><td style="width:12.5mm;height:12.5mm"></td><td style="width:12.5mm;height:12.5mm"></td><td style="width:12.5mm;height:12.5mm"><img class="pic" src="img/pomme-de-pin.svg" alt="" style="height:9.0mm;max-width:9.0mm"></td></tr>
+      <tr><td style="width:12.5mm;height:12.5mm"></td><td style="width:12.5mm;height:12.5mm"></td><td style="width:12.5mm;height:12.5mm"><img class="pic" src="img/noisette.svg" alt="" style="height:9.0mm;max-width:9.0mm"></td><td style="width:12.5mm;height:12.5mm"></td><td style="width:12.5mm;height:12.5mm"></td></tr>
+      <tr><td style="width:12.5mm;height:12.5mm"><img class="pic" src="img/cerf.svg" alt="" style="height:9.0mm;max-width:9.0mm"></td><td style="width:12.5mm;height:12.5mm"></td><td style="width:12.5mm;height:12.5mm"></td><td style="width:12.5mm;height:12.5mm"></td><td style="width:12.5mm;height:12.5mm"></td></tr>
+      <tr><td style="width:12.5mm;height:12.5mm"></td><td style="width:12.5mm;height:12.5mm"></td><td style="width:12.5mm;height:12.5mm"></td><td style="width:12.5mm;height:12.5mm"><img class="pic" src="img/feuille-morte.svg" alt="" style="height:9.0mm;max-width:9.0mm"></td><td style="width:12.5mm;height:12.5mm"></td></tr>
+      <tr><td style="width:12.5mm;height:12.5mm"></td><td style="width:12.5mm;height:12.5mm"><img class="pic" src="img/branche.svg" alt="" style="height:9.0mm;max-width:9.0mm"></td><td style="width:12.5mm;height:12.5mm"></td><td style="width:12.5mm;height:12.5mm"></td><td style="width:12.5mm;height:12.5mm"><img class="pic" src="img/loup.svg" alt="" style="height:9.0mm;max-width:9.0mm"></td></tr>
+</table>
+      </div>
+      <div><div class="legende">Je colle ici</div>
+    <table class="quadrillage">
+      <tr><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td></tr>
+      <tr><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td></tr>
+      <tr><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td></tr>
+      <tr><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td></tr>
+      <tr><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td><td style="width:17.5mm;height:17.5mm"></td></tr>
+</table>
+      </div>
+    </div>
   </div>
   <div class="pied-fiche"><span>Compétence : se repérer sur un quadrillage, reproduire l’emplacement d’objets d’après un modèle.</span><span class="codage">A ☐ · EC ☐ · NE ☐</span></div>
+</section>
+
+<!-- ══════════ FICHE 9 — matériel à découper (5 jeux) ══════════ -->
+<section class="fiche placer materiel">
+  <div class="entete">
+    <div class="idext"><span class="champ">Matériel de l’enseignant</span></div>
+    <div class="cartouche"><div class="ref">Période 2 · Fiche élève 9 — matériel</div><div class="dom">Les cachettes de la forêt : 5 jeux d’images</div></div>
+</div>
+  <div class="titre">Les images à découper</div>
+  <div class="consigne">Deux bandes par enfant (6 images pour le quadrillage 1, 7 pour le quadrillage 2) : découpe-les, l’enfant découpe ensuite ses images.</div>
+  <div class="jeu"><div class="a-decouper" style="grid-template-columns:repeat(6,19mm)"><div style="width:19mm;height:19mm"><img class="pic" src="img/herisson.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/sapin.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/champignon.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/gland.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/hibou.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/ecureuil.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div></div><div class="a-decouper" style="grid-template-columns:repeat(7,16mm)"><div style="width:16mm;height:16mm"><img class="pic" src="img/loup.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/noisette.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/branche.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/renard.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/feuille-morte.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/cerf.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/pomme-de-pin.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div></div></div>
+  <div class="jeu"><div class="a-decouper" style="grid-template-columns:repeat(6,19mm)"><div style="width:19mm;height:19mm"><img class="pic" src="img/herisson.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/sapin.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/champignon.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/gland.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/hibou.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/ecureuil.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div></div><div class="a-decouper" style="grid-template-columns:repeat(7,16mm)"><div style="width:16mm;height:16mm"><img class="pic" src="img/loup.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/noisette.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/branche.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/renard.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/feuille-morte.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/cerf.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/pomme-de-pin.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div></div></div>
+  <div class="jeu"><div class="a-decouper" style="grid-template-columns:repeat(6,19mm)"><div style="width:19mm;height:19mm"><img class="pic" src="img/herisson.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/sapin.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/champignon.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/gland.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/hibou.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/ecureuil.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div></div><div class="a-decouper" style="grid-template-columns:repeat(7,16mm)"><div style="width:16mm;height:16mm"><img class="pic" src="img/loup.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/noisette.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/branche.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/renard.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/feuille-morte.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/cerf.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/pomme-de-pin.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div></div></div>
+  <div class="jeu"><div class="a-decouper" style="grid-template-columns:repeat(6,19mm)"><div style="width:19mm;height:19mm"><img class="pic" src="img/herisson.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/sapin.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/champignon.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/gland.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/hibou.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/ecureuil.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div></div><div class="a-decouper" style="grid-template-columns:repeat(7,16mm)"><div style="width:16mm;height:16mm"><img class="pic" src="img/loup.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/noisette.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/branche.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/renard.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/feuille-morte.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/cerf.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/pomme-de-pin.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div></div></div>
+  <div class="jeu"><div class="a-decouper" style="grid-template-columns:repeat(6,19mm)"><div style="width:19mm;height:19mm"><img class="pic" src="img/herisson.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/sapin.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/champignon.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/gland.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/hibou.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div><div style="width:19mm;height:19mm"><img class="pic" src="img/ecureuil.svg" alt="" style="height:13.7mm;max-width:13.7mm"></div></div><div class="a-decouper" style="grid-template-columns:repeat(7,16mm)"><div style="width:16mm;height:16mm"><img class="pic" src="img/loup.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/noisette.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/branche.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/renard.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/feuille-morte.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/cerf.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div><div style="width:16mm;height:16mm"><img class="pic" src="img/pomme-de-pin.svg" alt="" style="height:11.5mm;max-width:11.5mm"></div></div></div>
+  <div class="pied-fiche"><span>À photocopier selon le nombre d’enfants.</span></div>
 </section>
 
 <!-- CREDITS -->
