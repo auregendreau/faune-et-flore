@@ -78,8 +78,8 @@ Passation en ateliers de 4-6 élèves (sauf mention « individuel »), intégré
 ## Fiche 1.10 — Motifs : la guirlande de fanions *(individuel dans l'atelier)*
 
 - **Compétence** : reproduire et prolonger un motif répétitif simple (AB, AAB) ; dire la règle.
-- **Matériel** : perles ou gommettes deux/trois couleurs ; amorces de guirlandes.
-- **Où le trouver** : **fiche élève 6** ; perles ou gommettes du **matériel de classe**.
+- **Matériel** : perles ou gommettes deux/trois couleurs ; amorces de guirlandes en images de la ville (AB, AAB, ABC), la suite à découper et à coller, et deux guirlandes avec une erreur.
+- **Où le trouver** : **fiche élève 6** et sa planche de matériel (4 jeux d'images à découper) ; perles ou gommettes du **matériel de classe**.
 - **Passation** : ① reproduire la guirlande modèle. ② prolonger l'amorce AB puis AAB. ③ « Explique comment tu sais ce qui vient après. »
 - **Critères** : **A** = les 2 motifs prolongés sans erreur + règle verbalisée ; **EC** = AB réussi, AAB avec aide ; **NE** = juxtaposition sans régularité.
 

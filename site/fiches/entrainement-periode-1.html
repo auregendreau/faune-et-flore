@@ -5,6 +5,31 @@
 <title>GS — Fiches d'entraînement · Période 1 · La ville</title>
 <link rel="stylesheet" href="../charte/charte.css">
 <link rel="stylesheet" href="fiches.css">
+<style>
+/* Guirlandes à découper : modèle en images, cases à coller, matériel à part */
+.guirlande-fiche .motif { gap: 1.5mm; margin: 2mm 0 4mm; flex-wrap: nowrap; }
+.guirlande-fiche .motif .gm, .guirlande-fiche .motif .gc {
+  width: 19mm; height: 19mm; flex: 0 0 19mm; display: flex; align-items: center; justify-content: center; border-radius: 2mm; }
+.guirlande-fiche .motif .gm { border: 1pt solid #333; }
+.guirlande-fiche .motif .gc { border: 1.2pt dashed #777; }
+.guirlande-fiche .motif .gm .pic { height: 14mm; max-width: 16mm; margin: 0; }
+.guirlande-fiche .motif .gm.erreur-possible { cursor: default; }
+.guirlande-fiche .enonce { display: inline-block; margin-bottom: 1mm; }
+.guirlande-fiche.materiel .ligne-bande { display: flex; align-items: center; gap: 2mm; margin-bottom: 0; }
+.guirlande-fiche.materiel .no-bande { width: 5mm; font-size: 10pt; font-weight: 700; text-align: center; }
+.guirlande-fiche.materiel .bande-dec { display: flex; width: max-content;
+  border-top: 1.2pt dashed #555; border-left: 1.2pt dashed #555; }
+.guirlande-fiche.materiel .bande-dec div { width: 15mm; height: 15mm; display: flex; align-items: center; justify-content: center;
+  border-right: 1.2pt dashed #555; border-bottom: 1.2pt dashed #555; }
+.guirlande-fiche.materiel .bande-dec .pic { height: 11.5mm; max-width: 13mm; margin: 0; }
+.guirlande-fiche.materiel .jeu { margin-bottom: 3mm; padding-left: 15mm; }
+.guirlande-fiche.materiel .jeu .etiquette-jeu { font-size: 8pt; color: #666; text-align: center; margin-bottom: .8mm; }
+.guirlande-fiche .motif.petit .gm, .guirlande-fiche .motif.petit .gc { width: 15mm; height: 15mm; flex: 0 0 15mm; }
+.guirlande-fiche .motif.petit .gm .pic { height: 11mm; max-width: 13mm; }
+.guirlande-fiche .motif.enroule { flex-wrap: wrap; row-gap: 1.5mm; }
+.guirlande-fiche.materiel .bande-dec.petit div { width: 13.5mm; height: 13.5mm; }
+.guirlande-fiche.materiel .bande-dec.petit .pic { height: 10mm; max-width: 12mm; }
+</style>
 </head>
 <body data-periode="1">
 
@@ -444,31 +469,18 @@
 </section>
 
 <!-- ═══ B6 — Motifs et espace ═══ -->
-<section class="fiche">
+<section class="fiche guirlande-fiche">
   <div class="entete">
     <div class="idext"><span class="champ">Prénom : <span class="trait"></span></span><span class="champ">Date : <span class="trait" style="min-width:28mm"></span></span></div>
     <div class="cartouche"><div class="ref">Période 1 · Entraînement B6</div><div class="dom">Mathématiques — motifs et espace</div></div>
 </div>
   <div class="titre">Guirlandes et chemins <span class="niveau n2">★★ je consolide</span></div>
   <div class="sous-objectif">Sous-objectif : prolonger des motifs plus complexes et suivre un code (prépare les fiches d’évaluation 1.10 et 2.10).</div>
-  <div class="consigne"><strong>Consigne :</strong> <strong>1.</strong> Continue les guirlandes. <strong>2.</strong> Suis le code des flèches et trace le chemin du pigeon jusqu’à son nid. <strong>3.</strong> Regarde le quadrillage modèle : dessine chaque image au même endroit dans le quadrillage vide.</div>
+  <div class="consigne"><strong>Consigne :</strong> <strong>1.</strong> Découpe les images de tes bandes 1 et 2 et colle-les pour continuer chaque guirlande. <strong>2.</strong> Suis le code des flèches et trace le chemin du pigeon jusqu’à son nid. <strong>3.</strong> Regarde le quadrillage modèle : dessine chaque image au même endroit dans le quadrillage vide.</div>
   <div class="exo">
-    <span class="num">1</span>
-    <div class="motif">
-      <svg width="280" height="44"><g stroke="#333" stroke-width="1.5">
-        <circle cx="22" cy="22" r="15" fill="#e05252"/><circle cx="62" cy="22" r="15" fill="#e05252"/><rect x="88" y="8" width="28" height="28" fill="#4a7fc1"/>
-        <circle cx="142" cy="22" r="15" fill="#e05252"/><circle cx="182" cy="22" r="15" fill="#e05252"/><rect x="208" y="8" width="28" height="28" fill="#4a7fc1"/>
-        <circle cx="262" cy="22" r="15" fill="#e05252"/>
-</g></svg>
-      <div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div>
-</div>
-    <div class="motif">
-      <svg width="280" height="44"><g stroke="#333" stroke-width="1.5">
-        <rect x="8" y="8" width="28" height="28" fill="#e8c33e"/><circle cx="62" cy="22" r="15" fill="#58a170"/><circle cx="102" cy="22" r="15" fill="#58a170"/><circle cx="142" cy="22" r="15" fill="#58a170"/>
-        <rect x="168" y="8" width="28" height="28" fill="#e8c33e"/><circle cx="222" cy="22" r="15" fill="#58a170"/><circle cx="262" cy="22" r="15" fill="#58a170"/>
-</g></svg>
-      <div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div>
-</div>
+    <span class="num">1</span><span class="enonce">Je continue les guirlandes avec les images de mes bandes 1 et 2.</span>
+    <div class="motif petit"><div class="gm"><img class="pic" src="img/chat.svg" alt=""></div><div class="gm"><img class="pic" src="img/chat.svg" alt=""></div><div class="gm"><img class="pic" src="img/souris.svg" alt=""></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div></div>
+    <div class="motif petit"><div class="gm"><img class="pic" src="img/escargot.svg" alt=""></div><div class="gm"><img class="pic" src="img/papillon.svg" alt=""></div><div class="gm"><img class="pic" src="img/papillon.svg" alt=""></div><div class="gm"><img class="pic" src="img/papillon.svg" alt=""></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div></div>
 </div>
   <div class="deuxcol">
     <div class="exo">
@@ -498,6 +510,25 @@
 </div>
   <div class="pied-fiche"><span>Compétences : motifs répétitifs ; décoder un déplacement ; se repérer dans un quadrillage.</span><span class="codage">Seul ☐ · Avec aide ☐ · À revoir ☐</span></div>
 </section>
+
+
+<!-- ══════════ Période 1 · Entraînement B6 — matériel à découper (6 jeux) ══════════ -->
+<section class="fiche guirlande-fiche materiel">
+  <div class="entete">
+    <div class="idext"><span class="champ">Matériel de l’enseignant</span></div>
+    <div class="cartouche"><div class="ref">Période 1 · Entraînement B6 — matériel</div><div class="dom">Guirlandes et chemins : 6 jeux d’images</div></div>
+</div>
+  <div class="titre">Les images à découper</div>
+  <div class="consigne">Un jeu par enfant : chaque bande numérotée continue la guirlande du même numéro, avec juste les images qu’il faut. Découpe les bandes, l’enfant découpe ensuite ses images.</div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 1</div><div class="ligne-bande"><span class="no-bande">1</span><div class="bande-dec petit"><div><img class="pic" src="img/souris.svg" alt=""></div><div><img class="pic" src="img/souris.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div></div></div><div class="ligne-bande"><span class="no-bande">2</span><div class="bande-dec petit"><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/escargot.svg" alt=""></div><div><img class="pic" src="img/escargot.svg" alt=""></div></div></div></div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 2</div><div class="ligne-bande"><span class="no-bande">1</span><div class="bande-dec petit"><div><img class="pic" src="img/souris.svg" alt=""></div><div><img class="pic" src="img/souris.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div></div></div><div class="ligne-bande"><span class="no-bande">2</span><div class="bande-dec petit"><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/escargot.svg" alt=""></div><div><img class="pic" src="img/escargot.svg" alt=""></div></div></div></div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 3</div><div class="ligne-bande"><span class="no-bande">1</span><div class="bande-dec petit"><div><img class="pic" src="img/souris.svg" alt=""></div><div><img class="pic" src="img/souris.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div></div></div><div class="ligne-bande"><span class="no-bande">2</span><div class="bande-dec petit"><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/escargot.svg" alt=""></div><div><img class="pic" src="img/escargot.svg" alt=""></div></div></div></div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 4</div><div class="ligne-bande"><span class="no-bande">1</span><div class="bande-dec petit"><div><img class="pic" src="img/souris.svg" alt=""></div><div><img class="pic" src="img/souris.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div></div></div><div class="ligne-bande"><span class="no-bande">2</span><div class="bande-dec petit"><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/escargot.svg" alt=""></div><div><img class="pic" src="img/escargot.svg" alt=""></div></div></div></div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 5</div><div class="ligne-bande"><span class="no-bande">1</span><div class="bande-dec petit"><div><img class="pic" src="img/souris.svg" alt=""></div><div><img class="pic" src="img/souris.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div></div></div><div class="ligne-bande"><span class="no-bande">2</span><div class="bande-dec petit"><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/escargot.svg" alt=""></div><div><img class="pic" src="img/escargot.svg" alt=""></div></div></div></div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 6</div><div class="ligne-bande"><span class="no-bande">1</span><div class="bande-dec petit"><div><img class="pic" src="img/souris.svg" alt=""></div><div><img class="pic" src="img/souris.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div><div><img class="pic" src="img/chat.svg" alt=""></div></div></div><div class="ligne-bande"><span class="no-bande">2</span><div class="bande-dec petit"><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/papillon.svg" alt=""></div><div><img class="pic" src="img/escargot.svg" alt=""></div><div><img class="pic" src="img/escargot.svg" alt=""></div></div></div></div>
+  <div class="pied-fiche"><span>À photocopier selon le nombre d’enfants.</span></div>
+</section>
+
 
 <!-- CREDITS -->
 <section class="fiche credits">

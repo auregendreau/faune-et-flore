@@ -101,7 +101,7 @@ Passation en ateliers de 4-6 élèves (sauf mention « individuel »). Codage : 
 
 - **Compétence** : poursuivre un motif **évolutif** et verbaliser sa règle.
 - **Matériel** : gommettes ; frises amorcées : ★●, ★●●, ★●●●… et escalier de briques 1, 2, 3….
-- **Où le trouver** : **fiche élève 7** ; gommettes du **matériel de classe**.
+- **Où le trouver** : **fiche élève 7** (la frise en sapins et flocons, la suite à découper et à coller) et sa planche de matériel (6 jeux) ; gommettes du **matériel de classe**.
 - **Passation** : ① prolonger la frise évolutive. ② « Explique la règle. » ③ construire l'escalier suivant.
 - **Critères** : **A** = prolongement juste + règle explicitée (« on ajoute un rond à chaque fois ») ; **EC** = poursuite en répétitif simple ; **NE** = pas de régularité.
 

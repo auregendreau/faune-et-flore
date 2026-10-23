@@ -5,6 +5,31 @@
 <title>GS — Fiches d'entraînement · Période 3 · La montagne</title>
 <link rel="stylesheet" href="../charte/charte.css">
 <link rel="stylesheet" href="fiches.css">
+<style>
+/* Guirlandes à découper : modèle en images, cases à coller, matériel à part */
+.guirlande-fiche .motif { gap: 1.5mm; margin: 2mm 0 4mm; flex-wrap: nowrap; }
+.guirlande-fiche .motif .gm, .guirlande-fiche .motif .gc {
+  width: 19mm; height: 19mm; flex: 0 0 19mm; display: flex; align-items: center; justify-content: center; border-radius: 2mm; }
+.guirlande-fiche .motif .gm { border: 1pt solid #333; }
+.guirlande-fiche .motif .gc { border: 1.2pt dashed #777; }
+.guirlande-fiche .motif .gm .pic { height: 14mm; max-width: 16mm; margin: 0; }
+.guirlande-fiche .motif .gm.erreur-possible { cursor: default; }
+.guirlande-fiche .enonce { display: inline-block; margin-bottom: 1mm; }
+.guirlande-fiche.materiel .ligne-bande { display: flex; align-items: center; gap: 2mm; margin-bottom: 0; }
+.guirlande-fiche.materiel .no-bande { width: 5mm; font-size: 10pt; font-weight: 700; text-align: center; }
+.guirlande-fiche.materiel .bande-dec { display: flex; width: max-content;
+  border-top: 1.2pt dashed #555; border-left: 1.2pt dashed #555; }
+.guirlande-fiche.materiel .bande-dec div { width: 15mm; height: 15mm; display: flex; align-items: center; justify-content: center;
+  border-right: 1.2pt dashed #555; border-bottom: 1.2pt dashed #555; }
+.guirlande-fiche.materiel .bande-dec .pic { height: 11.5mm; max-width: 13mm; margin: 0; }
+.guirlande-fiche.materiel .jeu { margin-bottom: 3mm; padding-left: 15mm; }
+.guirlande-fiche.materiel .jeu .etiquette-jeu { font-size: 8pt; color: #666; text-align: center; margin-bottom: .8mm; }
+.guirlande-fiche .motif.petit .gm, .guirlande-fiche .motif.petit .gc { width: 15mm; height: 15mm; flex: 0 0 15mm; }
+.guirlande-fiche .motif.petit .gm .pic { height: 11mm; max-width: 13mm; }
+.guirlande-fiche .motif.enroule { flex-wrap: wrap; row-gap: 1.5mm; }
+.guirlande-fiche.materiel .bande-dec.petit div { width: 13.5mm; height: 13.5mm; }
+.guirlande-fiche.materiel .bande-dec.petit .pic { height: 10mm; max-width: 12mm; }
+</style>
 </head>
 <body data-periode="3">
 
@@ -353,19 +378,17 @@
 </section>
 
 <!-- ═══ B6 — Motifs évolutifs ═══ -->
-<section class="fiche">
+<section class="fiche guirlande-fiche">
   <div class="entete">
     <div class="idext"><span class="champ">Prénom : <span class="trait"></span></span><span class="champ">Date : <span class="trait" style="min-width:28mm"></span></span></div>
     <div class="cartouche"><div class="ref">Période 3 · Entraînement B6</div><div class="dom">Mathématiques — motifs évolutifs</div></div>
 </div>
   <div class="titre">Les frises qui grandissent <span class="niveau n2">★★ je consolide</span></div>
   <div class="sous-objectif">Sous-objectif : comprendre la règle d’un motif évolutif et en créer un (prépare la fiche d’évaluation 3.13).</div>
-  <div class="consigne"><strong>Consigne :</strong> <strong>1.</strong> Continue chaque frise. <strong>2.</strong> Invente ta propre frise qui grandit et explique ta règle à un camarade.</div>
-  <div class="exo"><span class="num">1</span>
-    <p style="margin:2mm 0"><img class="pic" src="img/triangle.svg" alt=""><img class="pic" src="img/rond.svg" alt=""> &nbsp; <img class="pic" src="img/triangle.svg" alt=""><img class="pic" src="img/rond.svg" alt=""><img class="pic" src="img/rond.svg" alt=""> &nbsp; <img class="pic" src="img/triangle.svg" alt=""><img class="pic" src="img/rond.svg" alt=""><img class="pic" src="img/rond.svg" alt=""><img class="pic" src="img/rond.svg" alt=""> …</p>
-    <div class="motif"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
-    <p style="margin:4mm 0 2mm"><img class="pic" src="img/etoile-jaune.svg" alt=""> &nbsp; <img class="pic" src="img/etoile-jaune.svg" alt=""><img class="pic" src="img/etoile-jaune.svg" alt=""> &nbsp; <img class="pic" src="img/etoile-jaune.svg" alt=""><img class="pic" src="img/etoile-jaune.svg" alt=""><img class="pic" src="img/etoile-jaune.svg" alt=""> …</p>
-    <div class="motif"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
+  <div class="consigne"><strong>Consigne :</strong> <strong>1.</strong> Découpe les images de tes bandes 1 et 2 et colle la suite de chaque frise. <strong>2.</strong> Invente ta propre frise qui grandit et explique ta règle à un camarade.</div>
+  <div class="exo"><span class="num">1</span><span class="enonce">Je continue les frises avec les images de mes bandes 1 et 2.</span>
+    <div class="motif petit enroule"><div class="gm"><img class="pic" src="img/marmotte.png" alt=""></div><div class="gm"><img class="pic" src="img/flocon.svg" alt=""></div><div class="gm"><img class="pic" src="img/marmotte.png" alt=""></div><div class="gm"><img class="pic" src="img/flocon.svg" alt=""></div><div class="gm"><img class="pic" src="img/flocon.svg" alt=""></div><div class="gm"><img class="pic" src="img/marmotte.png" alt=""></div><div class="gm"><img class="pic" src="img/flocon.svg" alt=""></div><div class="gm"><img class="pic" src="img/flocon.svg" alt=""></div><div class="gm"><img class="pic" src="img/flocon.svg" alt=""></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div></div>
+    <div class="motif petit enroule"><div class="gm"><img class="pic" src="img/sapin.svg" alt=""></div><div class="gm"><img class="pic" src="img/aigle.png" alt=""></div><div class="gm"><img class="pic" src="img/sapin.svg" alt=""></div><div class="gm"><img class="pic" src="img/sapin.svg" alt=""></div><div class="gm"><img class="pic" src="img/aigle.png" alt=""></div><div class="gm"><img class="pic" src="img/sapin.svg" alt=""></div><div class="gm"><img class="pic" src="img/sapin.svg" alt=""></div><div class="gm"><img class="pic" src="img/sapin.svg" alt=""></div><div class="gm"><img class="pic" src="img/aigle.png" alt=""></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div></div>
 </div>
   <div class="exo"><span class="num">2</span><span class="enonce">Ma frise qui grandit :</span>
     <div class="motif"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
@@ -381,6 +404,25 @@
   <div class="defi"><span class="etoile">★ Défi :</span> la frise <img class="pic" src="img/rond-plein.svg" alt=""> &nbsp;<img class="pic" src="img/rond-plein.svg" alt=""><img class="pic" src="img/rond-plein.svg" alt=""> &nbsp;<img class="pic" src="img/rond-plein.svg" alt=""><img class="pic" src="img/rond-plein.svg" alt=""><img class="pic" src="img/rond-plein.svg" alt=""> continue… Combien de ronds dans le paquet numéro 5 ? <span class="chiffre-case" style="width:10mm;height:11mm"></span></div>
   <div class="pied-fiche"><span>Compétence : prolonger et créer un motif évolutif, anticiper.</span><span class="codage">Seul ☐ · Avec aide ☐ · À revoir ☐</span></div>
 </section>
+
+
+<!-- ══════════ Période 3 · Entraînement B6 — matériel à découper (6 jeux) ══════════ -->
+<section class="fiche guirlande-fiche materiel">
+  <div class="entete">
+    <div class="idext"><span class="champ">Matériel de l’enseignant</span></div>
+    <div class="cartouche"><div class="ref">Période 3 · Entraînement B6 — matériel</div><div class="dom">Les frises qui grandissent : 6 jeux d’images</div></div>
+</div>
+  <div class="titre">Les images à découper</div>
+  <div class="consigne">Un jeu par enfant : chaque bande numérotée continue la guirlande du même numéro, avec juste les images qu’il faut. Découpe les bandes, l’enfant découpe ensuite ses images.</div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 1</div><div class="ligne-bande"><span class="no-bande">1</span><div class="bande-dec petit"><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/marmotte.png" alt=""></div><div><img class="pic" src="img/marmotte.png" alt=""></div></div></div><div class="ligne-bande"><span class="no-bande">2</span><div class="bande-dec petit"><div><img class="pic" src="img/aigle.png" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div></div></div></div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 2</div><div class="ligne-bande"><span class="no-bande">1</span><div class="bande-dec petit"><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/marmotte.png" alt=""></div><div><img class="pic" src="img/marmotte.png" alt=""></div></div></div><div class="ligne-bande"><span class="no-bande">2</span><div class="bande-dec petit"><div><img class="pic" src="img/aigle.png" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div></div></div></div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 3</div><div class="ligne-bande"><span class="no-bande">1</span><div class="bande-dec petit"><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/marmotte.png" alt=""></div><div><img class="pic" src="img/marmotte.png" alt=""></div></div></div><div class="ligne-bande"><span class="no-bande">2</span><div class="bande-dec petit"><div><img class="pic" src="img/aigle.png" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div></div></div></div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 4</div><div class="ligne-bande"><span class="no-bande">1</span><div class="bande-dec petit"><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/marmotte.png" alt=""></div><div><img class="pic" src="img/marmotte.png" alt=""></div></div></div><div class="ligne-bande"><span class="no-bande">2</span><div class="bande-dec petit"><div><img class="pic" src="img/aigle.png" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div></div></div></div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 5</div><div class="ligne-bande"><span class="no-bande">1</span><div class="bande-dec petit"><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/marmotte.png" alt=""></div><div><img class="pic" src="img/marmotte.png" alt=""></div></div></div><div class="ligne-bande"><span class="no-bande">2</span><div class="bande-dec petit"><div><img class="pic" src="img/aigle.png" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div></div></div></div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 6</div><div class="ligne-bande"><span class="no-bande">1</span><div class="bande-dec petit"><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/flocon.svg" alt=""></div><div><img class="pic" src="img/marmotte.png" alt=""></div><div><img class="pic" src="img/marmotte.png" alt=""></div></div></div><div class="ligne-bande"><span class="no-bande">2</span><div class="bande-dec petit"><div><img class="pic" src="img/aigle.png" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div><div><img class="pic" src="img/sapin.svg" alt=""></div></div></div></div>
+  <div class="pied-fiche"><span>À photocopier selon le nombre d’enfants.</span></div>
+</section>
+
 
 <!-- CREDITS -->
 <section class="fiche credits">

@@ -83,7 +83,7 @@ Cette batterie sert au **bilan de fin d'école maternelle** : elle alimente la s
 
 - **Compétence bilan** : ordonner 5 longueurs (bande témoin) ; comparer des masses ; créer un motif et le faire reproduire.
 - **Matériel** : 5 « poissons » en carton, bande témoin ; coquillage/galet et balance ; perles-coquillages.
-- **Où le trouver** : **fiche élève 6** ; bande témoin, balance et perles du **matériel de classe**.
+- **Où le trouver** : **fiche élève 6** et sa planche de matériel (5 jeux : la suite du collier, et des images pour inventer le sien) ; bande témoin, balance et perles du **matériel de classe**.
 - **Passation** : ① podium des poissons du plus court au plus long (report au témoin pour 2 poissons non déplaçables). ② « lequel est le plus lourd ? » (prédire puis vérifier). ③ créer un collier à motif (répétitif ou évolutif), le **dicter** à un camarade qui le reproduit.
 - **Critères** : **A** = ordre exact avec témoin, pesée interprétée, motif créé + règle dictée efficacement ; **EC** = 2 réussites sur 3 ; **NE** = comparaisons perceptives seulement.
 
