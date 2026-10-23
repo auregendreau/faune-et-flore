@@ -93,8 +93,8 @@ Passation en ateliers de 4-6 élèves (sauf mention « individuel »). Codage : 
 ## Fiche 2.12 — Motifs : la guirlande de Noël *(individuel dans l'atelier)*
 
 - **Compétence** : mémoriser, poursuivre un motif répétitif à 3 éléments ; trouver l'intrus.
-- **Matériel** : perles/gommettes 3 couleurs ; frises préparées (ABC, AABB, une frise avec erreur).
-- **Où le trouver** : **fiche élève 7** ; perles ou gommettes du **matériel de classe**.
+- **Matériel** : perles/gommettes 3 couleurs ; frises préparées (ABC, AABB, une frise avec erreur) en images de la forêt, les images de la suite à découper et à coller (lisibles en noir et blanc).
+- **Où le trouver** : **fiche élève 7** et sa planche de matériel (5 jeux d'images à découper) ; perles ou gommettes du **matériel de classe**.
 - **Passation** : ① reproduire de mémoire (modèle caché après 10 s) une guirlande ABC. ② prolonger AABB. ③ « Un lutin s'est trompé : trouve l'erreur. »
 - **Critères** : **A** = 3 réussites, structure verbalisée ; **EC** = prolongement juste, mémoire ou intrus difficiles ; **NE** = pas de régularité perçue.
 

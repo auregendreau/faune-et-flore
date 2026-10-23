@@ -6,6 +6,24 @@
 <link rel="stylesheet" href="../charte/charte.css">
 <link rel="stylesheet" href="fiches.css">
 <style>
+/* Guirlandes à découper : modèle en images, cases à coller, matériel à part */
+.guirlande-fiche .motif { gap: 1.5mm; margin: 2mm 0 4mm; flex-wrap: nowrap; }
+.guirlande-fiche .motif .gm, .guirlande-fiche .motif .gc {
+  width: 17mm; height: 17mm; flex: 0 0 17mm; display: flex; align-items: center; justify-content: center; border-radius: 2mm; }
+.guirlande-fiche .motif .gm { border: 1pt solid #333; }
+.guirlande-fiche .motif .gc { border: 1.2pt dashed #777; }
+.guirlande-fiche .motif .gm .pic { height: 12.5mm; max-width: 14mm; margin: 0; }
+.guirlande-fiche .motif .gm.erreur-possible { cursor: default; }
+.guirlande-fiche .enonce { display: inline-block; margin-bottom: 1mm; }
+.guirlande-fiche.materiel .bande { display: grid; grid-template-columns: repeat(10, 15.5mm); width: max-content; margin: 0 auto 1mm;
+  border-top: 1.2pt dashed #555; border-left: 1.2pt dashed #555; }
+.guirlande-fiche.materiel .bande div { width: 15.5mm; height: 15.5mm; display: flex; align-items: center; justify-content: center;
+  border-right: 1.2pt dashed #555; border-bottom: 1.2pt dashed #555; }
+.guirlande-fiche.materiel .bande .pic { height: 11.5mm; max-width: 13mm; margin: 0; }
+.guirlande-fiche.materiel .jeu { margin-bottom: 4mm; }
+.guirlande-fiche.materiel .jeu .etiquette-jeu { font-size: 8pt; color: #666; text-align: center; margin-bottom: .8mm; }
+</style>
+<style>
 /* Fiche « Les cachettes de la forêt » : deux quadrillages à reproduire, matériel à part */
 .placer .deux-grilles { display: flex; gap: 8mm; align-items: flex-end; justify-content: center; margin-top: 2mm; }
 .placer .deux-grilles .legende { font-size: 9pt; color: #555; text-align: center; margin-bottom: 1.5mm; }
@@ -241,54 +259,44 @@
   <div class="pied-fiche"><span>Compétence : coder et décoder un déplacement sur quadrillage.</span><span class="codage">A ☐ · EC ☐ · NE ☐</span></div>
 </section>
 
-<!-- ══════════ FICHE 7 — Motifs ══════════ -->
-<section class="fiche">
+<!-- ══════════ FICHE 7 — Guirlandes à découper (paysage) ══════════ -->
+<section class="fiche paysage guirlande-fiche">
   <div class="entete">
     <div class="idext"><span class="champ">Prénom : <span class="trait"></span></span><span class="champ">Date : <span class="trait" style="min-width:28mm"></span></span></div>
     <div class="cartouche"><div class="ref">Période 2 · Fiche élève 7</div><div class="dom">Mathématiques — motifs (éval. 2.12)</div></div>
 </div>
-  <div class="titre">Les guirlandes de la classe</div>
-  <div class="consigne"><strong>Consigne :</strong> <strong>1.</strong> Continue chaque guirlande dans les cases vides. <strong>2.</strong> Un lutin s’est trompé dans la dernière guirlande : entoure son erreur. <strong>3.</strong> J’invente ma propre guirlande qui se répète.</div>
-  <div class="exo">
-    <span class="num">1</span><span class="enonce">Je continue les guirlandes.</span>
-    <div class="motif">
-      <svg width="280" height="44"><g stroke="#333" stroke-width="1.5">
-        <circle cx="22" cy="22" r="15" fill="#e05252"/><rect x="48" y="8" width="28" height="28" fill="#e8c33e"/><polygon points="102,8 118,36 86,36" fill="#58a170"/>
-        <circle cx="142" cy="22" r="15" fill="#e05252"/><rect x="168" y="8" width="28" height="28" fill="#e8c33e"/><polygon points="222,8 238,36 206,36" fill="#58a170"/>
-        <circle cx="262" cy="22" r="15" fill="#e05252"/>
-</g></svg>
-      <div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div>
+  <div class="titre">Les guirlandes de la forêt</div>
+  <div class="consigne"><strong>Consigne :</strong> <strong>1.</strong> Découpe les images de ta première bande. Continue chaque guirlande en collant les images dans les cases vides. <strong>2.</strong> Un lutin s’est trompé dans la guirlande : entoure son erreur. <strong>3.</strong> Avec ta deuxième bande, invente ta guirlande qui se répète.</div>
+  <div class="exo"><span class="num">1</span><span class="enonce">Je continue les guirlandes.</span>
+    <div class="motif"><div class="gm"><img class="pic" src="img/ecureuil.svg" alt=""></div><div class="gm"><img class="pic" src="img/gland.svg" alt=""></div><div class="gm"><img class="pic" src="img/champignon.svg" alt=""></div><div class="gm"><img class="pic" src="img/ecureuil.svg" alt=""></div><div class="gm"><img class="pic" src="img/gland.svg" alt=""></div><div class="gm"><img class="pic" src="img/champignon.svg" alt=""></div><div class="gm"><img class="pic" src="img/ecureuil.svg" alt=""></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div></div>
+    <div class="motif"><div class="gm"><img class="pic" src="img/hibou.svg" alt=""></div><div class="gm"><img class="pic" src="img/hibou.svg" alt=""></div><div class="gm"><img class="pic" src="img/herisson.svg" alt=""></div><div class="gm"><img class="pic" src="img/herisson.svg" alt=""></div><div class="gm"><img class="pic" src="img/hibou.svg" alt=""></div><div class="gm"><img class="pic" src="img/hibou.svg" alt=""></div><div class="gm"><img class="pic" src="img/herisson.svg" alt=""></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div></div>
 </div>
-    <div class="motif">
-      <svg width="280" height="44"><g stroke="#333" stroke-width="1.5">
-        <rect x="8" y="8" width="28" height="28" fill="#4a7fc1"/><rect x="48" y="8" width="28" height="28" fill="#4a7fc1"/>
-        <circle cx="102" cy="22" r="15" fill="#e8c33e"/><circle cx="142" cy="22" r="15" fill="#e8c33e"/>
-        <rect x="168" y="8" width="28" height="28" fill="#4a7fc1"/><rect x="208" y="8" width="28" height="28" fill="#4a7fc1"/>
-        <circle cx="262" cy="22" r="15" fill="#e8c33e"/>
-</g></svg>
-      <div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div>
+  <div class="exo"><span class="num">2</span><span class="enonce">J’entoure l’erreur du lutin.</span>
+    <div class="motif"><div class="gm"><img class="pic" src="img/ecureuil.svg" alt=""></div><div class="gm"><img class="pic" src="img/gland.svg" alt=""></div><div class="gm"><img class="pic" src="img/ecureuil.svg" alt=""></div><div class="gm"><img class="pic" src="img/gland.svg" alt=""></div><div class="gm"><img class="pic" src="img/ecureuil.svg" alt=""></div><div class="gm"><img class="pic" src="img/gland.svg" alt=""></div><div class="gm"><img class="pic" src="img/gland.svg" alt=""></div><div class="gm"><img class="pic" src="img/ecureuil.svg" alt=""></div><div class="gm"><img class="pic" src="img/gland.svg" alt=""></div><div class="gm"><img class="pic" src="img/ecureuil.svg" alt=""></div><div class="gm"><img class="pic" src="img/gland.svg" alt=""></div><div class="gm"><img class="pic" src="img/ecureuil.svg" alt=""></div></div>
 </div>
+  <div class="exo"><span class="num">3</span><span class="enonce">J’invente ma guirlande avec les images de ma deuxième bande : elle doit se répéter.</span>
+    <div class="motif"><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div><div class="gc"></div></div>
 </div>
-  <div class="exo">
-    <span class="num">2</span><span class="enonce">J’entoure l’erreur du lutin.</span>
-    <div class="motif">
-      <svg width="360" height="44"><g stroke="#333" stroke-width="1.5">
-        <circle cx="22" cy="22" r="15" fill="#e05252"/><circle cx="62" cy="22" r="15" fill="#4a7fc1"/>
-        <circle cx="102" cy="22" r="15" fill="#e05252"/><circle cx="142" cy="22" r="15" fill="#4a7fc1"/>
-        <circle cx="182" cy="22" r="15" fill="#e05252"/><circle cx="222" cy="22" r="15" fill="#e05252"/>
-        <circle cx="262" cy="22" r="15" fill="#4a7fc1"/><circle cx="302" cy="22" r="15" fill="#e05252"/>
-        <circle cx="342" cy="22" r="15" fill="#4a7fc1"/>
-</g></svg>
-</div>
-</div>
-  <div class="exo">
-    <span class="num">3</span>
-    <div class="motif">
-      <div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div>
-</div>
-</div>
-  <div class="pied-fiche"><span>Compétence : poursuivre un motif répétitif ; repérer une irrégularité ; créer un motif.</span><span class="codage">A ☐ · EC ☐ · NE ☐</span></div>
+  <div class="pied-fiche"><span>Compétence : poursuivre un motif répétitif (ABC, AABB) ; repérer une irrégularité ; créer un motif.</span><span class="codage">A ☐ · EC ☐ · NE ☐</span></div>
 </section>
+
+
+<!-- ══════════ FICHE 7 — matériel à découper (5 jeux) ══════════ -->
+<section class="fiche guirlande-fiche materiel">
+  <div class="entete">
+    <div class="idext"><span class="champ">Matériel de l’enseignant</span></div>
+    <div class="cartouche"><div class="ref">Période 2 · Fiche élève 7 — matériel</div><div class="dom">Les guirlandes de la forêt : 5 jeux d’images</div></div>
+</div>
+  <div class="titre">Les images à découper</div>
+  <div class="consigne">Un jeu par enfant : la première bande donne juste les images qui continuent les guirlandes ; la deuxième sert à inventer sa guirlande. Découpe les bandes, l’enfant découpe ensuite ses images.</div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 1 — bande 1 : continuer les guirlandes · bande 2 : inventer sa guirlande</div><div class="bande"><div><img class="pic" src="img/herisson.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/herisson.svg" alt=""></div><div><img class="pic" src="img/herisson.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div></div><div class="bande"><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div></div></div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 2 — bande 1 : continuer les guirlandes · bande 2 : inventer sa guirlande</div><div class="bande"><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/herisson.svg" alt=""></div><div><img class="pic" src="img/herisson.svg" alt=""></div><div><img class="pic" src="img/herisson.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div></div><div class="bande"><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div></div></div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 3 — bande 1 : continuer les guirlandes · bande 2 : inventer sa guirlande</div><div class="bande"><div><img class="pic" src="img/herisson.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/herisson.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/herisson.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div></div><div class="bande"><div><img class="pic" src="img/ecureuil.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div></div></div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 4 — bande 1 : continuer les guirlandes · bande 2 : inventer sa guirlande</div><div class="bande"><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/herisson.svg" alt=""></div><div><img class="pic" src="img/herisson.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div><div><img class="pic" src="img/herisson.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div></div><div class="bande"><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div></div></div>
+  <div class="jeu"><div class="etiquette-jeu">jeu 5 — bande 1 : continuer les guirlandes · bande 2 : inventer sa guirlande</div><div class="bande"><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/herisson.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/herisson.svg" alt=""></div><div><img class="pic" src="img/herisson.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div></div><div class="bande"><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div><div><img class="pic" src="img/hibou.svg" alt=""></div><div><img class="pic" src="img/gland.svg" alt=""></div><div><img class="pic" src="img/ecureuil.svg" alt=""></div><div><img class="pic" src="img/champignon.svg" alt=""></div></div></div>
+  <div class="pied-fiche"><span>À photocopier selon le nombre d’enfants.</span></div>
+</section>
+
 
 <!-- ══════════ FICHE 8 — Je reconstitue les mots (lettres à découper) ══════════ -->
 <section class="fiche reconstitue">
