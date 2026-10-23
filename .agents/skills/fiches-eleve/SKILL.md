@@ -151,4 +151,19 @@ Retours d'Aurélie (octobre 2026), à tenir pour toute fiche nouvelle ou refaite
   « Fiche élève N — matériel », qui compte pour une page au contrôle.
 - Le style propre à ces fiches est dans un `<style>` en tête du cahier, pas
   dans `fiches.css` (couche moteur).
+- **Les guirlandes (algorithmes) se font en images du milieu**, jamais en
+  couleurs : photocopiées en noir et blanc, rouge et bleu sont le même gris.
+  Animaux, fleurs ou fruits de la période ; la suite se colle avec des
+  images découpées sur une planche à part (« Fiche élève N — matériel »).
+  Ce qu'elle a fixé sur la fiche 7 de la période 2, modèle des autres :
+  un seul tour de modèle (2 à 4 cases ; les trois premiers groupes pour un
+  motif qui grandit), au moins 8 cases à remplir, toutes les lignes de même
+  longueur ; des frises à compléter et des erreurs du lutin à entourer,
+  **jamais de frise à inventer** (« ça ne sert pas à grand-chose ») ; sur
+  la planche, une bande numérotée par guirlande, avec juste les images
+  qu'il faut, **les images identiques regroupées** (tous les écureuils puis
+  tous les glands), sinon l'enfant colle dans l'ordre où il découpe.
+- **Un défi se comprend sans lire** : « combien de ronds dans le paquet
+  numéro 5 ? » ne parlait pas aux enfants ; des boîtes numérotées à
+  remplir, oui.
 <!-- classe:fin -->
