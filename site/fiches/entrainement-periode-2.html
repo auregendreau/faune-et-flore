@@ -5,6 +5,20 @@
 <title>GS — Fiches d'entraînement · Période 2 · La forêt</title>
 <link rel="stylesheet" href="../charte/charte.css">
 <link rel="stylesheet" href="fiches.css">
+<style>
+/* Ranger des longueurs en découpant et collant (fiches A5) */
+.ranger .bande-collage { border: 1pt solid #333; border-radius: 2mm; padding: 2mm 3mm; margin-top: 2mm; }
+.ranger .repere { font-size: 8.5pt; color: #555; }
+.ranger .ligne-baton { position: relative; height: 7mm; border-bottom: 1pt dashed #999; margin-left: 4mm; }
+.ranger .ligne-baton::before { content: ""; position: absolute; left: -4mm; top: 1mm; bottom: -1mm; width: 2.2pt; background: #333; }
+.ranger .socle { display: flex; gap: 2mm; align-items: flex-end; border-bottom: 1.4pt solid #333; padding: 0 2mm; }
+.ranger .socle .place { flex: 1; border: 1pt dashed #999; border-bottom: 0; border-radius: 2mm 2mm 0 0; }
+.ranger .fleche { display: flex; justify-content: space-between; font-size: 8.5pt; color: #555; margin-top: 1mm; }
+.ranger .a-decouper { display: flex; flex-wrap: wrap; gap: 2.5mm 3mm; align-items: flex-end; margin-top: 2mm; }
+.ranger .piece { border: 1.2pt dashed #555; padding: 1.2mm; display: flex; align-items: flex-end; justify-content: center; }
+.ranger .baton { height: 3.2mm; border: 1.2pt solid #333; border-radius: 2mm; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.ranger .exo { margin: 2.5mm 0; }
+</style>
 </head>
 <body data-periode="2">
 
@@ -133,27 +147,17 @@
   <div class="pied-fiche"><span>Compétences : dénombrer jusqu’à 8 ; écrire 7 et 8 ; suite numérique.</span><span class="codage">Seul ☐ · Avec aide ☐ · À revoir ☐</span></div>
 </section>
 
-<!-- ═══ A5 — Longueurs ═══ -->
-<section class="fiche">
+<!-- ═══ A5 — Longueurs (découper, ranger, coller) ═══ -->
+<section class="fiche ranger">
   <div class="entete">
     <div class="idext"><span class="champ">Prénom : <span class="trait"></span></span><span class="champ">Date : <span class="trait" style="min-width:28mm"></span></span></div>
     <div class="cartouche"><div class="ref">Période 2 · Entraînement A5</div><div class="dom">Mathématiques — longueurs</div></div>
 </div>
   <div class="titre">Les bâtons de la collecte <span class="niveau n1">★ je m’entraîne</span></div>
   <div class="sous-objectif">Sous-objectif : comparer et ordonner des longueurs (prépare la fiche d’évaluation 2.11).</div>
-  <div class="consigne"><strong>Consigne :</strong> <strong>1.</strong> Écris 1 sous le bâton le plus court, 2, 3 et 4 jusqu’au plus long. <strong>2.</strong> Dessine un bâton plus long que le bâton A et plus court que le bâton B. <strong>3.</strong> Écris 1 sous le plus petit sapin, 2, 3, 4 et 5 jusqu’au plus grand.</div>
+  <div class="consigne"><strong>Consigne :</strong> <strong>1.</strong> Découpe les 4 bâtons en bas de la feuille. Range-les du plus court au plus long et colle-les sur les lignes, bien contre le trait noir. <strong>2.</strong> Dessine un bâton plus long que le bâton A et plus court que le bâton B. <strong>3.</strong> Découpe les 5 sapins et colle-les du plus petit au plus grand.</div>
   <div class="exo"><span class="num">1</span>
-    <svg width="560" height="110" style="margin-top:2mm">
-      <g fill="#a9762f" stroke="#333" stroke-width="1.4">
-        <rect x="10" y="15" width="180" height="12" rx="6"/>
-        <rect x="10" y="40" width="90" height="12" rx="6"/>
-        <rect x="10" y="65" width="240" height="12" rx="6"/>
-        <rect x="10" y="90" width="140" height="12" rx="6"/>
-</g>
-</svg>
-    <div style="display:flex;gap:10mm;margin-top:1mm">
-      <span class="chiffre-case"></span><span class="chiffre-case"></span><span class="chiffre-case"></span><span class="chiffre-case"></span>
-</div>
+    <div class="bande-collage"><div class="repere">le plus court ↓ — colle chaque bâton contre le trait noir</div><div class="ligne-baton" style="width:72mm"></div><div class="ligne-baton" style="width:72mm"></div><div class="ligne-baton" style="width:72mm"></div><div class="ligne-baton" style="width:72mm"></div><div class="repere" style="margin-top:1mm">↑ le plus long</div></div>
 </div>
   <div class="exo"><span class="num">2</span>
     <svg width="560" height="66" style="margin-top:2mm">
@@ -167,18 +171,14 @@
     <div class="ligne-ecriture" style="height:8mm;background:none;border-bottom:1pt dashed #999"></div>
 </div>
   <div class="exo"><span class="num">3</span>
-    <div class="seriation" style="max-width:150mm">
-      <div class="sc"><img src="img/sapin.svg" alt="" style="height:20mm"></div>
-      <div class="sc"><img src="img/sapin.svg" alt="" style="height:8mm"></div>
-      <div class="sc"><img src="img/sapin.svg" alt="" style="height:26mm"></div>
-      <div class="sc"><img src="img/sapin.svg" alt="" style="height:14mm"></div>
-      <div class="sc"><img src="img/sapin.svg" alt="" style="height:32mm"></div>
+    <div class="socle" style="max-width:165mm"><div class="place" style="height:33mm"></div><div class="place" style="height:33mm"></div><div class="place" style="height:33mm"></div><div class="place" style="height:33mm"></div><div class="place" style="height:33mm"></div></div><div class="fleche" style="max-width:165mm"><span>← le plus petit</span><span>le plus grand →</span></div>
 </div>
-    <div style="display:flex;gap:3mm;max-width:150mm;margin-top:1mm">
-      <span class="chiffre-case" style="flex:1"></span><span class="chiffre-case" style="flex:1"></span><span class="chiffre-case" style="flex:1"></span><span class="chiffre-case" style="flex:1"></span><span class="chiffre-case" style="flex:1"></span>
+  <div class="exo">
+    <span class="ciseaux">✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</span>
+    <div class="a-decouper"><div class="piece"><div class="baton" style="width:37mm;background:#a9762f"></div></div><div class="piece"><div class="baton" style="width:63.5mm;background:#a9762f"></div></div><div class="piece"><div class="baton" style="width:24mm;background:#a9762f"></div></div><div class="piece"><div class="baton" style="width:47.5mm;background:#a9762f"></div></div>
+<div class="piece"><img src="img/sapin.svg" alt="" style="height:20mm"></div><div class="piece"><img src="img/sapin.svg" alt="" style="height:8mm"></div><div class="piece"><img src="img/sapin.svg" alt="" style="height:26mm"></div><div class="piece"><img src="img/sapin.svg" alt="" style="height:14mm"></div><div class="piece"><img src="img/sapin.svg" alt="" style="height:32mm"></div></div>
 </div>
-</div>
-  <div class="pied-fiche"><span>Compétences : ordonner des longueurs et des tailles ; intercaler.</span><span class="codage">Seul ☐ · Avec aide ☐ · À revoir ☐</span></div>
+  <div class="pied-fiche"><span>Compétences : ordonner des longueurs et des tailles en les manipulant ; intercaler.</span><span class="codage">Seul ☐ · Avec aide ☐ · À revoir ☐</span></div>
 </section>
 
 <!-- ═══ A6 — Le vivant ═══ -->

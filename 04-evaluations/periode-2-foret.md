@@ -78,9 +78,9 @@ Passation en ateliers de 4-6 élèves (sauf mention « individuel »). Codage : 
 
 - **Compétence** : reproduire un assemblage de formes (≤ 8) ; coder/décoder un déplacement sur quadrillage.
 - **Matériel** : tangram « sapin » (modèle non à l'échelle) ; quadrillage 4×4, pion-renard, cartes-flèches.
-- **Où le trouver** : **fiche élève 6** ; tangram et quadrillage du **matériel de classe**.
-- **Passation** : ① reproduire le sapin. ② décoder : suivre 4 flèches pour amener le renard au terrier. ③ coder : « écris le chemin avec les flèches pour ton camarade. »
-- **Critères** : **A** = assemblage conforme + décodage et codage justes ; **EC** = assemblage réussi, codage avec aide ; **NE** = superpositions/orientations non maîtrisées.
+- **Où le trouver** : **fiche élève 6** ; tangram et quadrillage du **matériel de classe** ; **fiche élève 9** (« Les cachettes de la forêt », images à découper).
+- **Passation** : ① reproduire le sapin. ② décoder : suivre 4 flèches pour amener le renard au terrier. ③ coder : « écris le chemin avec les flèches pour ton camarade. » ④ à la table, sur la fiche élève 9 : découper six images et les coller dans un quadrillage 4×4, dans la même case que sur le modèle.
+- **Critères** : **A** = assemblage conforme + décodage et codage justes ; **EC** = assemblage réussi, codage avec aide ; **NE** = superpositions/orientations non maîtrisées. — Fiche élève 9 : **A** = 6 images bien placées ; **EC** = 4 ou 5 ; **NE** = 3 ou moins.
 
 ## Fiche 2.11 — Grandeurs : les bâtons de la forêt *(groupe de 4)*
 
