@@ -217,3 +217,17 @@ hauteur des cases) plutôt que supprimer du contenu. Les cahiers comptent
 
 Les PDF publiés ne sont pas versionnés : `scripts/generer-pdf.sh` les
 refabrique au déploiement (push sur `main` → GitHub Actions → site).
+
+<!-- classe:debut -->
+## Propre à cette classe
+
+- **La noisette** (`noisette.svg`) était le pictogramme Mulberry `nuts`,
+  qui montre **deux fruits** : dans les fiches de numération, chaque
+  noisette comptait double (retour d'Aurélie). Il est recadré sur un seul
+  fruit, celui qu'elle a choisi (l'orange pointu au bas clair). Un picto
+  d'un exercice de comptage se vérifie à l'œil **en série**, cinq côte à
+  côte : un seul sujet par image.
+- Les sources d'images (jsDelivr, ARASAAC, Openverse) peuvent être fermées
+  par le réseau d'une session : le dire, et proposer en attendant une
+  adaptation mécanique d'une image de la banque, montrée avant d'installer.
+<!-- classe:fin -->

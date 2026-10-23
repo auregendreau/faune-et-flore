@@ -121,3 +121,34 @@ puis le PDF du cahier et `verifier-pagination.py`, puis un regard sur la page
 rendue (`pdftoppm`). Si la fiche correspond à une fiche d'évaluation, relire
 celle-ci dans `04-evaluations/` : même numérotation, même matériel, mêmes
 critères.
+
+<!-- classe:debut -->
+## Propre à cette classe
+
+Retours d'Aurélie (octobre 2026), à tenir pour toute fiche nouvelle ou refaite :
+
+- **Faire manipuler.** « Tes entraînements et exercices ne favorisent pas
+  assez la manipulation » : ranger, reconstituer, placer se fait en
+  **découpant et collant**, pas en numérotant ni en traçant. Exemples
+  publiés : la fiche « Je reconstitue les mots » de chaque évaluation de
+  lettres (1.4 à 5.4), les bâtons et les sapins à ranger de l'entraînement
+  A5 de la période 2, « Les cachettes de la forêt » (éval. 2.10). Les
+  autres fiches ne changent que sur sa demande, fiche par fiche (« modifie
+  seulement la période 2 pour le moment »).
+- **Reconstituer un mot**, progression qu'elle a fixée : P1 modèle et
+  lettres en capitales, chaque lettre du modèle au-dessus de sa case ; P2
+  script / script ; dès P3 **modèle en capitales, lettres à découper en
+  script** ; P5 lettres en **cursive** (Marelle, `site/marque/polices/`) ;
+  des lettres intruses à partir de P4 ; une ligne sous chaque mot pour le
+  récrire au crayon.
+- **Une étiquette à découper est plus petite que la case où elle se
+  colle** (case 20 mm, lettre 19 mm ; place d'un sapin plus large que la
+  plus grande pièce). Les étiquettes cursives sont plus hautes (21 mm) :
+  boucles et jambages dépassaient à 19 mm.
+- **Le matériel à découper peut aller sur une feuille à part**, en
+  plusieurs jeux (« j'imprime une page par enfant et le matériel pour
+  plusieurs enfants sur une autre feuille ») : une `section.fiche` de plus,
+  « Fiche élève N — matériel », qui compte pour une page au contrôle.
+- Le style propre à ces fiches est dans un `<style>` en tête du cahier, pas
+  dans `fiches.css` (couche moteur).
+<!-- classe:fin -->
